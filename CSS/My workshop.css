@@ -14,7 +14,7 @@
     --boxShadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
     --imageBoxShadow: 0 3px 10px;
     --hoverBackgroundColor: #25252540;
-    background-color: var(--mainColor);
+    background-color: white;
 }
 
 * {
@@ -161,7 +161,7 @@ nav .nav-big-screen {
 .background {
     position: absolute;
     z-index: 0;
-    background-image: url('../Images/My workshop/Picsart_24-09-22_20-09-01-170.jpg');
+    background-image: url('../My workshop/Picsart_24-09-22_20-09-01-170.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
