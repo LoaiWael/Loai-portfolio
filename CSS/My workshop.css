@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+/* font-family: "Noto Serif TC", serif; */
+
+:root {
+    font-family: "Lexend", sans-serif;
+    --mainColor: #252525;
+    --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
+    --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
+    --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
+    --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
+    --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
+    --decorationBarHeight: 8px;
+    --transitionDuration: 200ms;
+    --boxShadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+    --imageBoxShadow: 0 3px 10px;
+    --hoverBackgroundColor: #25252540;
+    background-color: var(--mainColor);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--mainColor);
+    color: var(--mainColor);
+}
+
+nav>a {
+    display: none;
+    margin-right: 3%;
+}
+
+nav a .list-button {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+}
+
+.list-button .shape {
+    color: white;
+    text-align: center;
+    font-weight: 999;
+    transform: translate(0, 43%);
+    border-radius: 50%;
+}
+
+.nav-small-screen {
+    display: none;
+    position: fixed;
+    z-index: 95;
+    right: 25px;
+    left: 25px;
+    top: 0;
+    display: none;
+    font-size: 16px;
+    list-style-type: none;
+    list-style-position: outside;
+    background-color: var(--mainColor);
+    padding: 37px 15px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+
+    li:not(last) {
+        margin-bottom: 10px;
+    }
+
+    li a {
+        color: white;
+    }
+
+    li a:hover {
+        background-color: rgb(55, 55, 55);
+    }
+
+    #my-workshop {
+        background-color: white;
+        color: var(--mainColor);
+    }
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+    width: calc(100% - 40px);
+    height: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: var(--boxShadow);
+    font-weight: 500;
+    display: flow-root;
+    font-size: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-big-screen {
+    position: relative;
+    margin: 2px;
+    margin-right: 1%;
+    float: right;
+    padding: 0;
+}
+
+.nav-big-screen li {
+    list-style: none;
+    float: left;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.nav-buttons {
+    text-decoration: none;
+    color: var(--mainColor);
+    margin: 7px;
+    display: block;
+    padding: 3px 5px;
+    border-radius: 5px;
+    transition-duration: var(--transitionDuration);
+}
+
+.logo-name {
+    position: relative;
+    left: 3%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* hovering */
+.nav-buttons:hover {
+    background-color: var(--hoverBackgroundColor);
+}
+
+.nav-buttons:active {
+    background-color: var(--mainColor);
+    color: white;
+    box-sizing: border-box;
+}
+
+#my-workshop {
+    background-color: var(--mainColor);
+    color: white;
+    pointer-events: none;
+}
+
+.introduction {
+    height: 100vh;
+    position: relative;
+    perspective: 500px;
+}
+
+.background {
+    position: absolute;
+    z-index: 0;
+    background-image: url('../Images/My workshop/Picsart_24-09-22_20-09-01-170.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    animation-name: background;
+    animation-duration: 2s;
+}
+
+@keyframes background {
+    from {
+        transform: scale(1.4) rotate(10deg);
+    }
+}
+
+.top-introduction {
+    position: absolute;
+    z-index: 1;
+    top: 15vh;
+    margin-left: 7%;
+    perspective: 500px;
+}
+
+.top-introduction::before {
+    content: "";
+    width: 10px;
+    height: 85vh;
+    background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
+    position: absolute;
+    border-radius: 20px;
+    left: -3%;
+    top: 5px;
+    animation-name: swip-up;
+    animation-duration: 1.2s;
+}
+
+.top-introduction::after {
+    content: "";
+    width: 10px;
+    height: calc(85vh - 25px);
+    background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
+    position: absolute;
+    border-radius: 20px;
+    left: -27px;
+    top: 30px;
+    animation-name: swip-up;
+    animation-duration: 1.5s;
+}
+
+@keyframes swip-up {
+    from {
+        top: 600px;
+    }
+}
+
+.top-introduction h1 {
+    font-size: 60px;
+    font-weight: 999;
+    margin: 0;
+    margin-bottom: -15px;
+    word-spacing: 10px;
+    animation-name: swip-left;
+    animation-duration: 1s;
+}
+
+.top-introduction span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-left: 3px;
+    animation-name: swip-left;
+    animation-duration: 1.5s;
+}
+
+@keyframes swip-left {
+    from {
+        transform: translatex(20px);
+        opacity: 0;
+    }
+}
+
+.center-introduction {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+.logo-area-relative {
+    position: relative;
+    width: 100%;
+}
+
+.center-introduction img[alt="circle"],
+.center-introduction img[alt="line"] {
+    width: 250px;
+    filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.334));
+    animation-name: logo;
+    animation-duration: 1s;
+    transition: 200ms;
+}
+
+.center-introduction img[alt="line"] {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    animation-name: logo;
+    animation-duration: 1.3s;
+    transition: 210ms;
+}
+
+.center-introduction:hover img[alt="circle"] {
+    transform: scale(1.1);
+}
+
+.center-introduction:hover img[alt="line"] {
+    transform: scale(1.1);
+}
+
+.center-introduction:hover .loaiproject {
+    opacity: 1;
+    transform: translateX(50%) scale(1);
+}
+
+@keyframes logo-hover {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes logo {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.loaiproject {
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    transform: translateX(50%) scale(0.8);
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms;
+}
+
+.introduction .fact {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    margin-left: 7%;
+    font-weight: 300;
+    font-size: 14px;
+    animation-name: swip-left;
+    animation-duration: 1.6s;
+}
+
+.introduction hr {
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom, transparent, white 55%);
+    border: none;
+}
+
+
+@media (max-width:428px) {
+    .nav-big-screen {
+        display: none;
+    }
+
+    .nav-small-screen {
+        display: block;
+    }
+
+    nav>a {
+        display: inline-block;
+    }
+}
