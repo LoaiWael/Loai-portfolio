@@ -228,13 +228,13 @@ main {
     border-color: white;
 }
 
-.photo-area #languages-list {
+.photo-area .lists {
     padding: 1%;
     text-wrap: wrap;
     width: 80%;
 }
 
-.photo-area #languages-list li {
+.photo-area .lists li {
     margin-bottom: 15px;
 }
 

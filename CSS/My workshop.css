@@ -156,6 +156,7 @@ nav .nav-big-screen {
     height: 100vh;
     position: relative;
     perspective: 500px;
+    overflow: hidden;
 }
 
 .background {
@@ -181,7 +182,7 @@ nav .nav-big-screen {
     position: absolute;
     z-index: 1;
     top: 15vh;
-    margin-left: 7%;
+    margin-left: 8%;
     perspective: 500px;
 }
 
@@ -319,24 +320,155 @@ nav .nav-big-screen {
 .introduction .fact {
     position: absolute;
     z-index: 2;
-    bottom: 15px;
-    margin-left: 7%;
+    bottom: 25px;
+    margin-left: 8%;
     font-weight: 300;
     font-size: 14px;
     animation-name: swip-left;
     animation-duration: 1.6s;
 }
 
-.introduction hr {
+.white-fog {
     position: absolute;
-    z-index: 1;
     bottom: -50px;
     width: 100%;
     height: 100px;
-    background-image: linear-gradient(to bottom, transparent, white 55%);
+    background-image: linear-gradient(to bottom, transparent, white 50%);
     border: none;
+    margin: 0;
 }
 
+.content {
+    background-color: white;
+}
+
+.sub-content {
+    padding: 100px 0;
+    margin-bottom: 300px;
+    position: relative;
+    height: 300px;
+}
+
+.sub-content h2 {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    padding-bottom: 7px;
+    margin-left: 5%;
+    font-size: 35px;
+    text-transform: capitalize;
+    background-color: var(--mainColor);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px 10px 0 0;
+    /* background-image: url("../My workshop/black\ and\ white\ fancy.png"); */
+    background-blend-mode: multiply;
+    background-size: 80%;
+    box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.218);
+}
+
+.sub-content h2 span {
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: -7px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+}
+
+.sub-content h2::after {
+    content: "";
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-bottom-left-radius: 20px;
+    box-shadow: -1px 15px 0 var(--mainColor);
+}
+
+.sub-content h2::before {
+    content: "";
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 15px 0 var(--mainColor);
+}
+
+.horizontal-content {
+    position: absolute;
+    z-index: 1;
+    top: 205px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainColor);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.horizontal-content::after {
+    content: "";
+    width: 97%;
+    height: 10px;
+    background-image: url("../My workshop/black\ and\ white\ fancy.png");
+    background-attachment: fixed;
+    position: absolute;
+    top: -10px;
+    background-color: rgb(116, 116, 116);
+    background-blend-mode: multiply;
+    background-size: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.horizontal-content::before {
+    content: "";
+    width: 97%;
+    height: 10px;
+    background-image: url("../My workshop/black\ and\ white\ fancy.png");
+    background-attachment: fixed;
+    position: absolute;
+    bottom: -10px;
+    background-color: rgb(116, 116, 116);
+    background-blend-mode: multiply;
+    background-size: 150px;
+    border-radius: 0 0 10px 10px;
+}
+
+@media (max-width:552px) {
+    .top-introduction h1 {
+        font-size: 45px;
+    }
+
+    .top-introduction span {
+        font-size: 12px;
+    }
+
+    .center-introduction img[alt="circle"],
+    .center-introduction img[alt="line"] {
+        width: 200px;
+    }
+
+    .loaiproject {
+        font-size: 15px;
+    }
+
+    .top-introduction::after {
+        left: -23px;
+    }
+
+    .introduction .fact {
+        font-size: 12px;
+    }
+}
 
 @media (max-width:428px) {
     .nav-big-screen {
@@ -349,5 +481,28 @@ nav .nav-big-screen {
 
     nav>a {
         display: inline-block;
+    }
+
+    .top-introduction h1 {
+        margin-left: 2%;
+    }
+
+    .top-introduction span {
+        margin-top: 3px;
+        margin-left: 2%;
+    }
+
+    .sub-content h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center-introduction img[alt="circle"],
+    .center-introduction img[alt="line"] {
+        width: 170px;
+    }
+
+    .loaiproject {
+        font-size: 12px;
     }
 }
