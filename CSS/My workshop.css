@@ -178,6 +178,7 @@ nav .nav-big-screen {
     height: 85vh;
     background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
     position: absolute;
+    z-index: 1;
     border-radius: 20px;
     left: -3%;
     top: 5px;
@@ -191,6 +192,7 @@ nav .nav-big-screen {
     height: calc(85vh - 25px);
     background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
     position: absolute;
+    z-index: 1;
     border-radius: 20px;
     left: -27px;
     top: 30px;
@@ -316,9 +318,10 @@ nav .nav-big-screen {
 
 .white-fog {
     position: absolute;
-    bottom: -50px;
+    bottom: 0;
+    transform: translate(0, 50%);
     width: 100%;
-    height: 100px;
+    height: 140px;
     background-image: linear-gradient(to bottom, transparent, white 50%);
     border: none;
     margin: 0;
@@ -326,6 +329,8 @@ nav .nav-big-screen {
 
 .content {
     background-color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .sub-content {
@@ -500,5 +505,9 @@ nav .nav-big-screen {
 
     .loaiproject {
         font-size: 12px;
+    }
+
+    .introduction .fact {
+        margin-left: 9%;
     }
 }
