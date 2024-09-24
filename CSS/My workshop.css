@@ -307,7 +307,7 @@ nav .nav-big-screen {
 
 .introduction .fact {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     bottom: 25px;
     margin-left: 8%;
     font-weight: 300;
@@ -318,6 +318,7 @@ nav .nav-big-screen {
 
 .white-fog {
     position: absolute;
+    z-index: 2;
     bottom: 0;
     transform: translate(0, 50%);
     width: 100%;
