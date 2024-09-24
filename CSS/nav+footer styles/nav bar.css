@@ -1,20 +1,68 @@
+nav>a {
+    display: none;
+    margin-right: 3%;
+}
+
+nav a .list-button {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+}
+
+.list-button .shape {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-weight: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.nav-small-screen {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 95;
+    right: 25px;
+    left: 25px;
+    top: 35px;
+    display: none;
+    list-style-type: none;
+    list-style-position: outside;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--boxShadow);
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     position: fixed;
     z-index: 100;
     width: calc(100% - 40px);
+    height: 40px;
     left: 20px;
     right: 20px;
     background-color: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: var(--boxShadow);
-    font-weight: 500;
     display: flow-root;
     font-size: 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
+nav .nav-big-screen {
     position: relative;
     margin: 2px;
     margin-right: 1%;
@@ -22,10 +70,9 @@ nav ul {
     padding: 0;
 }
 
-nav li {
+.nav-big-screen li {
     list-style: none;
     float: left;
-    font-size: 13px;
     margin-left: 5px;
 }
 
@@ -37,11 +84,12 @@ nav li {
     padding: 3px 5px;
     border-radius: 5px;
     transition-duration: var(--transitionDuration);
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .logo-name {
     position: relative;
-    top: 6.665px;
     left: 3%;
     font-weight: bold;
     font-size: 20px;
@@ -53,13 +101,13 @@ nav li {
 }
 
 .nav-buttons:active {
-    background-color: #252525;
+    background-color: var(--mainColor);
     color: white;
     box-sizing: border-box;
 }
 
 #home {
-    background-color: #252525;
+    background-color: var(--mainColor);
     color: white;
     pointer-events: none;
 }

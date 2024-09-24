@@ -46,38 +46,23 @@ nav a .list-button {
 }
 
 .nav-small-screen {
-    display: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
     position: fixed;
     z-index: 95;
     right: 25px;
     left: 25px;
-    top: 0;
+    top: 35px;
     display: none;
-    font-size: 16px;
     list-style-type: none;
     list-style-position: outside;
-    background-color: var(--mainColor);
-    padding: 37px 15px 0;
-    text-align: center;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
     box-shadow: var(--boxShadow);
-
-    li:not(last) {
-        margin-bottom: 10px;
-    }
-
-    li a {
-        color: white;
-    }
-
-    li a:hover {
-        background-color: rgb(55, 55, 55);
-    }
-
-    #cv {
-        background-color: white;
-        color: var(--mainColor);
-    }
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -91,7 +76,6 @@ nav {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: var(--boxShadow);
-    font-weight: 500;
     display: flow-root;
     font-size: 10px;
     box-sizing: border-box;
@@ -111,7 +95,6 @@ nav .nav-big-screen {
 .nav-big-screen li {
     list-style: none;
     float: left;
-    font-size: 13px;
     margin-left: 5px;
 }
 
@@ -123,6 +106,8 @@ nav .nav-big-screen {
     padding: 3px 5px;
     border-radius: 5px;
     transition-duration: var(--transitionDuration);
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .logo-name {
@@ -368,15 +353,25 @@ dd:empty::after {
 }
 
 @media (max-width:428px) {
+    nav {
+        height: 35px;
+    }
+
     .nav-big-screen {
         display: none;
     }
 
+
     .nav-small-screen {
-        display: block;
+        display: flex;
     }
 
-    nav>a {
+    /* nav>a {
         display: inline-block;
+    } */
+
+    .logo-name {
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
