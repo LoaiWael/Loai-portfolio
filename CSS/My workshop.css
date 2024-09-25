@@ -533,11 +533,14 @@ nav .nav-big-screen {
 
     .top-introduction h1 {
         margin-left: 2%;
+        line-height: 50px;
     }
 
     .top-introduction span {
-        margin-top: 3px;
-        margin-left: 2%;
+        letter-spacing: 3px;
+        margin-top: 10px;
+        margin-left: 3%;
+        line-height: 10px;
     }
 
     .sub-content h2 {
