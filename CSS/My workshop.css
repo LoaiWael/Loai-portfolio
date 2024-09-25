@@ -23,7 +23,7 @@
 
 body {
     margin: 0px;
-    background-color: var(--mainColor);
+    background-color: white;
     color: var(--mainColor);
 }
 
@@ -407,6 +407,16 @@ nav .nav-big-screen {
     color: white;
 }
 
+.projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: -16px;
+    padding-bottom: 10px;
+}
+
 .horizontal-content::after {
     content: "";
     width: 97%;
@@ -433,6 +443,42 @@ nav .nav-big-screen {
     background-blend-mode: multiply;
     background-size: 150px;
     border-radius: 0 0 10px 10px;
+}
+
+.horizontal-content img {
+    width: 200px;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.5);
+    transition: 100ms;
+}
+
+.horizontal-content a {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.horizontal-content figure {
+    transition: 200ms;
+}
+
+.horizontal-content a:hover figure {
+    transform: scale(1.07);
+
+    img {
+        border-color: black;
+        box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 0.5);
+    }
+}
+
+.horizontal-content a:active {
+    text-decoration: underline;
+}
+
+.horizontal-content figure figcaption {
+    font-weight: 600;
+    text-align: center;
 }
 
 @media (max-width:552px) {
@@ -510,5 +556,18 @@ nav .nav-big-screen {
 
     .introduction .fact {
         margin-left: 9%;
+    }
+
+    .projects {
+        padding-bottom: 20px;
+        margin-bottom: -30px;
+    }
+
+    .projects figure img {
+        width: 170px;
+    }
+
+    .projects figcaption {
+        font-size: 14px;
     }
 }

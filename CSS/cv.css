@@ -375,3 +375,19 @@ dd:empty::after {
         transform: translate(-50%, 0);
     }
 }
+
+.no-permission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+img[alt="no-permission"] {
+    width: 15%;
+}

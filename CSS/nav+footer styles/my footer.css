@@ -1,7 +1,6 @@
 /* Footer styling */
 footer {
     background-color: var(--mainColor);
-    position: relative;
     color: white;
     padding: 15px;
 }
@@ -80,14 +79,4 @@ footer hr {
     width: 85%;
     margin-top: 20px;
     margin-bottom: 10px;
-}
-
-footer::before {
-    content: '';
-    width: 100%;
-    height: 35px;
-    background-image: linear-gradient(to top, var(--mainColor) 35%, rgba(255, 255, 255, 0) 420%);
-    position: absolute;
-    top: -25px;
-    left: 0;
 }
