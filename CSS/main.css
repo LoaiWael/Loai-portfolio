@@ -296,14 +296,13 @@ nav .nav-big-screen {
     border-radius: 5px;
     margin: 110px 0;
     animation-name: scrolling;
-    animation-timeline: view(98% 0);
+    animation-timeline: view(99% 0);
 }
 
 @keyframes scrolling {
     from {
         opacity: 0.4;
         transform: scale(0.9);
-        filter: blur(3px);
     }
 }
 
@@ -316,8 +315,6 @@ nav .nav-big-screen {
     align-content: space-evenly;
     padding: 10px;
     border-radius: 10px;
-    animation-name: scrolling;
-    animation-timeline: view(96% 0);
 }
 
 .content-after-headline {
@@ -401,6 +398,38 @@ nav .nav-big-screen {
 #experience-line {
     background-image: var(--decorationColor2);
     width: 40%;
+}
+
+#experience .content img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.experience-content-flex {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    order: 2;
+}
+
+.experience-content-flex article {
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    padding: 15px;
+    flex: 1;
+
+    dl {
+        margin-left: 5px;
+    }
+}
+
+.content-after-headline h3 {
+    margin-top: 0;
+    text-transform: uppercase;
 }
 
 .content-after-headline details img {
@@ -633,6 +662,10 @@ footer hr {
         flex: 0 1 80%;
         margin: 10px 0;
     }
+
+    /* .experience-content-flex article:not(:last-child) {
+        margin-bottom: 10px;
+    } */
 }
 
 .no-permission {

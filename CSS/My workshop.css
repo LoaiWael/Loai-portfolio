@@ -413,8 +413,6 @@ nav .nav-big-screen {
     align-items: center;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-bottom: -16px;
-    padding-bottom: 10px;
 }
 
 .horizontal-content::after {
@@ -461,6 +459,10 @@ nav .nav-big-screen {
 
 .horizontal-content figure {
     transition: 200ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .horizontal-content a:hover figure {
@@ -478,7 +480,14 @@ nav .nav-big-screen {
 
 .horizontal-content figure figcaption {
     font-weight: 600;
-    text-align: center;
+    margin: 3px;
+}
+
+.horizontal-content figure span {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.4;
+    margin-top: -5px;
 }
 
 @media (max-width:552px) {
