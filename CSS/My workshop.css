@@ -2,7 +2,6 @@
 /* font-family: "Noto Serif TC", serif; */
 
 :root {
-    font-family: "Lexend", sans-serif;
     --mainColor: #252525;
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
@@ -25,6 +24,7 @@ body {
     margin: 0px;
     background-color: white;
     color: var(--mainColor);
+    font-family: "Lexend", sans-serif;
 }
 
 nav>a {
