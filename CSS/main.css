@@ -73,26 +73,6 @@ nav a .list-button {
     border-radius: 50%;
 }
 
-.nav-small-screen {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    z-index: 95;
-    right: 25px;
-    left: 25px;
-    top: 35px;
-    display: none;
-    list-style-type: none;
-    list-style-position: outside;
-    background-color: white;
-    border-radius: 0 0 10px 10px;
-    box-shadow: var(--boxShadow);
-    margin: 0;
-    padding: 0;
-}
-
 nav {
     position: fixed;
     z-index: 100;
@@ -112,15 +92,36 @@ nav {
     align-items: center;
 }
 
-nav .nav-big-screen {
-    position: relative;
+nav .nav-links {
     margin: 2px;
     margin-right: 1%;
     float: right;
     padding: 0;
 }
 
-.nav-big-screen li {
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 7px 4px;
+    margin: 5px;
+    transition: 200ms;
+    border-radius: 50%;
+}
+
+nav .hamburger:hover {
+    background-color: var(--hoverBackgroundColor);
+}
+
+nav .hamburger .bar {
+    width: 20px;
+    height: 3px;
+    background-color: #252525;
+    margin: 1px;
+    border-radius: 3px;
+}
+
+.nav-links li {
     list-style: none;
     float: left;
     margin-left: 5px;
@@ -579,7 +580,7 @@ footer hr {
     margin-bottom: 10px;
 }
 
-@media (min-width:427px) and (max-width:1172px) {
+@media (max-width:1172px) {
     .introduction {
         align-content: center;
     }
@@ -590,31 +591,56 @@ footer hr {
 }
 
 @media (max-width:428px) {
-
     nav {
         height: 35px;
     }
-
-    .nav-big-screen {
-        display: none;
-    }
-
-
-    .nav-small-screen {
-        display: flex;
-    }
-
-    /* nav>a {
-        display: inline-block;
-    } */
 
     .logo-name {
         left: 50%;
         transform: translate(-50%, 0);
     }
 
-    .photo-space {
-        margin-top: 70px;
+    nav .nav-links {
+        display: none;
+        position: fixed;
+        z-index: 95;
+        top: 35px;
+        right: 25px;
+        left: 25px;
+        background-color: var(--mainColor);
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+    }
+
+    .nav-buttons {
+        color: white;
+    }
+
+    .nav-buttons:hover {
+        background-color: rgba(255, 255, 255, 0.151);
+    }
+
+    .nav-buttons:active {
+        color: var(--mainColor);
+        background-color: white;
+    }
+
+    #home {
+        background-color: white;
+        color: var(--mainColor);
+        pointer-events: none;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: flex;
     }
 
     .photo-space #background {

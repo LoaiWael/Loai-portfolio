@@ -26,24 +26,23 @@
         <!-- NAVIGATION BAR SKELETON -->
         <nav>
             <span class="logo-name">.Loa项目'</span>
-            <ul class="nav-big-screen">
-                <li for="buttons"><a href="./index.html" class="nav-buttons" target="_self" id="home">Home</a></li>
-                <li for="buttons"><a href="./CV.html" class="nav-buttons" target="_self" id="cv">CV</a></li>
-                <li for="buttons"><a href="./My workshop.html" class="nav-buttons" target="_self" id="my-workshop">My
-                        workshop</a></li>
+            <ul class="nav-links">
+                <li><a target="_self" class="nav-buttons" href="./index.html" id="home">Home</a></li>
+                <li><a target="_self" class="nav-buttons" href="./CV.html" id="cv">CV</a></li>
+                <li><a target="_self" class="nav-buttons" href="./My workshop.html">My workshop</a></li>
             </ul>
-            <a href="">
-                <div class="list-button">
-                    <div class="shape"><i class="bi bi-list"></i></div>
-                </div>
-            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
-        <ul class="nav-small-screen">
-            <li for="buttons"><a href="./index.html" class="nav-buttons" target="_self" id="home">Home</a></li>
-            <li for="buttons"><a href="./CV.html" class="nav-buttons" target="_self" id="cv">CV</a></li>
-            <li for="buttons"><a href="./My workshop.html" class="nav-buttons" target="_self" id="my-workshop">My
-                    workshop</a></li>
-        </ul>
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
     </header>
     <!-- <div class="no-permission">
         <img src="./no pirimision.png" alt="no-permission">
