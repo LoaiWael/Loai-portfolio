@@ -199,13 +199,14 @@ nav .nav-big-screen {
     font-weight: 950;
     font-size: 50px;
     margin: 0;
+    line-height: 40px;
 }
 
 .info-under-name {
     font-family: "IBM Plex Mono", monospace;
     font-size: 13px;
     margin: 0;
-    margin-top: -10px;
+    margin-left: 3px;
 }
 
 .contacts {
@@ -630,6 +631,10 @@ footer hr {
 
     .name {
         font-size: 40px;
+    }
+
+    .info-under-name {
+        font-size: 11px;
     }
 
     #introduction-line {
