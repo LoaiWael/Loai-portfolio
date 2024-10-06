@@ -27,31 +27,6 @@ body {
     font-family: "Lexend", sans-serif;
 }
 
-nav>a {
-    display: none;
-    margin-right: 3%;
-}
-
-nav a .list-button {
-    position: relative;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: var(--mainColor);
-}
-
-.list-button .shape {
-    position: absolute;
-    color: white;
-    text-align: center;
-    font-weight: 999;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
-
 nav {
     position: fixed;
     z-index: 100;
@@ -107,6 +82,24 @@ nav .hamburger .bar {
     margin-left: 5px;
 }
 
+details.nav-buttons {
+    cursor: pointer;
+
+    div {
+        margin-top: 15px;
+    }
+
+    a.nav-buttons {
+        font-weight: 200;
+        color: white;
+    }
+
+    a.nav-buttons:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+
 .nav-buttons {
     text-decoration: none;
     color: var(--mainColor);
@@ -140,7 +133,15 @@ nav .hamburger .bar {
 #my-workshop {
     background-color: var(--mainColor);
     color: white;
-    pointer-events: none;
+}
+
+#my-workshop[open] {
+    transform: translate(0, 45%);
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+    color: white;
+    transition: 200ms;
 }
 
 .introduction {
@@ -523,7 +524,7 @@ nav .hamburger .bar {
     }
 }
 
-@media (max-width:428px) {
+@media (max-width:445px) {
     nav {
         height: 35px;
     }
@@ -542,7 +543,6 @@ nav .hamburger .bar {
         left: 25px;
         background-color: var(--mainColor);
         flex-direction: column;
-        text-align: center;
         padding: 1rem;
         margin: 0;
         border-radius: 0 0 5px 5px;
@@ -554,7 +554,7 @@ nav .hamburger .bar {
     }
 
     .nav-buttons:hover {
-        background-color: rgba(255, 255, 255, 0.151);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     .nav-buttons:active {
@@ -565,7 +565,20 @@ nav .hamburger .bar {
     #my-workshop {
         background-color: white;
         color: var(--mainColor);
-        pointer-events: none;
+    }
+
+    #my-workshop[open] {
+        background-color: white;
+        color: var(--mainColor);
+        transform: translate(0, 0);
+
+        a.nav-buttons {
+            color: var(--mainColor);
+        }
+
+        a.nav-buttons:hover {
+            background-color: var(--hoverBackgroundColor);
+        }
     }
 
     nav .nav-links.active {

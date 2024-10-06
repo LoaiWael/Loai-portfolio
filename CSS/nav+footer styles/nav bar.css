@@ -1,28 +1,3 @@
-nav>a {
-    display: none;
-    margin-right: 3%;
-}
-
-nav a .list-button {
-    position: relative;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: var(--mainColor);
-}
-
-.list-button .shape {
-    position: absolute;
-    color: white;
-    text-align: center;
-    font-weight: 999;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
-
 nav {
     position: fixed;
     z-index: 100;
@@ -113,7 +88,16 @@ nav .hamburger .bar {
     pointer-events: none;
 }
 
-@media (max-width:428px) {
+#my-workshop[open] {
+    transform: translate(0, 45%);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+    color: var(--mainColor);
+    transition: 200ms;
+}
+
+@media (max-width:445px) {
     nav {
         height: 35px;
     }
@@ -132,7 +116,6 @@ nav .hamburger .bar {
         left: 25px;
         background-color: var(--mainColor);
         flex-direction: column;
-        text-align: center;
         padding: 1rem;
         margin: 0;
         border-radius: 0 0 5px 5px;
@@ -144,7 +127,7 @@ nav .hamburger .bar {
     }
 
     .nav-buttons:hover {
-        background-color: rgba(255, 255, 255, 0.151);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     .nav-buttons:active {
@@ -152,10 +135,18 @@ nav .hamburger .bar {
         background-color: white;
     }
 
-    #cv {
+    #home {
         background-color: white;
         color: var(--mainColor);
         pointer-events: none;
+    }
+
+    #my-workshop[open] {
+        color: white;
+        background-color: transparent;
+        transform: translate(0, 0);
+        box-shadow: initial;
+        border-radius: initial;
     }
 
     nav .nav-links.active {
