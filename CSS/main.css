@@ -365,6 +365,14 @@ details.nav-buttons {
     box-shadow: var(--boxShadow);
 }
 
+.list-spaces {
+    margin-top: 20px;
+}
+
+.list-spaces li {
+    line-height: 0;
+}
+
 #skills-line {
     background-image: var(--decorationColor4);
     width: 30%;
@@ -428,12 +436,6 @@ details.nav-buttons {
 .content-after-headline h3 {
     margin-top: 0;
     text-transform: uppercase;
-}
-
-.content-after-headline details img {
-    width: 100%;
-    filter: none;
-    border-radius: 10px;
 }
 
 #contacts-line {
