@@ -17,8 +17,8 @@
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
     --decorationBarHeight: 8px;
     --transitionDuration: 200ms;
-    --boxShadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
-    --imageBoxShadow: 0 3px 10px;
+    --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
+    --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
     --hoverBackgroundColor: #25252540;
     background-color: var(--mainColor);
 }
@@ -327,7 +327,7 @@ details.nav-buttons {
 
 .content img {
     width: 20%;
-    filter: drop-shadow(0 4px 4px);
+    filter: drop-shadow(var(--imageBoxShadow));
 }
 
 .brown-links {

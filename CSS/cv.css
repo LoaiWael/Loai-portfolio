@@ -1,5 +1,4 @@
 :root {
-    font-family: "Lexend", sans-serif;
     --mainColor: #252525;
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
@@ -8,8 +7,8 @@
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
     --decorationBarHeight: 8px;
     --transitionDuration: 200ms;
-    --boxShadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
-    --imageBoxShadow: 0 3px 10px;
+    --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
+    --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
     --hoverBackgroundColor: #25252540;
     background-color: var(--mainColor);
 }
@@ -21,6 +20,7 @@
 body {
     margin: 0px;
     background-color: var(--mainColor);
+    font-family: "Lexend", sans-serif;
     color: var(--mainColor);
 }
 
