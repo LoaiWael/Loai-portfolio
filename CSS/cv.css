@@ -233,17 +233,21 @@ div h3 {
     grid-column-start: 2;
 }
 
+.education small {
+    display: block;
+    margin: -10px 0 10px 10px;
+    font-weight: 300;
+}
+
 .skills {
     grid-column-start: 3;
 }
 
 .experience {
-    grid-column: 2 / span 2;
+    grid-column-start: 2;
 }
 
-.education,
-.skills,
-.experience {
+.sub-content {
     padding: 0 10px;
     border-radius: 8px;
     box-shadow: var(--boxShadow);
@@ -256,7 +260,11 @@ div h3 {
 .experience-content h4 {
     text-indent: 10px;
     margin-bottom: 5px;
-    word-spacing: 30px;
+
+    span {
+        font-size: 13px;
+        font-weight: 300;
+    }
 }
 
 .experience-content {
@@ -264,10 +272,15 @@ div h3 {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    align-content: space-evenly;
+    align-content: space-between;
 }
 
-.experience-content div {
+.front-end,
+.ui-ux {
+    flex: 2 1 50%;
+}
+
+.modeling {
     flex: 1 1 auto;
 }
 
@@ -313,7 +326,7 @@ dd:empty::after {
     }
 
     .photo-area {
-        grid-row: span 3;
+        grid-row: span 4;
     }
 
     .education {
@@ -328,6 +341,10 @@ dd:empty::after {
     .experience {
         grid-column-start: 2;
         margin: 10px 0 0 10px;
+    }
+
+    .additional-skills {
+        grid-column-start: 2;
     }
 }
 

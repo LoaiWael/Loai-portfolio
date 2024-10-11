@@ -433,6 +433,13 @@ details.nav-buttons {
     }
 }
 
+.experience-content-flex article small {
+    display: block;
+    margin-top: -24px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
 .content-after-headline h3 {
     margin-top: 0;
     text-transform: uppercase;
