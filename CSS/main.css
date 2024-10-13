@@ -515,9 +515,9 @@ footer a:hover {
 
 .top-footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    align-content: flex-start;
+    align-content: space-between;
     flex-wrap: wrap;
     width: 95%;
     margin-left: auto;
@@ -706,9 +706,10 @@ footer hr {
         margin: 10px 0;
     }
 
-    /* .experience-content-flex article:not(:last-child) {
-        margin-bottom: 10px;
-    } */
+    .logo-footer {
+        flex: 2 1 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .no-permission {
