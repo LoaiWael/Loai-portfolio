@@ -197,6 +197,7 @@ details.nav-buttons {
     font-size: 50px;
     margin: 0;
     line-height: 40px;
+    animation: move-up-int 1000ms;
 }
 
 .info-under-name {
@@ -204,25 +205,23 @@ details.nav-buttons {
     font-size: 13px;
     margin: 0;
     margin-left: 3px;
+    animation: move-up-int 1400ms;
 }
 
 .contacts {
     width: 100%;
     text-wrap: nowrap;
-}
+    animation: move-down-int 1000ms;
 
-.contacts a {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 4px 6px;
-    border-radius: 50%;
-    color: var(--mainColor);
-    transition-duration: var(--transitionDuration);
-    transition-property: filter, background-color;
-}
-
-.contacts .whatsapp {
-    cursor: default;
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 4px 6px;
+        border-radius: 50%;
+        color: var(--mainColor);
+        transition-duration: var(--transitionDuration);
+        transition-property: filter, background-color;
+    }
 }
 
 .contacts a:hover {
@@ -233,6 +232,8 @@ details.nav-buttons {
 .photo-space {
     position: relative;
     width: fit-content;
+    animation: image 1500ms;
+    animation-fill-mode: both;
 }
 
 #background {
@@ -250,12 +251,49 @@ details.nav-buttons {
     bottom: 5px;
     right: 0px;
     filter: drop-shadow(0 2px 5px);
+    animation: me 1800ms;
+    animation-fill-mode: both;
+}
+
+@keyframes me {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes image {
+    0% {
+        opacity: 0.7;
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes move-up-int {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes move-down-int {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }
 
 .cv-content {
     grid-area: cv-content;
     background-color: white;
-    box-shadow: 0 0 15px 0 rgb(0, 0, 0, 0.5);
+    box-shadow: var(--boxShadow);
     display: grid;
     grid-template-columns: 10% repeat(12, 1fr) 10%;
     grid-template-rows: auto auto auto auto auto auto;
