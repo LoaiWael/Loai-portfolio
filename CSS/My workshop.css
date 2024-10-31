@@ -150,6 +150,7 @@ details.nav-buttons {
     perspective: 500px;
     overflow: hidden;
     background-color: rgb(227, 227, 227);
+    overflow: hidden;
 }
 
 .background {
