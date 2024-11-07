@@ -340,6 +340,7 @@ details.nav-buttons {
     background-color: white;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .sub-content {
@@ -361,7 +362,7 @@ details.nav-buttons {
     color: white;
     width: fit-content;
     height: fit-content;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     /* background-image: url("../My workshop/black\ and\ white\ fancy.png"); */
     background-blend-mode: multiply;
     background-size: 80%;
@@ -378,26 +379,26 @@ details.nav-buttons {
 
 .sub-content h2::after {
     content: "";
-    width: 10%;
-    height: 100%;
+    width: 100%;
+    height: 60%;
     background-color: transparent;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 100%;
-    border-bottom-left-radius: 20px;
-    box-shadow: -1px 15px 0 var(--mainColor);
+    border-bottom-left-radius: 27px;
+    box-shadow: -10px 3px 0 3px var(--mainColor);
 }
 
 .sub-content h2::before {
     content: "";
-    width: 10%;
-    height: 100%;
+    width: 100%;
+    height: 60%;
     background-color: transparent;
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 100%;
-    border-bottom-right-radius: 20px;
-    box-shadow: 1px 15px 0 var(--mainColor);
+    border-bottom-right-radius: 27px;
+    box-shadow: 10px 3px 0 3px var(--mainColor);
 }
 
 .horizontal-content {

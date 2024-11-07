@@ -233,7 +233,7 @@ div h3 {
     grid-column-start: 2;
 }
 
-.education small {
+.education small:not(.essentials) {
     display: block;
     margin: -10px 0 10px 10px;
     font-weight: 300;
