@@ -18,6 +18,8 @@
         rel="stylesheet">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="./JS/Jquery.js"></script>
+    <script src="./JS/main.js"></script>
     <title>My workshop</title>
 </head>
 
@@ -29,34 +31,26 @@
             <ul class="nav-links">
                 <li><a target="_self" class="nav-buttons" href="./index.html" id="home">Home</a></li>
                 <li><a target="_self" class="nav-buttons" href="./CV.html" id="cv">CV</a></li>
-                <li>
-                    <details class="nav-buttons" id="my-workshop">
-                        <summary>My workshop</summary>
-                        <div>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html">Home</a>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html#websites">Websites</a>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html#small-pages">Small pages</a>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html#open-source-projects">Open
-                                source
-                                projects</a>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html#ui-ux">UI / UX</a>
-                            <a class="nav-buttons" target="_self" href="./My workshop.html#3d">3D Modeling</a>
-                        </div>
-                    </details>
+                <li><a class="nav-buttons" id="my-workshop">My workshop</a>
                 </li>
+                <ul class="my-workshop-list">
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html">Home</a></li>
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html#websites">Websites</a></li>
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html#small-pages">Small
+                            pages</a></li>
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html#open-source-projects">Open
+                            source
+                            projects</a></li>
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html#ui-ux">UI / UX</a></li>
+                    <li><a class="nav-buttons" target="_self" href="./My workshop.html#3d">3D Modeling</a></li>
+                </ul>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
         </nav>
-        <script>
-            function toggleMenu() {
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.toggle('active');
-            }
-        </script>
     </header>
     <main>
         <section class="introduction">

@@ -37,20 +37,19 @@ nav {
     background-color: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: var(--boxShadow);
-    display: flow-root;
-    font-size: 10px;
-    box-sizing: border-box;
+    z-index: 98;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: var(--boxShadow);
 }
 
-nav .nav-links {
+.nav-links {
     margin: 2px;
     margin-right: 1%;
     float: right;
     padding: 0;
+    display: flex;
 }
 
 
@@ -82,24 +81,6 @@ nav .hamburger .bar {
     margin-left: 5px;
 }
 
-details.nav-buttons {
-    cursor: pointer;
-
-    div {
-        margin-top: 15px;
-    }
-
-    a.nav-buttons {
-        font-weight: 200;
-        color: white;
-    }
-
-    a.nav-buttons:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
-
 .nav-buttons {
     text-decoration: none;
     color: var(--mainColor);
@@ -110,6 +91,13 @@ details.nav-buttons {
     transition-duration: var(--transitionDuration);
     font-weight: 500;
     font-size: 13px;
+}
+
+button.nav-buttons {
+    border: none;
+    background-color: transparent;
+    font-family: "Lexend", sans-serif;
+    cursor: pointer;
 }
 
 .logo-name {
@@ -129,19 +117,41 @@ details.nav-buttons {
     color: white;
 }
 
-
 #my-workshop {
     background-color: var(--mainColor);
     color: white;
+    cursor: pointer;
 }
 
-#my-workshop[open] {
-    transform: translate(0, 45%);
-    background-color: var(--mainColor);
-    border-radius: 5px;
-    box-shadow: var(--boxShadow);
-    color: white;
-    transition: 200ms;
+.nav-links .my-workshop-list {
+    visibility: hidden;
+    list-style-type: none;
+    background-color: #252525e3;
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 5px 5px;
+    position: fixed;
+    z-index: 97;
+    top: 40px;
+    right: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    li a.nav-buttons {
+        font-weight: 400;
+        color: white;
+    }
+}
+
+.my-workshop-list li a.nav-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .introduction {
@@ -498,6 +508,17 @@ details.nav-buttons {
     margin-top: -5px;
 }
 
+@media (max-width:670px) {
+    .my-workshop-list {
+        flex-direction: column;
+        align-items: start;
+
+        li:first-child {
+            margin-top: 7px;
+        }
+    }
+}
+
 @media (max-width:552px) {
     .top-introduction h1 {
         font-size: 45px;
@@ -536,18 +557,30 @@ details.nav-buttons {
     }
 
     nav .nav-links {
-        display: none;
+        visibility: hidden;
         position: fixed;
         z-index: 95;
         top: 35px;
         right: 25px;
         left: 25px;
-        background-color: var(--mainColor);
+        background-color: #252525d6;
+        backdrop-filter: blur(10px);
+        -moz-backdrop-filter: blur(10px);
+        -ms-backdrop-filter: blur(10px);
+        -o-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 1rem;
         margin: 0;
         border-radius: 0 0 5px 5px;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+    }
+
+    .nav-links .my-workshop-list {
+        top: 140px;
+        left: 5px;
+        right: 100px;
+        align-items: flex-start;
     }
 
     .nav-buttons {
