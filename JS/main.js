@@ -11,4 +11,10 @@ $(function () {
         $(".nav-links").css("visibility", "visible");
         $(".nav-links").slideToggle("fast");
     });
+
+    const image = document.getElementsByTagName("img");
+    image.setAttribute("draggable", "false");
+    image.oncontextmenu = function () {
+        return false
+    }
 })
