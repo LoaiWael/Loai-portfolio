@@ -173,7 +173,7 @@ button.nav-buttons {
     height: 100%;
     width: 100%;
     animation-name: background;
-    animation-duration: 2s;
+    animation-duration: 2.7s;
 }
 
 @keyframes background {
@@ -201,7 +201,7 @@ button.nav-buttons {
     left: -3%;
     top: 5px;
     animation-name: swip-up;
-    animation-duration: 1.2s;
+    animation-duration: 1.5s;
 }
 
 .top-introduction::after {
@@ -215,7 +215,7 @@ button.nav-buttons {
     left: -27px;
     top: 30px;
     animation-name: swip-up;
-    animation-duration: 1.5s;
+    animation-duration: 1.7s;
 }
 
 @keyframes swip-up {
@@ -231,7 +231,7 @@ button.nav-buttons {
     margin-bottom: -15px;
     word-spacing: 10px;
     animation-name: swip-left;
-    animation-duration: 1s;
+    animation-duration: 1500ms;
 }
 
 .top-introduction span {
@@ -241,12 +241,12 @@ button.nav-buttons {
     letter-spacing: 5px;
     margin-left: 3px;
     animation-name: swip-left;
-    animation-duration: 1.5s;
+    animation-duration: 2000ms;
 }
 
 @keyframes swip-left {
     from {
-        transform: translatex(20px);
+        transform: translatex(25px);
         opacity: 0;
     }
 }
@@ -270,7 +270,7 @@ button.nav-buttons {
     width: 250px;
     filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.334));
     animation-name: logo;
-    animation-duration: 1s;
+    animation-duration: 2s;
     transition: 200ms;
 }
 
@@ -279,7 +279,7 @@ button.nav-buttons {
     left: 0;
     bottom: 25px;
     animation-name: logo;
-    animation-duration: 1.3s;
+    animation-duration: 2.3s;
     transition: 210ms;
 }
 
