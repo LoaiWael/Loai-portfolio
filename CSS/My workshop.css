@@ -34,7 +34,12 @@ nav {
     height: 40px;
     left: 20px;
     right: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: 98;
@@ -126,32 +131,31 @@ button.nav-buttons {
 .nav-links .my-workshop-list {
     visibility: hidden;
     list-style-type: none;
-    background-color: #252525e3;
-    backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--mainColor);
     border-radius: 0 0 5px 5px;
     position: fixed;
     z-index: 97;
     top: 40px;
-    right: 25px;
+    right: 5px;
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-    li a.nav-buttons {
-        font-weight: 400;
-        color: white;
+    li {
+        margin: 0;
     }
-}
 
-.my-workshop-list li a.nav-buttons:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    li a.nav-buttons {
+        color: white;
+        font-weight: 400;
+    }
+
+    li a.nav-buttons:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 }
 
 .introduction {
@@ -511,7 +515,13 @@ button.nav-buttons {
 @media (max-width:670px) {
     .my-workshop-list {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
+        justify-content: center;
+        direction: rtl;
+
+        li {
+            width: 100%;
+        }
 
         li:first-child {
             margin-top: 7px;
@@ -563,7 +573,7 @@ button.nav-buttons {
         top: 35px;
         right: 25px;
         left: 25px;
-        background-color: #252525d6;
+        background-color: var(--mainColor);
         backdrop-filter: blur(10px);
         -moz-backdrop-filter: blur(10px);
         -ms-backdrop-filter: blur(10px);
@@ -580,7 +590,9 @@ button.nav-buttons {
         top: 140px;
         left: 5px;
         right: 100px;
+        background-color: var(--mainColor);
         align-items: flex-start;
+        direction: ltr;
     }
 
     .nav-buttons {
