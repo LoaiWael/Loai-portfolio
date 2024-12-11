@@ -22,6 +22,7 @@ body {
     background-color: var(--mainColor);
     font-family: "Lexend", sans-serif;
     color: var(--mainColor);
+    font-size: 17px;
 }
 
 nav {

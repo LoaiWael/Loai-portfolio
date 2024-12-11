@@ -89,6 +89,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--boxShadow);
+    animation-name: slideDown;
+    animation-duration: 1700ms;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-40px);
+    }
 }
 
 .nav-links {
@@ -391,6 +399,7 @@ nav .hamburger .bar {
     align-content: space-evenly;
     padding: 10px;
     border-radius: 10px;
+    font-size: 17px;
 }
 
 .content-after-headline {
@@ -514,6 +523,7 @@ nav .hamburger .bar {
 .experience-content-flex article small {
     display: block;
     margin-top: -24px;
+    margin-bottom: 30px;
     font-size: 12px;
     font-weight: 300;
 }
