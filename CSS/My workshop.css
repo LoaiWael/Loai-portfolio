@@ -3,6 +3,7 @@
 
 :root {
     --mainColor: #252525;
+    --black1: #131313;
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
@@ -123,7 +124,7 @@ button.nav-buttons {
 }
 
 #my-workshop {
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     color: white;
     cursor: pointer;
 }
@@ -131,7 +132,7 @@ button.nav-buttons {
 .nav-links .my-workshop-list {
     visibility: hidden;
     list-style-type: none;
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     border-radius: 0 0 5px 5px;
     position: fixed;
     z-index: 97;

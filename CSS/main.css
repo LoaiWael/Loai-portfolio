@@ -10,6 +10,7 @@
 
 :root {
     --mainColor: #252525;
+    --black1: #131313;
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
@@ -169,7 +170,7 @@ nav .hamburger .bar {
 }
 
 #home {
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     color: white;
     pointer-events: none;
 }
@@ -177,7 +178,7 @@ nav .hamburger .bar {
 .nav-links .my-workshop-list {
     visibility: hidden;
     list-style-type: none;
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     border-radius: 0 0 5px 5px;
     position: fixed;
     z-index: 97;
@@ -595,7 +596,7 @@ nav .hamburger .bar {
 
 /* Footer styling */
 footer {
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     color: white;
     padding: 15px;
 }
@@ -642,7 +643,7 @@ footer a:hover {
 .logo-footer {
     color: white;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.7rem;
     flex: 2 70px;
     position: relative;
     text-wrap: nowrap;
