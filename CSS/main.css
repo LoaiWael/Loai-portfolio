@@ -827,17 +827,7 @@ footer hr {
     }
 }
 
-.no-permission {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    font-weight: 200;
-    font-size: 14px;
-}
-
-img[alt="no-permission"] {
-    width: 15%;
+button[aria-label="Visual Search"],
+button[data-visual-search] {
+    display: none !important;
 }

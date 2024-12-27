@@ -679,3 +679,8 @@ button.nav-buttons {
         font-size: 14px;
     }
 }
+
+button[aria-label="Visual Search"],
+button[data-visual-search] {
+    display: none !important;
+}
