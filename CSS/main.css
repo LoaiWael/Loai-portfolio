@@ -91,6 +91,8 @@ nav {
     align-items: center;
     box-shadow: var(--boxShadow);
     animation-name: slideDown;
+    animation-fill-mode: both;
+    animation-delay: 500ms;
     animation-duration: 1700ms;
 }
 
@@ -245,7 +247,8 @@ nav .hamburger .bar {
     font-size: 50px;
     margin: 0;
     line-height: 40px;
-    animation: move-up-int 1000ms;
+    animation: pop-up 1500ms;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .info-under-name {
@@ -253,13 +256,13 @@ nav .hamburger .bar {
     font-size: 13px;
     margin: 0;
     margin-left: 3px;
-    animation: move-up-int 1400ms;
+    animation: pop-up 2000ms;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .contacts {
     width: 100%;
     text-wrap: nowrap;
-    animation: move-down-int 1000ms;
 
     a {
         display: inline-block;
@@ -324,17 +327,25 @@ nav .hamburger .bar {
     }
 }
 
-@keyframes move-up-int {
+@keyframes pop-up {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+        filter: blur(1.5px);
+        transform: scale(0.8) translateY(10px);
+    }
+
+    70% {
+        transform: scale(1.05);
     }
 }
 
-@keyframes move-down-int {
+@keyframes pop-up-contacts {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        filter: blur(0.5px);
+        transform: scale(0.8) translateY(10px);
+    }
+
+    70% {
+        transform: scale(1.3);
     }
 }
 

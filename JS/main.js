@@ -12,9 +12,12 @@ $(function () {
         $(".nav-links").slideToggle("fast");
     });
 
-    const image = document.getElementsByTagName("img");
-    image.setAttribute("draggable", "false");
-    image.oncontextmenu = function () {
-        return false
+    const contactLinks = document.querySelectorAll(".contacts a");
+    var timing = 1500;
+    for (let i = 0; i < contactLinks.length; i++) {
+        contactLinks[i].style.animationName = 'pop-up-contacts'
+        contactLinks[i].style.animationTimingFunction = 'cubic-bezier(1, 0, 0, 1)'
+        contactLinks[i].style.animationDuration = `${timing}ms`
+        timing += 100
     }
 })
