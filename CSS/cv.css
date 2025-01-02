@@ -170,7 +170,7 @@ main {
     box-shadow: var(--boxShadow);
     display: grid;
     grid-template-columns: minmax(150px, 1fr) minmax(150px, 2fr) minmax(150px, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, auto);
     gap: 10px;
 }
 
@@ -185,7 +185,7 @@ main {
     padding: 10px;
     color: white;
     font-size: 14px;
-    grid-row: span 2;
+    grid-row: span 3;
 }
 
 .photo-area img {
@@ -253,7 +253,7 @@ div h3 {
     grid-column-start: 2;
 }
 
-.education small:not(.essentials) {
+.education small {
     display: block;
     margin: -10px 0 10px 10px;
     font-weight: 300;
@@ -265,9 +265,10 @@ div h3 {
 
 .experience {
     grid-column-start: 2;
+    grid-row: span 2;
 }
 
-.additional-experience {
+.additional-info {
     grid-column-start: 3;
 }
 
@@ -343,33 +344,21 @@ dd:empty::after {
     margin: 10px 3% 10px 5%;
 }
 
-@media (min-width:510px) and (max-width:941px) {
+@media (min-width:585px) and (max-width:941px) {
     .cv {
         grid-template-columns: minmax(150px, 1fr) minmax(150px, 2fr);
-        gap: 0;
-    }
-
-    .photo-area {
-        grid-row: span 4;
-    }
-
-    .education {
-        margin: 0 0 0 10px;
     }
 
     .skills {
         grid-column-start: 2;
-        margin: 10px 0 0 10px;
     }
 
     .experience {
         grid-column-start: 2;
-        margin: 10px 0 0 10px;
     }
 
     .additional-experience {
-        grid-column-start: 2;
-        margin: 10px 0 0 10px;
+        grid-column: span 2
     }
 }
 
@@ -390,26 +379,21 @@ dd:empty::after {
     }
 }
 
-@media (max-width:510px) {
+@media (max-width:585px) {
     .cv {
         grid-template-columns: minmax(150px, 1fr);
-        gap: 0;
     }
 
     .education,
     .skills,
     .experience,
+    .essentials-div,
     .additional-experience {
         grid-column-start: 1;
-        margin: 10px 0;
     }
 
-    .skills {
-        margin: 0;
-    }
-
-    .additional-experience {
-        margin: 0;
+    .essentials-div {
+        grid-row-start: 5;
     }
 }
 

@@ -360,9 +360,8 @@ button.nav-buttons {
 
 .sub-content {
     padding: 100px 0;
-    margin-bottom: 300px;
     position: relative;
-    height: 300px;
+    height: 100vh;
 }
 
 .sub-content h2 {
@@ -401,7 +400,7 @@ button.nav-buttons {
     bottom: 0;
     left: 100%;
     border-bottom-left-radius: 27px;
-    box-shadow: -10px 3px 0 3px var(--mainColor);
+    box-shadow: -10px 3px 0 2px var(--mainColor);
 }
 
 .sub-content h2::before {
@@ -413,7 +412,7 @@ button.nav-buttons {
     bottom: 0;
     right: 100%;
     border-bottom-right-radius: 27px;
-    box-shadow: 10px 3px 0 3px var(--mainColor);
+    box-shadow: 10px 3px 0 2px var(--mainColor);
 }
 
 .horizontal-content {
@@ -421,7 +420,7 @@ button.nav-buttons {
     z-index: 1;
     top: 205px;
     width: 100%;
-    height: 100%;
+    height: 300px;
     background-color: var(--mainColor);
     box-shadow: var(--boxShadow);
     display: flex;
