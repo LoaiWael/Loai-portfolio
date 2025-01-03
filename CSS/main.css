@@ -289,11 +289,10 @@ nav .hamburger .bar {
 
 #background {
     width: 350px;
-    border-radius: 130px 130px;
-    border: 2px solid var(--mainColor);
-    border-bottom-right-radius: 50px 100px;
-    border-bottom-left-radius: 50px 100px;
-    box-shadow: 0 2px 5px;
+    border-radius: 180px;
+    border-bottom-right-radius: 100px 100px;
+    border-bottom-left-radius: 100px 100px;
+    box-shadow: 0 1px 5px;
 }
 
 #me-in-img {
@@ -301,7 +300,7 @@ nav .hamburger .bar {
     position: absolute;
     bottom: 5px;
     right: 0px;
-    filter: drop-shadow(0 2px 5px);
+    filter: drop-shadow(0 0 5px);
     animation: me 1800ms;
     animation-fill-mode: both;
 }
@@ -419,9 +418,8 @@ nav .hamburger .bar {
 }
 
 .content-after-headline p {
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: calc(1.5 * 17px);
     margin-top: 50px;
     align-self: flex-start;
 }
@@ -506,6 +504,57 @@ nav .hamburger .bar {
     right: 0;
     bottom: 15px;
     font-size: small;
+}
+
+.skills-list {
+    dt {
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    dd {
+        margin-left: 10px;
+        margin-bottom: 3px;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 2px 4px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #html-tech {
+        background-image: radial-gradient(rgba(240, 163, 127, 0.9) 2%, rgba(240, 163, 127, 0.5) 90%);
+    }
+
+    #css-tech {
+        background-image: radial-gradient(rgba(127, 180, 240, 0.9) 2%, rgba(127, 180, 240, 0.5) 90%);
+    }
+
+    #js-tech {
+        background-image: radial-gradient(rgba(255, 255, 79, 0.9) 2%, rgba(255, 255, 79, 0.5) 90%);
+    }
+
+    #vs-tech {
+        background-image: radial-gradient(rgba(175, 211, 255, 0.9) 2%, rgba(175, 211, 255, 0.5) 90%);
+    }
+
+    #git-tech {
+        background-image: radial-gradient(rgba(255, 156, 141, 0.9) 2%, rgba(255, 156, 141, 0.5) 90%);
+    }
+
+    #github-tech {
+        background-image: radial-gradient(rgba(45, 45, 45, 0.9) 2%, rgba(45, 45, 45, 0.6) 90%);
+        color: white;
+    }
+
+    #figma-tech {
+        background-image: radial-gradient(rgba(156, 255, 182, 0.9) 2%, rgba(156, 255, 182, 0.5) 90%);
+    }
+
+    #cinema-tech {
+        background-image: radial-gradient(rgba(129, 133, 255, 0.9) 2%, rgba(129, 133, 255, 0.5) 90%);
+    }
 }
 
 #experience-line {
