@@ -1,8 +1,32 @@
 /* Footer styling */
 footer {
+    position: relative;
     background-color: var(--black1);
     color: white;
     padding: 15px;
+    padding-top: 84px;
+}
+
+footer::after {
+    content: '';
+    width: 30%;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 48%;
+    transform: translateX(-50%) skewX(40deg);
+}
+
+footer::before {
+    content: '';
+    width: 30%;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 48%;
+    transform: translateX(50%) skewX(-40deg);
 }
 
 footer a:hover {
@@ -47,7 +71,7 @@ footer a:hover {
 .logo-footer {
     color: white;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 2rem;
     flex: 2 70px;
     position: relative;
     text-wrap: nowrap;
