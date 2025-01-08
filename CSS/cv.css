@@ -268,9 +268,13 @@ div h3 {
     grid-column-start: 3;
 }
 
+.essentials-div {
+    grid-column-start: 3;
+}
+
 .experience {
     grid-column-start: 2;
-    grid-row: span 2;
+    grid-row: 2 / span 2;
 }
 
 .additional-info {
@@ -369,16 +373,27 @@ dd:empty::after {
         grid-template-columns: minmax(150px, 1fr) minmax(150px, 2fr);
     }
 
+    .essentials-div {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
     .skills {
         grid-column-start: 2;
+        grid-row-start: 3;
+    }
+
+    .education {
+        grid-row-start: 1;
     }
 
     .experience {
-        grid-column-start: 2;
+        grid-row-start: 4;
+        grid-column-start: 1 / span 2;
     }
 
-    .additional-experience {
-        grid-column: span 2
+    .about-me {
+        grid-column: 1;
     }
 }
 
@@ -408,12 +423,17 @@ dd:empty::after {
     .skills,
     .experience,
     .essentials-div,
-    .additional-experience {
+    .about-me {
         grid-column-start: 1;
+        grid-row-start: unset;
+    }
+
+    .about-me {
+        grid-row-start: 4;
     }
 
     .essentials-div {
-        grid-row-start: 5;
+        grid-row-start: 6;
     }
 }
 
