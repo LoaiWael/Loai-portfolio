@@ -288,7 +288,7 @@ div h3 {
 }
 
 .experience-content h4 {
-    text-indent: 10px;
+    margin-left: 10px;
     margin-bottom: 5px;
 
     span {
@@ -298,24 +298,39 @@ div h3 {
 }
 
 .experience-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 10px;
+
+    ol {
+        margin-top: 8px;
+        padding-left: 24px;
+    }
 }
 
-.front-end,
-.ui-ux {
-    flex: 2 1 50%;
+#front-end {
+    grid-column: span 2;
 }
 
-.modeling {
-    flex: 1 1 auto;
+.ver-break {
+    width: 40%;
+    height: 0.5px;
+    background-color: var(--mainColor);
+    margin: 16px;
+}
+
+.experiences {
+    background-color: rgba(98, 98, 98, 0.2);
+    border-radius: 5px;
 }
 
 dl dt {
-    text-indent: 20px;
+    margin-left: 10px;
+}
+
+dl dd {
+    margin-left: 16px;
 }
 
 /* no need to remove it in the future ;D */
