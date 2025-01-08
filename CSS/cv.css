@@ -29,10 +29,8 @@ body {
 nav {
     position: fixed;
     z-index: 100;
-    width: calc(100% - 40px);
-    height: 40px;
-    left: 20px;
-    right: 20px;
+    left: 8%;
+    right: 8%;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
@@ -264,6 +262,13 @@ div h3 {
     font-weight: 300;
 }
 
+.about-me {
+    p {
+        margin: 0 12px;
+        line-height: calc(1.5 * 17px);
+    }
+}
+
 .skills {
     grid-column-start: 3;
 }
@@ -282,7 +287,7 @@ div h3 {
 }
 
 .sub-content {
-    padding: 0 10px;
+    padding: 0 10px 20px;
     border-radius: 8px;
     box-shadow: var(--boxShadow);
 
@@ -317,7 +322,7 @@ div h3 {
     grid-column: span 2;
 }
 
-.ver-break {
+.hor-break {
     width: 40%;
     height: 0.5px;
     background-color: var(--mainColor);
@@ -374,13 +379,16 @@ dd:empty::after {
     }
 
     .essentials-div {
-        grid-row-start: 2;
         grid-column-start: 2;
+        grid-row-start: 3;
     }
 
     .skills {
-        grid-column-start: 2;
-        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column: span 2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     .education {
@@ -388,16 +396,16 @@ dd:empty::after {
     }
 
     .experience {
-        grid-row-start: 4;
-        grid-column-start: 1 / span 2;
+        grid-row-start: 5;
+        grid-column: 1 / span 2;
     }
 
     .about-me {
-        grid-column: 1;
+        grid-column: 2;
     }
 }
 
-@media (max-width:670px) {
+@media (max-width:715px) {
     .my-workshop-list {
         flex-direction: column;
         align-items: center;
@@ -429,7 +437,7 @@ dd:empty::after {
     }
 
     .about-me {
-        grid-row-start: 4;
+        grid-row-start: 5;
     }
 
     .essentials-div {
