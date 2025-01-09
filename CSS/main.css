@@ -14,6 +14,7 @@
     --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
     --hoverBackgroundColor: #25252540;
     background-color: var(--mainColor);
+    scroll-behavior: smooth;
 }
 
 * {
@@ -388,8 +389,9 @@ nav .hamburger .bar {
 /* end of grid area properties */
 
 .cv-content-box {
+    padding-top: 50px;
     border-radius: 5px;
-    margin: 110px 0;
+    margin: 100px 0;
     /* animation-name: scrolling;
     animation-timeline: view(99% 0); */
 }
