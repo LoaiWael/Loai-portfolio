@@ -27,6 +27,7 @@ body {
     background-color: white;
     color: var(--mainColor);
     font-family: "Lexend", sans-serif;
+    font-size: clamp(0.9375rem, 1rem, 1.125rem);
 }
 
 nav {
@@ -95,21 +96,18 @@ nav .hamburger .bar {
     border-radius: 5px;
     transition-duration: var(--transitionDuration);
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8rem;
 }
 
-button.nav-buttons {
-    border: none;
-    background-color: transparent;
-    font-family: "Lexend", sans-serif;
+#my-workshop {
     cursor: pointer;
 }
 
 .logo-name {
     position: relative;
-    left: 3%;
+    font-size: 1.15rem;
+    left: 1em;
     font-weight: bold;
-    font-size: 20px;
 }
 
 /* hovering */
@@ -558,11 +556,6 @@ button.nav-buttons {
 @media (max-width:445px) {
     nav {
         height: 35px;
-    }
-
-    .logo-name {
-        left: 50%;
-        transform: translate(-50%, 0);
     }
 
     nav .nav-links {

@@ -64,7 +64,7 @@ nav .hamburger .bar {
     border-radius: 5px;
     transition-duration: var(--transitionDuration);
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8rem;
 }
 
 #my-workshop {
@@ -73,9 +73,9 @@ nav .hamburger .bar {
 
 .logo-name {
     position: relative;
-    left: 3%;
+    font-size: 1.15rem;
+    left: 1em;
     font-weight: bold;
-    font-size: 20px;
 }
 
 /* hovering */
@@ -146,11 +146,6 @@ nav .hamburger .bar {
 
     nav {
         height: 35px;
-    }
-
-    .logo-name {
-        left: 50%;
-        transform: translate(-50%, 0);
     }
 
     nav .nav-links {
