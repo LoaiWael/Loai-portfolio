@@ -178,12 +178,6 @@ nav .hamburger .bar {
     animation-duration: 2.7s;
 }
 
-@keyframes background {
-    from {
-        transform: scale(1.4) rotate(10deg);
-    }
-}
-
 .top-introduction {
     position: absolute;
     z-index: 1;
@@ -220,12 +214,6 @@ nav .hamburger .bar {
     animation-duration: 1.7s;
 }
 
-@keyframes swip-up {
-    from {
-        top: 600px;
-    }
-}
-
 .top-introduction h1 {
     font-size: 60px;
     font-weight: 999;
@@ -244,13 +232,6 @@ nav .hamburger .bar {
     margin-left: 3px;
     animation-name: swip-left;
     animation-duration: 2000ms;
-}
-
-@keyframes swip-left {
-    from {
-        transform: translatex(25px);
-        opacity: 0;
-    }
 }
 
 .center-introduction {
@@ -296,19 +277,6 @@ nav .hamburger .bar {
 .center-introduction:hover .loaiproject {
     opacity: 1;
     transform: translateX(50%) scale(1);
-}
-
-@keyframes logo-hover {
-    to {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes logo {
-    from {
-        transform: scale(1.2);
-        opacity: 0;
-    }
 }
 
 .loaiproject {
@@ -507,6 +475,40 @@ nav .hamburger .bar {
     font-weight: 300;
     opacity: 0.4;
     margin-top: -5px;
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    @keyframes background {
+        from {
+            transform: scale(1.4) rotate(10deg);
+        }
+    }
+
+    @keyframes swip-up {
+        from {
+            top: 600px;
+        }
+    }
+
+    @keyframes swip-left {
+        from {
+            transform: translatex(25px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes logo-hover {
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes logo {
+        from {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
 }
 
 @media (max-width:715px) {
