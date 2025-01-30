@@ -11,13 +11,16 @@ $(function () {
         $(".nav-links").css("visibility", "visible");
         $(".nav-links").slideToggle("fast");
     });
+    contactAnimation();
+})
 
+function contactAnimation() {
     const contactLinks = document.querySelectorAll(".contacts a");
     var timing = 1500;
     for (let i = 0; i < contactLinks.length; i++) {
         contactLinks[i].style.animationName = 'pop-up-contacts'
         contactLinks[i].style.animationTimingFunction = 'cubic-bezier(1, 0, 0, 1)'
         contactLinks[i].style.animationDuration = `${timing}ms`
-        timing += 100
+        timing += 120
     }
-})
+}
