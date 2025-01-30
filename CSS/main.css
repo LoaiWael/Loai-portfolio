@@ -47,7 +47,7 @@ body {
 
 main {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     color: var(--mainColor);
     display: grid;
     justify-content: center;
@@ -197,6 +197,10 @@ nav .hamburger .bar {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation: introduction-scrolling linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100vh;
 }
 
 .about-me {
@@ -265,7 +269,6 @@ nav .hamburger .bar {
     width: fit-content;
     animation: image 2800ms;
     animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 #background {
@@ -329,10 +332,10 @@ nav .hamburger .bar {
 .cv-content-box {
     padding-top: 50px;
     border-radius: 5px;
-    margin: 100px 0;
-    animation: content-scroll linear both;
-    animation-timeline: view(block);
-    animation-range: entry 0% entry 100%;
+    margin: 10em 0;
+    animation: contentScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0 entry 70vh;
 }
 
 .content {
@@ -703,10 +706,27 @@ footer hr {
 
 @media (prefers-reduced-motion: no-preference) {
 
-    @keyframes content-scroll {
+    @keyframes introduction-scrolling {
         0% {
-            transform: scale(0.9);
-            filter: blur(5px);
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(50vh) scale(0.5);
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes contentScroll {
+        0% {
+            transform: translateY(10vh) scale(0.8);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
         }
     }
 
