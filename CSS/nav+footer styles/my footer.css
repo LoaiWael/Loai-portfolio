@@ -5,6 +5,25 @@ footer {
     color: white;
     padding: 1em;
     padding-top: 7em;
+    height: 60vh;
+    overflow: clip;
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    animation: footer linear both;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+footer::before,
+footer::after {
+    animation: footer-whiteHead linear both;
+    animation-timeline: view();
+    animation-range: contain;
 }
 
 footer::after {
@@ -103,6 +122,22 @@ footer hr {
     width: 85%;
     margin-top: 1.75em;
     margin-bottom: 1em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes footer {
+        from {
+            scale: 0.7;
+            opacity: 0;
+            transform: translateY(-80%);
+        }
+    }
+
+    @keyframes footer-whiteHead {
+        from {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width:445px) {

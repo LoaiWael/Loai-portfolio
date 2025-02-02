@@ -325,6 +325,9 @@ nav .hamburger .bar {
 
 #contacts {
     grid-area: contacts;
+    animation: contentScroll linear both, contacts-end linear both;
+    animation-timeline: view();
+    animation-range: entry 0 entry 70vh, exit 10vh;
 }
 
 /* end of grid area properties */
@@ -604,6 +607,25 @@ footer {
     color: white;
     padding: 1em;
     padding-top: 7em;
+    height: 60vh;
+    overflow: clip;
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    animation: footer linear both;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+footer::before,
+footer::after {
+    animation: footer-whiteHead linear both;
+    animation-timeline: view();
+    animation-range: contain;
 }
 
 footer::after {
@@ -705,6 +727,27 @@ footer hr {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
+    @keyframes contacts-end {
+        to {
+            scale: 0.5;
+            opacity: 0;
+        }
+    }
+
+    @keyframes footer {
+        from {
+            scale: 0.7;
+            opacity: 0;
+            transform: translateY(-80%);
+        }
+    }
+
+    @keyframes footer-whiteHead {
+        from {
+            width: 100%;
+        }
+    }
 
     @keyframes introduction-scrolling {
         0% {
