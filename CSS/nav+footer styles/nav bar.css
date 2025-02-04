@@ -9,13 +9,17 @@ nav {
     -ms-backdrop-filter: blur(10px);
     -o-backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     z-index: 98;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--boxShadow);
+    animation-name: slideDown;
+    animation-fill-mode: both;
+    animation-duration: 3000ms;
+    animation-timing-function: cubic-bezier(1, 0, 0.25, 1);
 }
 
 .nav-links {
@@ -26,13 +30,12 @@ nav {
     display: flex;
 }
 
-
 nav .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.25em;
+    margin: 0.5em;
     transition: 200ms;
     border-radius: 5px;
 }
@@ -98,7 +101,7 @@ nav .hamburger .bar {
     visibility: hidden;
     list-style-type: none;
     background-color: var(--mainColor);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 0.5em 0.5em;
     position: fixed;
     z-index: 97;
     top: 40px;
@@ -164,13 +167,13 @@ nav .hamburger .bar {
         flex-direction: column;
         padding: 1rem;
         margin: 0;
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
     }
 
     .nav-links .my-workshop-list {
         top: 140px;
-        left: 5px;
+        left: 0.5em;
         right: 100px;
         background-color: var(--mainColor);
         align-items: flex-start;

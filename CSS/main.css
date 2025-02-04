@@ -1,4 +1,15 @@
 /* font-family: "Lexend", sans-serif; */
+@property --scroll-position {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --scroll-position-delayed {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
 
 :root {
     --mainColor: #252525;
@@ -15,6 +26,8 @@
     --hoverBackgroundColor: #25252540;
     background-color: var(--mainColor);
     scroll-behavior: smooth;
+    animation: smooth-scroll linear both;
+    animation-timeline: scroll(root);
 }
 
 * {
@@ -29,6 +42,12 @@ body {
     margin: 0px;
     font-family: "Lexend", sans-serif;
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
+    transition: --scroll-position-delayed 0.625s linear;
+    /* --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed));
+    --scroll-direction: sign(var(--scroll-velocity));
+    --scroll-speed: abs(var(--scroll-velocity)); */
+    --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
+    --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position));
 }
 
 .introduction-background {
@@ -69,8 +88,8 @@ nav {
     -ms-backdrop-filter: blur(10px);
     -o-backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     z-index: 98;
     display: flex;
     justify-content: space-between;
@@ -94,8 +113,8 @@ nav .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.25em;
+    margin: 0.5em;
     transition: 200ms;
     border-radius: 5px;
 }
@@ -161,7 +180,7 @@ nav .hamburger .bar {
     visibility: hidden;
     list-style-type: none;
     background-color: var(--black1);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 0.5em 0.5em;
     position: fixed;
     z-index: 97;
     top: 40px;
@@ -309,6 +328,9 @@ nav .hamburger .bar {
 
 #about-me {
     grid-area: about-me;
+    animation: contentScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0 entry 70vh;
 }
 
 #education {
@@ -325,20 +347,22 @@ nav .hamburger .bar {
 
 #contacts {
     grid-area: contacts;
-    animation: contentScroll linear both, contacts-end linear both;
+    animation: contacts-end linear both;
     animation-timeline: view();
-    animation-range: entry 0 entry 70vh, exit 10vh;
+    animation-range: exit 10vh;
+
 }
 
 /* end of grid area properties */
+/* .blur-scrolling {
+    translate: calc(-0.25rem * var(--scrolling-down)) calc(-10rem * var(--scrolling-down));
+    filter: blur(max(calc(0.75rem * var(--scrolling-down)), calc(0.75rem * var(--scrolling-up))));
+} */
 
 .cv-content-box {
     padding-top: 50px;
     border-radius: 5px;
     margin: 10em 0;
-    animation: contentScroll linear both;
-    animation-timeline: view();
-    animation-range: entry 0 entry 70vh;
 }
 
 .content {
@@ -623,30 +647,26 @@ footer {
 
 footer::before,
 footer::after {
-    animation: footer-whiteHead linear both;
-    animation-timeline: view();
-    animation-range: contain;
-}
-
-footer::after {
     content: '';
     width: 30%;
     height: 0.75em;
     background-color: white;
     position: absolute;
     top: 0;
-    left: 48%;
+    right: 36%;
+    animation: footer-whiteHead linear both;
+    animation-timeline: view();
+    animation-range: contain 0 contain 50vh;
+}
+
+footer::after {
+    left: 36%;
+    /* translate: calc(5rem * var(--scrolling-down)) 0; */
     transform: translateX(-50%) skewX(40deg);
 }
 
 footer::before {
-    content: '';
-    width: 30%;
-    height: 0.75em;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    right: 48%;
+    /* translate: calc(-5rem * var(--scrolling-down)) 0; */
     transform: translateX(50%) skewX(-40deg);
 }
 
@@ -727,6 +747,18 @@ footer hr {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
+    @keyframes smooth-scroll {
+        from {
+            --scroll-position: 0;
+            --scroll-position-delayed: 0;
+        }
+
+        to {
+            --scroll-position: 1;
+            --scroll-position-delayed: 1;
+        }
+    }
 
     @keyframes contacts-end {
         to {
@@ -886,13 +918,13 @@ footer hr {
         flex-direction: column;
         padding: 1rem;
         margin: 0;
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
     }
 
     .nav-links .my-workshop-list {
         top: 140px;
-        left: 5px;
+        left: 0.5em;
         right: 100px;
         background-color: var(--mainColor);
         align-items: flex-start;
