@@ -349,7 +349,7 @@ nav .hamburger .bar {
     grid-area: contacts;
     animation: contacts-end linear both;
     animation-timeline: view();
-    animation-range: exit 10vh;
+    animation-range: exit -10% exit 100%;
 
 }
 
@@ -631,7 +631,7 @@ footer {
     color: white;
     padding: 1em;
     padding-top: 7em;
-    height: 60vh;
+    height: 40vh;
     overflow: clip;
 }
 
@@ -653,10 +653,10 @@ footer::after {
     background-color: white;
     position: absolute;
     top: 0;
-    right: 36%;
+    right: 40%;
     animation: footer-whiteHead linear both;
     animation-timeline: view();
-    animation-range: contain 0 contain 50vh;
+    animation-range: contain 0 contain 60vh;
 }
 
 footer::after {
@@ -1009,9 +1009,13 @@ footer hr {
         margin: 10px 0;
     }
 
+    footer {
+        height: 50vh;
+    }
+
     .logo-footer {
         flex: 2 1 100%;
-        margin-bottom: 20px;
+        margin: 1em 0;
     }
 }
 
