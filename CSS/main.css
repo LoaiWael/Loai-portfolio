@@ -24,7 +24,7 @@
     --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
     --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
     --hoverBackgroundColor: #25252540;
-    background-color: var(--mainColor);
+    background-color: var(--black1);
     scroll-behavior: smooth;
     animation: smooth-scroll linear both;
     animation-timeline: scroll(root);
@@ -42,12 +42,12 @@ body {
     margin: 0px;
     font-family: "Lexend", sans-serif;
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
-    transition: --scroll-position-delayed 0.625s linear;
+    /* transition: --scroll-position-delayed 0.625s linear; */
     /* --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed));
     --scroll-direction: sign(var(--scroll-velocity));
     --scroll-speed: abs(var(--scroll-velocity)); */
-    --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
-    --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position));
+    /* --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
+    --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position)); */
 }
 
 .introduction-background {
@@ -748,7 +748,7 @@ footer hr {
 
 @media (prefers-reduced-motion: no-preference) {
 
-    @keyframes smooth-scroll {
+    /* @keyframes smooth-scroll {
         from {
             --scroll-position: 0;
             --scroll-position-delayed: 0;
@@ -758,7 +758,7 @@ footer hr {
             --scroll-position: 1;
             --scroll-position-delayed: 1;
         }
-    }
+    } */
 
     @keyframes contacts-end {
         to {
