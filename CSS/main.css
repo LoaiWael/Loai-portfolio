@@ -360,7 +360,6 @@ nav .hamburger .bar {
 } */
 
 .cv-content-box {
-    padding-top: 50px;
     border-radius: 5px;
     margin: 10em 0;
 }
@@ -378,6 +377,43 @@ nav .hamburger .bar {
 
 .content-after-headline {
     width: 70%;
+}
+
+#certificates {
+    border-radius: 2rem;
+    border: 0;
+    padding: 0.4rem 1rem;
+    background-image: var(--decorationColor3);
+    background-size: 400%;
+    background-position: right;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition-duration: var(--transitionDuration);
+    position: relative;
+}
+
+#certificates::before {
+    content: '';
+    background-color: white;
+    width: 1.5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -1.6rem;
+    transform: skewX(-10deg);
+    transition: var(--transitionDuration);
+}
+
+#certificates:hover {
+    background-position: left;
+    color: var(--black1);
+}
+
+#certificates:hover::before {
+    left: calc(100% + 1px);
 }
 
 .content-after-headline p {
