@@ -3,7 +3,7 @@ nav {
     z-index: 100;
     left: 8%;
     right: 8%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--nav-color);
     backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
     -ms-backdrop-filter: blur(10px);
