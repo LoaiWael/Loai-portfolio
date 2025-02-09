@@ -5,7 +5,7 @@ footer {
     color: white;
     padding: 1em;
     padding-top: 7em;
-    height: 60vh;
+    height: 40vh;
     overflow: clip;
 }
 
@@ -21,30 +21,26 @@ footer {
 
 footer::before,
 footer::after {
-    animation: footer-whiteHead linear both;
-    animation-timeline: view();
-    animation-range: contain;
-}
-
-footer::after {
     content: '';
     width: 30%;
     height: 0.75em;
     background-color: white;
     position: absolute;
     top: 0;
-    left: 48%;
+    right: 40%;
+    animation: footer-whiteHead linear both;
+    animation-timeline: view();
+    animation-range: contain 0 contain 60vh;
+}
+
+footer::after {
+    left: 36%;
+    /* translate: calc(5rem * var(--scrolling-down)) 0; */
     transform: translateX(-50%) skewX(40deg);
 }
 
 footer::before {
-    content: '';
-    width: 30%;
-    height: 0.75em;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    right: 48%;
+    /* translate: calc(-5rem * var(--scrolling-down)) 0; */
     transform: translateX(50%) skewX(-40deg);
 }
 
