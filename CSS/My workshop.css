@@ -171,10 +171,7 @@ nav .hamburger .bar {
 .background {
     position: absolute;
     z-index: 0;
-    background-image: url('../My workshop/background.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
     height: 100%;
     width: 100%;
     animation-name: background;
