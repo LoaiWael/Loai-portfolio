@@ -28,8 +28,8 @@
     --hoverBackgroundColor: #25252540;
     background-color: var(--black1);
     scroll-behavior: smooth;
-    animation: smooth-scroll linear both;
-    animation-timeline: scroll(root);
+    /* animation: smooth-scroll linear both;
+    animation-timeline: scroll(root); */
 }
 
 * {
@@ -343,8 +343,7 @@ nav .hamburger .bar {
 #certificates {
     grid-area: certificate;
     width: 100%;
-    padding: 1em;
-    margin: 0;
+    margin: 5em 0;
     background-color: #f9f5fa;
     box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.2) inset;
     border-radius: 0;
@@ -433,16 +432,25 @@ nav .hamburger .bar {
     left: calc(100% + 1px);
 }
 
+#certificate-button:active {
+    opacity: 0.6;
+    scale: 0.9;
+}
+
 .certificates-container {
     margin: auto 10%;
+    scroll-timeline: --certificates x;
 
     .certificates {
         max-width: 40em;
         list-style: none;
         margin: 0;
         padding: 0;
+        scroll-snap-type: x mandatory;
 
         li {
+            scroll-snap-align: center;
+
             img {
                 width: 100%;
                 box-shadow: var(--boxShadow);
@@ -464,8 +472,15 @@ nav .hamburger .bar {
             border-radius: 50%;
             display: block;
             margin: 0 0.25em;
+            animation: certificate-markers linear;
+            animation-timeline: --certificates;
+            animation-range: calc(var(--i) - 1 * 25%) calc(var(--i) * 25%);
         }
     }
+}
+
+.cv-content-box.show {
+    height: calc-size(auto);
 }
 
 #certificates button {
@@ -503,6 +518,19 @@ nav .hamburger .bar {
 
 #certificates button:hover {
     opacity: 0.6;
+}
+
+#certificates button:active {
+    scale: 0.9;
+}
+
+.certificates-animation-open {
+    animation: certificates-pop-up 1000ms ease-in-out both;
+}
+
+.certificates-animation-close {
+    animation: certificates-pop-up 1s ease-in-out both;
+    animation-direction: reverse;
 }
 
 .content-after-headline p {
@@ -889,6 +917,21 @@ footer hr {
         to {
             scale: 0.5;
             opacity: 0;
+        }
+    }
+
+    @keyframes certificates-pop-up {
+        from {
+            opacity: 0;
+            scale: 0.9;
+        }
+    }
+
+    @keyframes certificate-markers {
+
+        from,
+        to {
+            background-color: var(--black1);
         }
     }
 

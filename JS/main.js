@@ -1,5 +1,6 @@
 $(function () {
     $(".my-workshop-list").slideUp();
+    $("#certificates").slideUp();
     if ($(window).width() < 445) {
         $(".nav-links").slideUp();
     }
@@ -12,6 +13,21 @@ $(function () {
         $(".nav-links").slideToggle("fast");
     });
     contactAnimation();
+    $("#certificate-button").click(function () {
+        $("#certificates").slideDown("slow");
+        document.getElementById("certificates").scrollIntoView();
+        $("#certificates-header").addClass("certificates-animation-open");
+        $(".certificates-container").addClass("certificates-animation-open");
+        // $("#certificates-header").removeClass("certificates-animation-close");
+        // $(".certificates-container").removeClass("certificates-animation-close");
+    });
+    $("#close-certificates").click(function () {
+        $("#certificates").slideUp("slow");
+        // $("#certificates-header").addClass("certificates-animation-close");
+        // $(".certificates-container").addClass("certificates-animation-close");
+        // $("#certificates-header").removeClass("certificates-animation-open");
+        // $(".certificates-container").removeClass("certificates-animation-open");
+    });
 })
 
 function contactAnimation() {
