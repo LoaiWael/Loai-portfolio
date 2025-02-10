@@ -19,6 +19,8 @@
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
     --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
+    --simi-black: rgba(0, 0, 0, 0.3);
+    --nav-color: rgba(255, 255, 255, 0.6);
     --decorationBarHeight: 8px;
     --transitionDuration: 200ms;
     --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
@@ -26,8 +28,8 @@
     --hoverBackgroundColor: #25252540;
     background-color: var(--black1);
     scroll-behavior: smooth;
-    animation: smooth-scroll linear both;
-    animation-timeline: scroll(root);
+    /* animation: smooth-scroll linear both;
+    animation-timeline: scroll(root); */
 }
 
 * {
@@ -82,7 +84,7 @@ nav {
     z-index: 100;
     left: 8%;
     right: 8%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--nav-color);
     backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
     -ms-backdrop-filter: blur(10px);
@@ -319,6 +321,7 @@ nav .hamburger .bar {
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: ". about-me about-me about-me about-me about-me about-me about-me about-me about-me about-me about-me about-me ."
         ". education education education education education education education education education education education education ."
+        " certificate certificate certificate certificate certificate certificate certificate certificate certificate certificate certificate certificate certificate certificate"
         ". skills skills skills skills skills skills skills skills skills skills skills skills ."
         ". experience experience experience experience experience experience experience experience experience experience experience experience ."
         ". contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts .";
@@ -335,6 +338,19 @@ nav .hamburger .bar {
 
 #education {
     grid-area: education;
+}
+
+#certificates {
+    grid-area: certificate;
+    width: 100%;
+    margin: 5em 0;
+    background-color: #f9f5fa;
+    box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.2) inset;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 #skills {
@@ -360,7 +376,6 @@ nav .hamburger .bar {
 } */
 
 .cv-content-box {
-    padding-top: 50px;
     border-radius: 5px;
     margin: 10em 0;
 }
@@ -378,6 +393,144 @@ nav .hamburger .bar {
 
 .content-after-headline {
     width: 70%;
+}
+
+#certificate-button {
+    border-radius: 3rem;
+    border: 0;
+    padding: 0.5rem 1.25rem;
+    background-image: var(--decorationColor3);
+    background-size: 400%;
+    background-position: right;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition-duration: var(--transitionDuration);
+    position: relative;
+}
+
+#certificate-button::before {
+    content: '';
+    background-color: white;
+    width: 1.5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -1.6rem;
+    transform: skewX(-10deg);
+    transition: var(--transitionDuration);
+}
+
+#certificate-button:hover {
+    background-position: left;
+    color: var(--black1);
+}
+
+#certificate-button:hover::before {
+    left: calc(100% + 1px);
+}
+
+#certificate-button:active {
+    opacity: 0.6;
+    scale: 0.9;
+}
+
+.certificates-container {
+    margin: auto 10%;
+    scroll-timeline: --certificates x;
+
+    .certificates {
+        max-width: 40em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        scroll-snap-type: x mandatory;
+
+        li {
+            scroll-snap-align: center;
+
+            img {
+                width: 100%;
+                box-shadow: var(--boxShadow);
+            }
+        }
+    }
+
+    .certificates-markers {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+
+        a {
+            background-color: var(--simi-black);
+            aspect-ratio: 1;
+            width: 0.75rem;
+            border-radius: 50%;
+            display: block;
+            margin: 0 0.25em;
+            animation: certificate-markers linear;
+            animation-timeline: --certificates;
+            animation-range: calc(var(--i) - 1 * 25%) calc(var(--i) * 25%);
+        }
+    }
+}
+
+.cv-content-box.show {
+    height: calc-size(auto);
+}
+
+#certificates button {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    aspect-ratio: 1;
+    width: 2.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    transition-duration: var(--transitionDuration);
+
+    span {
+        width: 60%;
+        height: 0.125rem;
+        background-color: black;
+        border-radius: 2rem;
+        position: absolute;
+    }
+
+    span:first-of-type {
+        transform: rotate(45deg);
+    }
+
+    span:last-of-type {
+        transform: rotate(-45deg);
+    }
+}
+
+#certificates button:hover {
+    opacity: 0.6;
+}
+
+#certificates button:active {
+    scale: 0.9;
+}
+
+.certificates-animation-open {
+    animation: certificates-pop-up 1000ms ease-in-out both;
+}
+
+.certificates-animation-close {
+    animation: certificates-pop-up 1s ease-in-out both;
+    animation-direction: reverse;
 }
 
 .content-after-headline p {
@@ -790,6 +943,21 @@ footer hr {
         }
     }
 
+    @keyframes certificates-pop-up {
+        from {
+            opacity: 0;
+            scale: 0.9;
+        }
+    }
+
+    @keyframes certificate-markers {
+
+        from,
+        to {
+            background-color: var(--black1);
+        }
+    }
+
     @keyframes footer {
         from {
             scale: 0.7;
@@ -989,22 +1157,6 @@ footer hr {
         width: 250px;
     }
 
-    .about-me {
-        margin-top: 30px;
-    }
-
-    .name {
-        font-size: 40px;
-    }
-
-    .info-under-name {
-        font-size: 11px;
-    }
-
-    #introduction-line {
-        margin-top: 20px;
-    }
-
     .content {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -1014,10 +1166,6 @@ footer hr {
     .content-after-headline {
         order: 2;
         flex: 1 1 100%
-    }
-
-    .cv-content-box {
-        margin-bottom: 0;
     }
 
     #skills img {

@@ -6,6 +6,8 @@
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
     --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
+    --simi-black: rgba(0, 0, 0, 0.3);
+    --nav-color: rgba(255, 255, 255, 0.6);
     --decorationBarHeight: 8px;
     --transitionDuration: 200ms;
     --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
@@ -31,7 +33,7 @@ nav {
     z-index: 100;
     left: 8%;
     right: 8%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--nav-color);
     backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
     -ms-backdrop-filter: blur(10px);
