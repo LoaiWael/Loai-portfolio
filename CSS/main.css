@@ -350,7 +350,9 @@ nav .hamburger .bar {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
+    overflow-x: clip;
 }
 
 #skills {
@@ -366,7 +368,6 @@ nav .hamburger .bar {
     animation: contacts-end linear both;
     animation-timeline: view();
     animation-range: exit -10% exit 100%;
-
 }
 
 /* end of grid area properties */
@@ -438,23 +439,37 @@ nav .hamburger .bar {
 }
 
 .certificates-container {
-    margin: auto 10%;
-    scroll-timeline: --certificates x;
+    timeline-scope: --certificates;
+    width: 100%;
 
     .certificates {
-        max-width: 40em;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
         list-style: none;
         margin: 0;
         padding: 0;
+        display: flex;
         scroll-snap-type: x mandatory;
+        scroll-timeline: --certificates x;
 
         li {
+            flex: 0 0 100%;
+            max-width: 40em;
             scroll-snap-align: center;
+            scroll-margin-top: 20vh;
 
             img {
                 width: 100%;
                 box-shadow: var(--boxShadow);
             }
+        }
+
+        li:first-of-type {
+            margin-left: 50%;
+        }
+
+        li:last-of-type {
+            margin-right: 50%;
         }
     }
 
@@ -474,7 +489,7 @@ nav .hamburger .bar {
             margin: 0 0.25em;
             animation: certificate-markers linear;
             animation-timeline: --certificates;
-            animation-range: calc(var(--i) - 1 * 25%) calc(var(--i) * 25%);
+            animation-range: calc((var(--i) - 1) * 50%) calc(var(--i) * 50% + 1px);
         }
     }
 }
@@ -498,6 +513,7 @@ nav .hamburger .bar {
     cursor: pointer;
     box-shadow: var(--boxShadow);
     transition-duration: var(--transitionDuration);
+    clip-path: circle();
 
     span {
         width: 60%;
@@ -528,10 +544,10 @@ nav .hamburger .bar {
     animation: certificates-pop-up 1000ms ease-in-out both;
 }
 
-.certificates-animation-close {
+/* .certificates-animation-close {
     animation: certificates-pop-up 1s ease-in-out both;
     animation-direction: reverse;
-}
+} */
 
 .content-after-headline p {
     font-weight: 500;
