@@ -240,6 +240,9 @@ nav .hamburger .bar {
 }
 
 .navigations {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     position: absolute;
     z-index: 1;
     left: 58%;
@@ -247,10 +250,92 @@ nav .hamburger .bar {
     aspect-ratio: 1;
     width: 20em;
     transform: translate(-58%, -50%);
-    clip-path: circle();
+    clip-path: circle(100% at center);
     border-radius: 50%;
     border-right: 0.4em solid var(--mainColor);
     transition: 300ms;
+    overflow: visible;
+
+    li {
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        position: absolute;
+        transition-duration: var(--transitionDuration);
+        overflow: visible;
+
+        a {
+            clip-path: circle();
+            background-color: var(--mainColor);
+            border-radius: 50%;
+            padding: 0.65em;
+            aspect-ratio: 1;
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition-duration: 100ms;
+        }
+
+        span {
+            position: absolute;
+            left: calc(100% + 0.5em);
+            top: 50%;
+            transform: translateY(-50%);
+            translate: -50% 0;
+            color: var(--mainColor);
+            font-weight: bold;
+            text-wrap: nowrap;
+            scale: 0;
+            opacity: 0;
+            transition-duration: var(--transitionDuration);
+        }
+
+        a:active {
+            scale: 0.9;
+        }
+    }
+
+    li:hover {
+        scale: 1.2;
+    }
+
+    li:hover span {
+        scale: unset;
+        opacity: unset;
+        translate: 0 0;
+    }
+
+
+    #websites {
+        --top: 8%;
+        --right: 7%;
+        top: var(--top);
+        right: var(--right);
+    }
+
+    #websites:hover~#open-source {}
+
+    #open-source {
+        --top: 31%;
+        --right: -7%;
+        top: var(--top);
+        right: var(--right);
+    }
+
+    #ui-ux {
+        --top: 56%;
+        --right: -7%;
+        top: var(--top);
+        right: var(--right);
+    }
+
+    #modeling {
+        --top: 79%;
+        --right: 7%;
+        top: var(--top);
+        right: var(--right);
+    }
 }
 
 .logo-area-realtive {
