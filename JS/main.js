@@ -13,7 +13,6 @@ $(function () {
         $(".nav-links").slideToggle("fast");
     });
     contactAnimation();
-    workshopNavigationsAnimation()
     $("#certificate-button").click(function () {
         $("#certificates").slideDown("slow");
         document.getElementById("certificates").scrollIntoView();
@@ -42,16 +41,6 @@ function contactAnimation() {
         contactLinks[i].style.animationTimingFunction = 'cubic-bezier(1, 0, 0, 1)'
         contactLinks[i].style.animationDuration = `${timing}ms`
         timing += 120
-    }
-}
-function workshopNavigationsAnimation() {
-    const li = document.querySelectorAll(".navigations li");
-    var timing = 1500;
-    for (let i = 0; i < li.length; i++) {
-        li[i].style.animationName = 'navigations-li'
-        li[i].style.animationTimingFunction = 'cubic-bezier(1, 0, 0, 1)'
-        li[i].style.animationDuration = `${timing}ms`
-        timing += 150
     }
 }
 
