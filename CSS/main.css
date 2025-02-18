@@ -44,9 +44,9 @@ body {
     margin: 0px;
     font-family: "Lexend", sans-serif;
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
-    /* transition: --scroll-position-delayed 0.625s linear; */
-    /* --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed));
-    --scroll-direction: sign(var(--scroll-velocity));
+    /* transition: --scroll-position-delayed 0.625s linear;
+    --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); */
+    /* --scroll-direction: sign(var(--scroll-velocity));
     --scroll-speed: abs(var(--scroll-velocity)); */
     /* --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
     --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position)); */
@@ -378,7 +378,8 @@ nav .hamburger .bar {
 
 .cv-content-box {
     border-radius: 5px;
-    margin: 10em 0;
+    margin: calc(15vh + 5vw) 0;
+    scroll-margin-top: 5em;
 }
 
 .content {
