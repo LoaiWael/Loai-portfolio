@@ -1,0 +1,152 @@
+nav {
+    position: fixed;
+    z-index: 100;
+    left: 8%;
+    right: 8%;
+    background-color: var(--nav-color);
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    z-index: 98;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+    animation-name: slideDown;
+    animation-fill-mode: both;
+    animation-duration: 3000ms;
+    animation-timing-function: cubic-bezier(1, 0, 0.25, 1);
+}
+
+.nav-links {
+    margin: 2px;
+    margin-right: 1%;
+    float: right;
+    padding: 0;
+    display: flex;
+}
+
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.25em;
+    margin: 0.5em;
+    transition: 200ms;
+    border-radius: 5px;
+}
+
+nav .hamburger:hover {
+    background-color: var(--hoverBackgroundColor);
+}
+
+nav .hamburger .bar {
+    width: 20px;
+    height: 3px;
+    background-color: var(--mainColor);
+    margin: 1px;
+    border-radius: 3px;
+}
+
+.nav-links li {
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+}
+
+.nav-buttons {
+    text-decoration: none;
+    color: var(--mainColor);
+    margin: 7px;
+    display: block;
+    padding: 3px 5px;
+    border-radius: 5px;
+    transition-duration: var(--transitionDuration);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+#my-workshop {
+    cursor: pointer;
+}
+
+.logo-name {
+    position: relative;
+    font-size: 1.15rem;
+    left: 1em;
+    font-weight: bold;
+}
+
+/* hovering */
+.nav-buttons:hover {
+    background-color: #25252540;
+}
+
+.nav-buttons:active {
+    background-color: var(--mainColor);
+    color: white;
+}
+
+#home {
+    background-color: var(--mainColor);
+    color: white;
+    pointer-events: none;
+}
+
+@media (max-width:445px) {
+
+    nav {
+        height: 35px;
+    }
+
+    nav .nav-links {
+        visibility: hidden;
+        position: fixed;
+        z-index: 95;
+        top: 35px;
+        right: 25px;
+        left: 25px;
+        background-color: var(--mainColor);
+        backdrop-filter: blur(10px);
+        -moz-backdrop-filter: blur(10px);
+        -ms-backdrop-filter: blur(10px);
+        -o-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 0 0 0.5em 0.5em;
+        box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+    }
+
+    .nav-buttons {
+        color: white;
+    }
+
+    .nav-buttons:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-buttons:active {
+        color: var(--mainColor);
+        background-color: white;
+    }
+
+    #home {
+        background-color: white;
+        color: var(--mainColor);
+        pointer-events: none;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+}
