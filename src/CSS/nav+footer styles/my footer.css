@@ -1,0 +1,144 @@
+/* Footer styling */
+footer {
+    position: relative;
+    background-color: var(--black1);
+    color: white;
+    padding: 1em;
+    padding-top: 7em;
+    height: 40vh;
+    overflow: clip;
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    animation: footer linear both;
+    animation-timeline: view();
+    animation-range: entry;
+}
+
+footer::before,
+footer::after {
+    content: '';
+    width: 30%;
+    height: 0.75em;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 40%;
+    animation: footer-whiteHead linear both;
+    animation-timeline: view();
+    animation-range: contain 0 contain 60vh;
+}
+
+footer::after {
+    left: 36%;
+    /* translate: calc(5rem * var(--scrolling-down)) 0; */
+    transform: translateX(-50%) skewX(40deg);
+}
+
+footer::before {
+    /* translate: calc(-5rem * var(--scrolling-down)) 0; */
+    transform: translateX(50%) skewX(-40deg);
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.31);
+}
+
+.top-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: auto;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.bottom-footer .links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.bottom-footer a {
+    margin: 0 1%;
+    color: white;
+}
+
+.bottom-footer p {
+    margin: 1em 0 1.25em;
+    font-weight: 50;
+    font-size: 0.65rem;
+}
+
+.logo-footer {
+    color: white;
+    font-weight: 550;
+    font-size: 2rem;
+    flex: 2 70px;
+    position: relative;
+    text-wrap: nowrap;
+}
+
+.logo-footer::before {
+    content: "Project";
+    font-weight: 100;
+    font-size: 0.25em;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+}
+
+.top-footer-first-column,
+.top-footer-second-column,
+.top-footer-third-column {
+    flex: 0.5 1 auto;
+}
+
+.top-footer a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+}
+
+footer hr {
+    width: 85%;
+    margin-top: 1.75em;
+    margin-bottom: 1em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes footer {
+        from {
+            scale: 0.7;
+            opacity: 0;
+            transform: translateY(-80%);
+        }
+    }
+
+    @keyframes footer-whiteHead {
+        from {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:445px) {
+    .logo-footer {
+        flex: 2 1 100%;
+        margin-bottom: 20px;
+    }
+}

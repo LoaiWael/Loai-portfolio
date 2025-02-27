@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Loai Wael Hassan">
     <meta name="search-disable" content="true">
-    <meta property="og:image" content="https://loaiwael.github.io/Loai-portfolio/coverPhoto.jpg">
+    <meta property="og:image" content="https://loaiwael.github.io/Loai-portfolio/public/coverPhoto.jpg">
 
-    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./src/CSS/main.css">
     <!-- favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon_16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon_32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicons/favicon_48x48.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="favicons/favicon_64x64.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="favicons/favicon_128x128.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="favicons/favicon_256x256.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon_16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="public/favicons/favicon_48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="public/favicons/favicon_64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="public/favicons/favicon_128x128.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="public/favicons/favicon_256x256.png">
     <!-- Font styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,9 +77,9 @@
                 </div>
             </div>
             <div class="photo-space">
-                <img draggable="false" id="background" fetchpriority="high" src="./Home images/IMG20240725232931.webp"
-                    alt="My image">
-                <img draggable="false" id="me-in-img" fetchpriority="high" src="./Home images/Me.webp"
+                <img draggable="false" id="background" fetchpriority="high"
+                    src="./public/Home images/IMG20240725232931.webp" alt="My image">
+                <img draggable="false" id="me-in-img" fetchpriority="high" src="./public/Home images/Me.webp"
                     alt="me in the image :D">
             </div>
         </section>
@@ -110,7 +110,7 @@
                             <a class="brown-links" href="#contacts">contact me</a>.
                         </p>
                     </div>
-                    <img src="./Home images/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
+                    <img src="./public/Home images/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
                         alt="Big MAN" draggable="false" loading="lazy" id="about-me-img">
                 </div>
             </div>
@@ -158,7 +158,7 @@
                         <button id="certificate-button" aria-label="Show certificates"
                             title="Show certificates">Certificates</button>
                     </div>
-                    <img src="./Home images/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
+                    <img src="./public/Home images/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
                         alt="graduation cap" draggable="false" loading="lazy">
                 </div>
             </div>
@@ -169,7 +169,8 @@
                         class="bi bi-award"></i></h2>
                 <div class="certificates-container">
                     <ul class="certificates">
-                        <li id="certificate1"><img src="./Home images/certificate CX.webp" alt="CX certificate"></li>
+                        <li id="certificate1"><img src="./public/Home images/certificate CX.webp" alt="CX certificate">
+                        </li>
                         <!-- <li id="certificate2"><img src="./Home images/certificate CX.webp" alt="CX certificate"></li> -->
                     </ul>
                     <div class="certificates-markers">
@@ -185,7 +186,7 @@
                     <div class="content-after-headline">
                         <div class="skills-progress">
                             <details>
-                                <summary id="front-end-details">Front-End <progress max="100" value="60"></progress>
+                                <summary id="front-end-details">Front-End <progress max="100" value="70"></progress>
                                 </summary>
                                 <hr>
                                 <small>
@@ -253,7 +254,7 @@
                                                             fill="#fff" stroke="#000" stroke-width="50.45" />
                                                         <path d="M536.653 252.449l31.344 113.359" fill="none"
                                                             stroke="#000" stroke-width="58.81" />
-                                                    </svg> Scroll-driven-animation</a></dd>
+                                                    </svg> Scroll-driven Animations</a></dd>
                                         </div>
                                         <div class="all-frontend-tools">
                                             <dt>TOOLS:</dt>
@@ -289,22 +290,18 @@
                                                     </defs>
                                                 </svg>
                                                 Git</dd>
-                                            <dd id="github-tech"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-github"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                                                </svg> GitHub</dd>
+                                            <dd id="github-tech"><i class="bi bi-github"></i> GitHub</dd>
                                         </div>
                                     </dl>
                                 </small>
                             </details>
                             <br>
                             <details>
-                                <summary id="ui-ux-details">UI/UX <progress max="100" value="50"></progress></summary>
+                                <summary id="ui-ux-details">UI/UX <progress max="100" value="75"></progress></summary>
                                 <hr>
                                 <small>
-                                    watching UI guidances since 2023 and started using figma in 2024
+                                    Learned modern color theories and some basic UI layouts and how to choose between
+                                    them
                                     <dl class="skills-list">
                                         <div>
                                             <dt>TOOLS:</dt>
@@ -324,6 +321,23 @@
                                                     </defs>
                                                 </svg>
                                                 Figma</dd>
+                                            <dd id="adobe-color-tech"><svg width="16" height="16" viewBox="0 0 16 16"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <rect width="16" height="16" fill="url(#pattern0_58_36)" />
+                                                    <defs>
+                                                        <pattern id="pattern0_58_36"
+                                                            patternContentUnits="objectBoundingBox" width="1"
+                                                            height="1">
+                                                            <use xlink:href="#image0_58_36"
+                                                                transform="scale(0.0078125)" />
+                                                        </pattern>
+                                                        <image id="image0_58_36" width="128" height="128"
+                                                            preserveAspectRatio="none"
+                                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAANlBMVEVHcEwACh3///8AAAkACx0ACx0ACx0ACx0ACx0ACx3v8PFTV2BxdX0uNEDS1Nego6iJjJK5vMDddZ79AAAACnRSTlMA////n2jmG9Lzvz2WoQAABR9JREFUeJzdW9uWqyAMHYvWCqLw/z97QEADIoSOyKyTh3mxQ3ZuJCTw8/MnaaxCSN5D/5nq0PvTDxkU4/DpKtMngWHs37XZa5r6Cwj9E9wNxSCM1ZUPKKKE4RHtH/QeAv7PstfkIRim5wFAHYzPs9e0+8Gj/gfo4xA8GH8+9U0NoILRGqGZAqwKmilA09hWAZsKWoWAIRUITS2gbdBgE4Y0tHUB7QRNXUA5wU9b/l33nwMgihoCIB2bBevSECoCIPNCXy+6zEkEFQHIlyXZBABZXzutCR1UA8BfgPjzAIiAABIqqAZAQgBLBQDE0OVnWhGA5stViAvBGL9AQZZaABTveaVOPkqpFBrF6WczBCBuA0C48IxrBVxZCAFG4euVWLEIAOlWema/aUL6WvCDIKGAEgCEr3HuhiQ72Gzy71hFalU8ALW1p/grhqtTwiY/ZfNmLXlXLgjEp4Z8X+AbLyO/tglXdE82JByKT+U6M729Miak90FLa+XXfEmXYY8FQDgQdZl5Z4N/2wSYOD5SQQB/DKEAkJkewp+CXoEA7iGs/pH8UQCA/Eu8wCGdgN6Alx8FAPBfL00KnaRAfpwG3NI0GVBH/iuQHwNg31TT/LsjUBOp5wsAhKENu2fA1NZbDMAZICs/iJU7nXDPKnn+IP/IGwFQ5JJbAUBdNCaq0DIArq6guRU3/SsziVIV5DSw4NzKyK/NtBR6QQYAoygFGP/bMtFcGAhpAG4PyCxnFG+Etk6zIPnnNGAtEGfrCuJD/90RDFg3TAPgly6li2O5FcS7/9kPDBm2GADOoOfFCLM7vyoA5uAn5kvqQIoHsF64NCgQXroJAJ3E/dMtAIwLLCd7ekffwEmt2iiOfwaAkfPcYAjqY0/dxIYu0gvTTkijPugfu84hZ/4LuRV9BSCs0ANe1QF04fGwNoBTRIUA5qc1EJ4RnzaBf/Q9hSm/D8BFGLpAcxQAtF9R7HMAZEzCUxj4UeD0c8tOKKI2DjtA/g8c6lsA2Mx2Lgf4HgjLGujAHpFuSUZuzz9Lo87EUrcHFmH3xR2BA42tyTIFiRU08kWfy5n+a+sRx9Alw3sKEudtcX3uHRmI4DKBfQXAxXSmyAVWcH6LLYiy54IlpYKDdh1YF8RWA3kArvTIHPmdDtI2+wLAroJcWFs/cEdpLHsEAFd84M5GtFQBiP6A23JybgXqpHMR+RsArkOUPe4dCNAhgAFwrItu0RQYANekkhgEZLdViQGQjco996XadHt6KmnQYDuloFEZ35T9RmUJAhyAowSia3eaz8BWLQ2z8y0A/Ga53CZVO3N1TAZNUhZk55sABO36Rc7MdMo5ExIoX7upn53vAqDHRS9IlEYmFmZgAecF+QsENUY2JiOpzMTFuoqMLuoMrYwnmhHbMUr6LQDtcJdju8WbHPp1e3JnKh1cMhExRGRw6SO48f6ArkXnBfgeVdxjo1sPQcIPvhhea89W4acdTBzzqySAROf22/E9yY3v/en59ULVLjDQ1gCq3R/AAvAaWS3ukMBZ6233B4oQgDbKTfcHShG4di5NVvQ175JtyYDKdDaqe5uu4zw3wK99oTFbl/znNyoxAB5+WxLSu/294uY3q5vfLW9+u775+4KfscEbI0fT+BfemLR0w7HZQzNDw195adXIDyfw5rDFa7up8Xu/KXjxOD6cFafTm89nPfETe3j7zKNfTe8+wl4roX/EEy7fHWsIw7syhumdf/3d959K1GffnjsQlSjG6x/dQ2z536Co7wAAAABJRU5ErkJggg==" />
+                                                    </defs>
+                                                </svg>
+                                                Adobe Color</dd>
                                         </div>
                                     </dl>
                                 </small>
@@ -362,7 +376,7 @@
                             </details>
                         </div>
                     </div>
-                    <img src="./Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
+                    <img src="./public/Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
                         alt="Skateboard boi" draggable="false" loading="lazy">
                 </div>
             </div>
@@ -407,7 +421,7 @@
                             </dl>
                         </article>
                     </div>
-                    <img src="./Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
+                    <img src="./public/Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
                         alt="Very very big MAN" draggable="false" loading="lazy">
                 </div>
             </div>
@@ -431,7 +445,7 @@
                                         class="bi bi-instagram"></i> Instagram</a></li>
                         </ul>
                     </div>
-                    <img src="./Home images/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
+                    <img src="./public/Home images/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
                         alt="Contacts picture" draggable="false" loading="lazy">
                 </div>
             </div>
@@ -471,8 +485,8 @@
         </div>
     </footer>
     <!-- JavaScript -->
-    <script src="./JS/Jquery.js"></script>
-    <script src="./JS/main.js"></script>
+    <script src="./src/JS/Jquery.js"></script>
+    <script src="./src/JS/main.js"></script>
 </body>
 
 </html>
