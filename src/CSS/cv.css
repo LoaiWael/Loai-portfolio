@@ -34,11 +34,11 @@ nav {
     left: 8%;
     right: 8%;
     background-color: var(--nav-color);
-    backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
     -ms-backdrop-filter: blur(10px);
     -o-backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     z-index: 98;
@@ -474,11 +474,11 @@ dd:empty::after {
         right: 25px;
         left: 25px;
         background-color: var(--mainColor);
-        backdrop-filter: blur(10px);
         -moz-backdrop-filter: blur(10px);
         -ms-backdrop-filter: blur(10px);
         -o-backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         padding: 1rem;
         margin: 0;
