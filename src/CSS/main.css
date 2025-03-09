@@ -14,6 +14,7 @@
 :root {
     --mainColor: #252525;
     --black1: #131313;
+    --white: rgb(255, 255, 255);
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
@@ -169,12 +170,12 @@ nav .hamburger .bar {
 
 .nav-buttons:active {
     background-color: var(--mainColor);
-    color: white;
+    color: var(--white);
 }
 
 #home {
     background-color: var(--black1);
-    color: white;
+    color: var(--white);
     pointer-events: none;
 }
 
@@ -199,7 +200,7 @@ nav .hamburger .bar {
     }
 
     li a.nav-buttons {
-        color: white;
+        color: var(--white);
         font-weight: 400;
     }
 
@@ -314,7 +315,7 @@ nav .hamburger .bar {
 .cv-content {
     position: relative;
     grid-area: cv-content;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: var(--boxShadow);
     display: grid;
     grid-template-columns: 10% repeat(12, 1fr) 10%;
@@ -407,7 +408,7 @@ nav .hamburger .bar {
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
-    color: white;
+    color: var(--white);
     cursor: pointer;
     transition-duration: var(--transitionDuration);
     position: relative;
@@ -415,7 +416,7 @@ nav .hamburger .bar {
 
 #certificate-button::before {
     content: '';
-    background-color: white;
+    background-color: var(--white);
     width: 1.5rem;
     height: 100%;
     position: absolute;
@@ -442,10 +443,14 @@ nav .hamburger .bar {
 .certificates-container {
     timeline-scope: --certificates;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .certificates {
         overflow-x: scroll;
         scroll-behavior: smooth;
+        scrollbar-width: none;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -455,7 +460,7 @@ nav .hamburger .bar {
 
         li {
             flex: 0 0 100%;
-            max-width: 40em;
+            max-width: max(40em, 70vw);
             scroll-snap-align: center;
             scroll-margin-top: 20vh;
 
@@ -475,11 +480,20 @@ nav .hamburger .bar {
     }
 
     .certificates-markers {
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1em;
+        padding: 0.625em;
+        background-color: var(--nav-color);
+        backdrop-filter: blur(5px);
+        border-radius: 2em;
+        margin: 0.75em;
+        box-shadow: var(--imageBoxShadow);
+        position: sticky;
+        bottom: 0.75em;
+        animation: certificate-markers-view-in-scroll linear both;
+        animation-timeline: view();
+        animation-range: entry cover 5%;
 
         a {
             background-color: var(--simi-black);
@@ -488,15 +502,16 @@ nav .hamburger .bar {
             border-radius: 50%;
             display: block;
             margin: 0 0.25em;
+            transition-duration: var(--transitionDuration);
             animation: certificate-markers linear;
             animation-timeline: --certificates;
             animation-range: calc((var(--i) - 1) * 50%) calc(var(--i) * 50% + 1px);
         }
-    }
-}
 
-.cv-content-box.show {
-    height: calc-size(auto);
+        a:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
 #certificates button {
@@ -505,7 +520,7 @@ nav .hamburger .bar {
     right: 1vw;
     border-radius: 50%;
     border: none;
-    background: white;
+    background: var(--white);
     aspect-ratio: 1;
     width: 2.25em;
     display: flex;
@@ -514,7 +529,6 @@ nav .hamburger .bar {
     cursor: pointer;
     box-shadow: var(--boxShadow);
     transition-duration: var(--transitionDuration);
-    clip-path: circle();
 
     span {
         width: 60%;
@@ -593,7 +607,7 @@ nav .hamburger .bar {
 }
 
 .content details[open] {
-    background-color: white;
+    background-color: var(--white);
     padding: 10px;
     box-shadow: var(--boxShadow);
 }
@@ -847,7 +861,7 @@ footer::after {
     content: '';
     width: 30%;
     height: 0.75em;
-    background-color: white;
+    background-color: var(--white);
     position: absolute;
     top: 0;
     right: 40%;
@@ -976,6 +990,18 @@ footer hr {
         from,
         to {
             background-color: var(--black1);
+        }
+    }
+
+    @keyframes certificate-markers-view-in-scroll {
+        0% {
+            scale: 0;
+            translate: 0 100%;
+        }
+
+        50% {
+            scale: 1.25;
+            translate: 0 -80%;
         }
     }
 
@@ -1144,7 +1170,7 @@ footer hr {
     }
 
     .nav-buttons {
-        color: white;
+        color: var(--white);
     }
 
     .nav-buttons:hover {
@@ -1153,11 +1179,11 @@ footer hr {
 
     .nav-buttons:active {
         color: var(--mainColor);
-        background-color: white;
+        background-color: var(--white);
     }
 
     #home {
-        background-color: white;
+        background-color: var(--white);
         color: var(--mainColor);
         pointer-events: none;
     }

@@ -88,12 +88,12 @@ nav .hamburger .bar {
 
 .nav-buttons:active {
     background-color: var(--mainColor);
-    color: white;
+    color: var(--white);
 }
 
 #home {
     background-color: var(--mainColor);
-    color: white;
+    color: var(--white);
     pointer-events: none;
 }
 
@@ -118,7 +118,7 @@ nav .hamburger .bar {
     }
 
     li a.nav-buttons {
-        color: white;
+        color: var(--white);
         font-weight: 400;
     }
 
@@ -181,7 +181,7 @@ nav .hamburger .bar {
     }
 
     .nav-buttons {
-        color: white;
+        color: var(--white);
     }
 
     .nav-buttons:hover {
@@ -190,11 +190,11 @@ nav .hamburger .bar {
 
     .nav-buttons:active {
         color: var(--mainColor);
-        background-color: white;
+        background-color: var(--white);
     }
 
     #home {
-        background-color: white;
+        background-color: var(--white);
         color: var(--mainColor);
         pointer-events: none;
     }
