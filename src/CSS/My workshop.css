@@ -388,6 +388,82 @@ nav .hamburger .bar {
     animation-duration: 1.6s;
 }
 
+.overlay {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 50%, transparent);
+    backdrop-filter: blur(5px);
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    div {
+        width: 80%;
+        height: 80vh;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        box-shadow: var(--boxShadow);
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1#mentain-svg {
+            width: 2em;
+
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    aspect-ratio: 1;
+    width: 2.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    transition-duration: var(--transitionDuration);
+
+    span {
+        width: 60%;
+        height: 0.125rem;
+        background-color: black;
+        border-radius: 2rem;
+        position: absolute;
+    }
+
+    span:first-of-type {
+        transform: rotate(45deg);
+    }
+
+    span:last-of-type {
+        transform: rotate(-45deg);
+    }
+}
+
+.close-button:hover {
+    opacity: 0.7;
+}
+
+.close-button:active {
+    scale: 0.8;
+}
+
 .white-fog {
     position: absolute;
     z-index: 2;

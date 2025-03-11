@@ -101,3 +101,11 @@ function workshop_3d_hover() {
         websitesLi.style.right = "";
     });
 }
+function overlay(close = true) {
+    const overLay = document.querySelector('.overlay');
+    if (close == true) {
+        $(overLay).fadeOut();
+    } else {
+        $(overLay).fadeIn();
+    }
+}
