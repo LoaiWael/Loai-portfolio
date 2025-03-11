@@ -1,7 +1,7 @@
 /* Footer styling */
 footer {
     position: relative;
-    background-color: var(--black1);
+    background-color: var(--static-black);
     color: white;
     padding: 1em;
     padding-top: 7em;

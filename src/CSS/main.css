@@ -12,22 +12,25 @@
 }
 
 :root {
-    --mainColor: #252525;
-    --black1: #131313;
-    --white: rgb(255, 255, 255);
+    color-scheme: light dark;
+    --mainColor: light-dark(#252525, hsl(0, 0%, 75%));
+    --static-black: #131313;
+    --black1: light-dark(#131313, hsl(0, 0%, 90%));
+    --black2: light-dark(white, hsl(0, 0%, 18%));
+    --white: light-dark(rgb(255, 255, 255), #1f1f1f);
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
     --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
-    --simi-black: rgba(0, 0, 0, 0.3);
-    --nav-color: rgba(255, 255, 255, 0.6);
+    --simi-black: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.25));
+    --nav-color: light-dark(rgba(255, 255, 255, 0.6), hsla(0, 0%, 10%, 0.6));
     --decorationBarHeight: 8px;
     --transitionDuration: 200ms;
     --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
     --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
-    --hoverBackgroundColor: #25252540;
-    background-color: var(--black1);
+    --hoverBackgroundColor: light-dark(hsla(0, 0%, 15%, 0.125), hsla(0, 0%, 80%, 0.125));
+    background-color: var(--static-black);
     scroll-behavior: smooth;
     /* animation: smooth-scroll linear both;
     animation-timeline: scroll(root); */
@@ -56,11 +59,12 @@ body {
 .introduction-background {
     position: absolute;
     z-index: 0;
-    width: 200%;
+    width: 100%;
     height: 100vh;
-    background-image: linear-gradient(140deg, hsl(209, 50%, 93%) 10%, hsl(206, 14%, 95%) 60%);
+    background-image: linear-gradient(140deg, light-dark(hsl(209, 50%, 93%), hsl(209, 20%, 18%)) 10%, light-dark(hsl(206, 14%, 95%), hsl(206, 14%, 15%)) 60%);
+    background-size: 200vmax;
     background-position: right;
-    animation: introduction-background 5000ms;
+    animation: introduction-background 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
@@ -110,6 +114,7 @@ nav {
     float: right;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav .hamburger {
@@ -137,7 +142,6 @@ nav .hamburger .bar {
 .nav-links li {
     list-style: none;
     float: left;
-    margin-left: 5px;
 }
 
 .nav-buttons {
@@ -146,10 +150,15 @@ nav .hamburger .bar {
     margin: 7px;
     display: block;
     padding: 3px 5px;
-    border-radius: 5px;
+    border-radius: 0.475em;
     transition-duration: var(--transitionDuration);
     font-weight: 500;
     font-size: 0.8rem;
+}
+
+#timeline {
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 #my-workshop {
@@ -165,7 +174,7 @@ nav .hamburger .bar {
 
 /* hovering */
 .nav-buttons:hover {
-    background-color: #25252540;
+    background-color: var(--hoverBackgroundColor);
 }
 
 .nav-buttons:active {
@@ -182,7 +191,7 @@ nav .hamburger .bar {
 .nav-links .my-workshop-list {
     visibility: hidden;
     list-style-type: none;
-    background-color: var(--black1);
+    background-color: #252525;
     border-radius: 0 0 0.5em 0.5em;
     position: fixed;
     z-index: 97;
@@ -193,14 +202,13 @@ nav .hamburger .bar {
     align-items: center;
     margin: 0;
     padding: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
     li {
         margin: 0;
     }
 
     li a.nav-buttons {
-        color: var(--white);
+        color: white;
         font-weight: 400;
     }
 
@@ -209,6 +217,75 @@ nav .hamburger .bar {
     }
 }
 
+/* checkbox theme */
+.checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+    --width-of-switch: 3em;
+    --height-of-switch: 1.5em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.125em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.25em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+    margin-inline-start: 1.5em;
+}
+
+/* The slider */
+.checkbox-wrapper-54 {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    ;
+    transition: .4s;
+}
+
+.checkbox-wrapper-54 input:checked+.slider {
+    background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
 
 .introduction {
     position: relative;
@@ -282,8 +359,7 @@ nav .hamburger .bar {
 }
 
 .contacts a:hover {
-    filter: invert(100%);
-    background-color: #dadada;
+    background-color: var(--simi-black);
 }
 
 .photo-space {
@@ -298,7 +374,7 @@ nav .hamburger .bar {
     border-radius: 180px;
     border-bottom-right-radius: 100px 100px;
     border-bottom-left-radius: 100px 100px;
-    box-shadow: 0 1px 5px;
+    box-shadow: 0 1px 5px rgba(14, 14, 14, 0.5);
 }
 
 #me-in-img {
@@ -306,7 +382,7 @@ nav .hamburger .bar {
     position: absolute;
     bottom: 5px;
     right: 0px;
-    filter: drop-shadow(0 0 5px);
+    filter: drop-shadow(0 0 5px rgba(14, 14, 14, 0.5));
     animation: me 2800ms;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -345,7 +421,7 @@ nav .hamburger .bar {
     grid-area: certificate;
     width: 100%;
     margin: 5em 0;
-    background-color: #f9f5fa;
+    background-color: light-dark(#f9f5fa, hsl(288, 15%, 13%));
     box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.2) inset;
     border-radius: 0;
     display: flex;
@@ -408,15 +484,16 @@ nav .hamburger .bar {
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
-    color: var(--white);
+    color: white;
     cursor: pointer;
     transition-duration: var(--transitionDuration);
     position: relative;
+    overflow: clip;
 }
 
 #certificate-button::before {
     content: '';
-    background-color: var(--white);
+    background-color: white;
     width: 1.5rem;
     height: 100%;
     position: absolute;
@@ -428,7 +505,7 @@ nav .hamburger .bar {
 
 #certificate-button:hover {
     background-position: left;
-    color: var(--black1);
+    color: black;
 }
 
 #certificate-button:hover::before {
@@ -533,7 +610,7 @@ nav .hamburger .bar {
     span {
         width: 60%;
         height: 0.125rem;
-        background-color: black;
+        background-color: var(--mainColor);
         border-radius: 2rem;
         position: absolute;
     }
@@ -607,15 +684,9 @@ nav .hamburger .bar {
 }
 
 .content details[open] {
-    background-color: var(--white);
+    background-color: var(--black2);
     padding: 10px;
     box-shadow: var(--boxShadow);
-}
-
-.content .details-img {
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
 .list-spaces {
@@ -677,6 +748,7 @@ nav .hamburger .bar {
         display: flex;
         align-items: center;
         gap: 5px;
+        color: var(--static-black);
     }
 
     dd a {
@@ -705,6 +777,10 @@ nav .hamburger .bar {
 
     #scroll-driven-animation {
         background-image: radial-gradient(rgba(207, 207, 207, 0.9) 2%, rgba(207, 207, 207, 0.5) 90%);
+
+        a {
+            color: var(--static-black);
+        }
     }
 
     #vs-tech {
@@ -759,6 +835,7 @@ nav .hamburger .bar {
     box-shadow: var(--boxShadow);
     padding: 15px;
     flex: 1;
+    background-color: var(--black2);
 
     dl {
         margin-left: 5px;
@@ -838,7 +915,7 @@ nav .hamburger .bar {
 /* Footer styling */
 footer {
     position: relative;
-    background-color: var(--black1);
+    background-color: var(--static-black);
     color: white;
     padding: 1em;
     padding-top: 7em;
@@ -1134,7 +1211,7 @@ footer hr {
     }
 }
 
-@media (max-width:445px) {
+@media (max-width:540px) {
 
     nav {
         height: 35px;
@@ -1147,7 +1224,7 @@ footer hr {
         top: 35px;
         right: 25px;
         left: 25px;
-        background-color: var(--mainColor);
+        background-color: #252525;
         -moz-backdrop-filter: blur(10px);
         -ms-backdrop-filter: blur(10px);
         -o-backdrop-filter: blur(10px);
@@ -1158,19 +1235,23 @@ footer hr {
         margin: 0;
         border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+        align-items: unset;
     }
 
     .nav-links .my-workshop-list {
-        top: 140px;
+        top: 100%;
         left: 0.5em;
         right: 100px;
-        background-color: var(--mainColor);
         align-items: flex-start;
         direction: ltr;
     }
 
+    .nav-links li:last-of-type {
+        align-self: flex-end;
+    }
+
     .nav-buttons {
-        color: var(--white);
+        color: white;
     }
 
     .nav-buttons:hover {
@@ -1183,8 +1264,8 @@ footer hr {
     }
 
     #home {
-        background-color: var(--white);
-        color: var(--mainColor);
+        background-color: white;
+        color: var(--static-black);
         pointer-events: none;
     }
 
