@@ -1,0 +1,15 @@
+:root {
+    color-scheme: light dark;
+    --mainColor: light-dark(#252525, white);
+    --static-black: #131313;
+    --black1: light-dark(#131313, hsl(0, 0%, 90%));
+    --black2: light-dark(white, hsl(0, 0%, 18%));
+    --white: light-dark(white, #1f1f1f);
+    --simi-black: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.25));
+    --nav-color: light-dark(rgba(255, 255, 255, 0.6), hsla(0, 0%, 10%, 0.6));
+    --decorationBarHeight: 8px;
+    --transitionDuration: 200ms;
+    --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
+    --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
+    --hoverBackgroundColor: light-dark(hsla(0, 0%, 15%, 0.125), hsla(0, 0%, 80%, 0.125));
+}

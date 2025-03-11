@@ -12,24 +12,11 @@
 }
 
 :root {
-    color-scheme: light dark;
-    --mainColor: light-dark(#252525, hsl(0, 0%, 75%));
-    --static-black: #131313;
-    --black1: light-dark(#131313, hsl(0, 0%, 90%));
-    --black2: light-dark(white, hsl(0, 0%, 18%));
-    --white: light-dark(rgb(255, 255, 255), #1f1f1f);
     --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
     --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
     --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
-    --simi-black: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.25));
-    --nav-color: light-dark(rgba(255, 255, 255, 0.6), hsla(0, 0%, 10%, 0.6));
-    --decorationBarHeight: 8px;
-    --transitionDuration: 200ms;
-    --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
-    --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
-    --hoverBackgroundColor: light-dark(hsla(0, 0%, 15%, 0.125), hsla(0, 0%, 80%, 0.125));
     background-color: var(--static-black);
     scroll-behavior: smooth;
     /* animation: smooth-scroll linear both;
@@ -568,7 +555,7 @@ nav .hamburger .bar {
     right: 1vw;
     border-radius: 50%;
     border: none;
-    background: var(--white);
+    background: var(--black2);
     aspect-ratio: 1;
     width: 2.25em;
     display: flex;

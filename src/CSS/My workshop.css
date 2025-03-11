@@ -2,20 +2,6 @@
 /* font-family: "Noto Serif TC", serif; */
 
 :root {
-    --mainColor: #252525;
-    --black1: #131313;
-    --decorationColor1: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
-    --decorationColor2: linear-gradient(10deg, #f2ecb6 10%, #a96f44 80%);
-    --decorationColor3: linear-gradient(10deg, #ffc0d6 10%, #e0709f 80%);
-    --decorationColor4: linear-gradient(10deg, #e2b0ff 10%, #9f44d3 80%);
-    --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
-    --simi-black: rgba(0, 0, 0, 0.3);
-    --nav-color: rgba(255, 255, 255, 0.6);
-    --decorationBarHeight: 8px;
-    --transitionDuration: 200ms;
-    --boxShadow: 0 0 10px 0 rgba(14, 14, 14, 0.2);
-    --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
-    --hoverBackgroundColor: #25252540;
     background-color: var(--black1);
     scroll-behavior: smooth;
 }
@@ -64,6 +50,7 @@ nav {
     float: right;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav .hamburger {
@@ -91,7 +78,6 @@ nav .hamburger .bar {
 .nav-links li {
     list-style: none;
     float: left;
-    margin-left: 5px;
 }
 
 .nav-buttons {
@@ -100,10 +86,15 @@ nav .hamburger .bar {
     margin: 7px;
     display: block;
     padding: 3px 5px;
-    border-radius: 5px;
+    border-radius: 0.475em;
     transition-duration: var(--transitionDuration);
     font-weight: 500;
     font-size: 0.8rem;
+}
+
+#timeline {
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 #my-workshop {
@@ -119,18 +110,88 @@ nav .hamburger .bar {
 
 /* hovering */
 .nav-buttons:hover {
-    background-color: #25252540;
+    background-color: var(--hoverBackgroundColor);
 }
 
 .nav-buttons:active {
     background-color: var(--mainColor);
-    color: white;
+    color: var(--white);
 }
 
 #my-workshop {
     background-color: var(--black1);
-    color: white;
+    color: var(--white);
+    pointer-events: none;
+}
+
+/* checkbox theme */
+.checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+    --width-of-switch: 3em;
+    --height-of-switch: 1.5em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.125em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.25em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+    margin-inline-start: 1.5em;
+}
+
+/* The slider */
+.checkbox-wrapper-54 {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper-54 .slider {
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    ;
+    transition: .4s;
+}
+
+.checkbox-wrapper-54 input:checked+.slider {
+    background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 .introduction {
@@ -138,11 +199,12 @@ nav .hamburger .bar {
     position: relative;
     perspective: 500px;
     overflow: hidden;
-    background-color: rgb(227, 227, 227);
+    background-color: var(--white);
     overflow: hidden;
 }
 
 .background {
+    mix-blend-mode: multiply;
     position: absolute;
     top: 0;
     z-index: 0;
@@ -165,7 +227,7 @@ nav .hamburger .bar {
     content: "";
     width: 10px;
     height: 85vh;
-    background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
+    background-image: linear-gradient(100deg, var(--mainColor), var(--white));
     position: absolute;
     z-index: 1;
     border-radius: 20px;
@@ -179,7 +241,7 @@ nav .hamburger .bar {
     content: "";
     width: 10px;
     height: calc(85vh - 25px);
-    background-image: linear-gradient(100deg, var(--mainColor), rgb(164, 164, 164));
+    background-image: linear-gradient(100deg, var(--mainColor), var(--white));
     position: absolute;
     z-index: 1;
     border-radius: 20px;
@@ -243,7 +305,7 @@ nav .hamburger .bar {
             border-radius: 50%;
             padding: 0.65em;
             aspect-ratio: 1;
-            color: white;
+            color: var(--white);
             display: flex;
             align-items: center;
             position: relative;
@@ -332,6 +394,7 @@ nav .hamburger .bar {
 .logo-area-realtive img[alt="circle"],
 .logo-area-realtive img[alt="line"] {
     width: inherit;
+    mix-blend-mode: darken;
     filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.334));
     animation-name: logo;
     animation-duration: 2s;
@@ -339,6 +402,7 @@ nav .hamburger .bar {
 }
 
 .logo-area-realtive img[alt="line"] {
+    mix-blend-mode: lighten;
     position: absolute;
     left: 0;
     bottom: 1.75em;
@@ -400,7 +464,7 @@ nav .hamburger .bar {
     div {
         width: 80%;
         height: 80vh;
-        background-color: white;
+        background-color: var(--white);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -415,6 +479,9 @@ nav .hamburger .bar {
         h1#mentain-svg {
             width: 2em;
 
+            svg {
+                fill: var(--mainColor);
+            }
         }
 
         p {
@@ -429,7 +496,7 @@ nav .hamburger .bar {
     right: 1vw;
     border-radius: 50%;
     border: none;
-    background: white;
+    background: var(--black2);
     aspect-ratio: 1;
     width: 2.25em;
     display: flex;
@@ -471,7 +538,7 @@ nav .hamburger .bar {
     transform: translate(0, -50%);
     width: 100%;
     height: 140px;
-    background-image: linear-gradient(to bottom, transparent, white 50%);
+    background-image: linear-gradient(to bottom, transparent, var(--white) 50%);
     border: none;
     margin: 0;
 }
@@ -586,7 +653,7 @@ nav .hamburger .bar {
 
 }
 
-@media (max-width:445px) {
+@media (max-width:540px) {
     nav {
         height: 35px;
     }
@@ -598,15 +665,22 @@ nav .hamburger .bar {
         top: 35px;
         right: 25px;
         left: 25px;
-        background-color: var(--mainColor);
+        background-color: #252525;
+        -moz-backdrop-filter: blur(10px);
         -ms-backdrop-filter: blur(10px);
         -o-backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
+        flex-direction: column;
         padding: 1rem;
         margin: 0;
         border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+        align-items: unset;
+    }
+
+    .nav-links li:last-of-type {
+        align-self: flex-end;
     }
 
     .nav-buttons {
@@ -619,12 +693,13 @@ nav .hamburger .bar {
 
     .nav-buttons:active {
         color: var(--mainColor);
-        background-color: white;
+        background-color: var(--white);
     }
 
     #my-workshop {
         background-color: white;
-        color: var(--mainColor);
+        color: var(--static-black);
+        pointer-events: none;
     }
 
     nav .nav-links.active {
