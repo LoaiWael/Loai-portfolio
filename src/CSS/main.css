@@ -188,35 +188,6 @@ nav .hamburger .bar {
     pointer-events: none;
 }
 
-.nav-links .my-workshop-list {
-    visibility: hidden;
-    list-style-type: none;
-    background-color: #252525;
-    border-radius: 0 0 0.5em 0.5em;
-    position: fixed;
-    z-index: 97;
-    top: 40px;
-    right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-
-    li {
-        margin: 0;
-    }
-
-    li a.nav-buttons {
-        color: white;
-        font-weight: 400;
-    }
-
-    li a.nav-buttons:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
 /* checkbox theme */
 .checkbox-wrapper-54 input[type="checkbox"] {
     visibility: hidden;
@@ -1194,23 +1165,6 @@ footer hr {
     }
 }
 
-@media (max-width:715px) {
-    .my-workshop-list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        direction: rtl;
-
-        li {
-            width: 100%;
-        }
-
-        li:first-child {
-            margin-top: 7px;
-        }
-    }
-}
-
 @media (max-width:540px) {
 
     nav {
@@ -1236,14 +1190,6 @@ footer hr {
         border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
         align-items: unset;
-    }
-
-    .nav-links .my-workshop-list {
-        top: 100%;
-        left: 0.5em;
-        right: 100px;
-        align-items: flex-start;
-        direction: ltr;
     }
 
     .nav-links li:last-of-type {

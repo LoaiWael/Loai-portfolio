@@ -93,7 +93,7 @@ nav .hamburger .bar {
 
 .nav-buttons:active {
     background-color: var(--mainColor);
-    color: var(--white);
+    <<<<<<< HEAD color: var(--white);
 }
 
 #home {
@@ -149,7 +149,16 @@ nav .hamburger .bar {
     }
 }
 
-@media (max-width:445px) {
+=======color: white;
+}
+
+#home {
+    background-color: var(--mainColor);
+    color: white;
+    pointer-events: none;
+}
+
+>>>>>>>My-workshop @media (max-width:445px) {
 
     nav {
         height: 35px;
@@ -173,14 +182,6 @@ nav .hamburger .bar {
         margin: 0;
         border-radius: 0 0 0.5em 0.5em;
         box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
-    }
-
-    .nav-links .my-workshop-list {
-        top: 140px;
-        left: 0.5em;
-        right: 100px;
-        align-items: flex-start;
-        direction: ltr;
     }
 
     .nav-buttons {
