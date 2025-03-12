@@ -460,6 +460,7 @@ nav .hamburger .bar {
     inset: 0;
     width: 100%;
     height: 100vh;
+    transition-duration: unset;
 
     div {
         width: 80%;
@@ -509,7 +510,7 @@ nav .hamburger .bar {
     span {
         width: 60%;
         height: 0.125rem;
-        background-color: black;
+        background-color: var(--black1);
         border-radius: 2rem;
         position: absolute;
     }

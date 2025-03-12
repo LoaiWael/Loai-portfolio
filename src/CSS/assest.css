@@ -16,26 +16,14 @@
     --certificates: light-dark(#f9f5fa, hsl(288, 15%, 13%));
 }
 
+* {
+    transition-duration: var(--transitionDuration);
+}
+
 :root.dark-theme {
-    --mainColor: white;
-    --black1: hsl(0, 0%, 90%);
-    --black2: hsl(0, 0%, 18%);
-    --white: #1f1f1f;
-    --simi-black: rgba(255, 255, 255, 0.25);
-    --nav-color: hsla(0, 0%, 10%, 0.6);
-    --hoverBackgroundColor: hsla(0, 0%, 80%, 0.125);
-    --index-introduction: linear-gradient(140deg, hsl(209, 20%, 18%) 10%, hsl(206, 14%, 15%) 60%);
-    --certificates: hsl(288, 15%, 13%);
+    color-scheme: dark;
 }
 
 :root.light-theme {
-    --mainColor: #252525;
-    --black1: #131313;
-    --black2: white;
-    --white: white;
-    --simi-black: rgba(0, 0, 0, 0.3);
-    --nav-color: rgba(255, 255, 255, 0.6);
-    --hoverBackgroundColor: hsla(0, 0%, 15%, 0.125);
-    --index-introduction: linear-gradient(140deg, hsl(209, 50%, 93%) 10%, hsl(206, 14%, 95%) 60%);
-    --certificates: #f9f5fa;
+    color-scheme: light;
 }
