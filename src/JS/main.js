@@ -1,18 +1,12 @@
-$(function () {
-    $(".my-workshop-list").slideUp();
+window.onload = function () {
     $("#certificates").slideUp();
     if ($(window).width() < 445) {
         $(".nav-links").slideUp();
     }
-    $("#my-workshop").click(function () {
-        $(".my-workshop-list").css("visibility", "visible");
-        $(".my-workshop-list").slideToggle("fast");
-    });
     $(".hamburger").click(function () {
         $(".nav-links").css("visibility", "visible");
         $(".nav-links").slideToggle("fast");
     });
-    contactAnimation();
     $("#certificate-button").click(function () {
         $("#certificates").slideDown("slow");
         document.getElementById("certificates").scrollIntoView();
@@ -28,11 +22,44 @@ $(function () {
         // $("#certificates-header").removeClass("certificates-animation-open");
         // $(".certificates-container").removeClass("certificates-animation-open");
     });
-    workshop_openSource_hover();
-    workshop_uiux_hover();
-    workshop_3d_hover();
-})
+    contactAnimation();
+    theme();
+}
+function theme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const rootElement = document.documentElement;
 
+    // Function to apply theme
+    function applyTheme(theme) {
+        rootElement.classList.remove('light-theme', 'dark-theme'); // Remove any previous class
+        if (theme === 'dark') {
+            rootElement.classList.add('dark-theme');
+            themeToggle.checked = true;
+        } else {
+            rootElement.classList.add('light-theme');
+            themeToggle.checked = false;
+        }
+        localStorage.setItem('theme', theme); // Save user preference
+    }
+
+    // Check system preference first
+    const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    if (systemDarkMode) {
+        themeToggle.checked = true;
+    }
+    if (savedTheme) {
+        applyTheme(savedTheme); // Use user preference if exists
+    } else {
+        applyTheme(systemDarkMode ? 'dark' : 'light'); // Otherwise, use system preference
+    }
+
+    // Toggle manually
+    themeToggle.addEventListener('change', () => {
+        applyTheme(themeToggle.checked ? 'dark' : 'light');
+    });
+
+}
 function contactAnimation() {
     const contactLinks = document.querySelectorAll(".contacts a");
     var timing = 1500;
@@ -44,68 +71,3 @@ function contactAnimation() {
     }
 }
 
-function workshop_openSource_hover() {
-    const openSourceLi = document.querySelector("#open-source");
-    const websitesLi = document.querySelector("#websites");
-
-    openSourceLi.addEventListener("mouseenter", () => {
-        websitesLi.style.top = "calc(var(--top) - 2.5%)";
-        websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
-    });
-
-    openSourceLi.addEventListener("mouseleave", () => {
-        websitesLi.style.top = "";
-        websitesLi.style.right = "";
-    });
-}
-function workshop_uiux_hover() {
-    const uiux = document.querySelector("#ui-ux");
-    const openSourceLi = document.querySelector("#open-source");
-    const websitesLi = document.querySelector("#websites");
-
-    uiux.addEventListener("mouseenter", () => {
-        openSourceLi.style.top = "calc(var(--top) - 2.5%)";
-        openSourceLi.style.right = "calc((var(--top) / 16 + var(--right)) - 1%)";
-        websitesLi.style.top = "calc(var(--top) - 2.5%)";
-        websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
-    });
-
-    uiux.addEventListener("mouseleave", () => {
-        openSourceLi.style.top = "";
-        openSourceLi.style.right = "";
-        websitesLi.style.top = "";
-        websitesLi.style.right = "";
-    });
-}
-function workshop_3d_hover() {
-    const modeling = document.querySelector("#modeling");
-    const uiux = document.querySelector("#ui-ux");
-    const openSourceLi = document.querySelector("#open-source");
-    const websitesLi = document.querySelector("#websites");
-
-    modeling.addEventListener("mouseenter", () => {
-        uiux.style.top = "calc(var(--top) - 2.5%)";
-        uiux.style.right = "calc((var(--top) / 16 + var(--right)) - 4%)";
-        openSourceLi.style.top = "calc(var(--top) - 2.5%)";
-        openSourceLi.style.right = "calc((var(--top) / 16 + var(--right)) - 1%)";
-        websitesLi.style.top = "calc(var(--top) - 2.5%)";
-        websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
-    });
-
-    modeling.addEventListener("mouseleave", () => {
-        uiux.style.top = "";
-        uiux.style.right = "";
-        openSourceLi.style.top = "";
-        openSourceLi.style.right = "";
-        websitesLi.style.top = "";
-        websitesLi.style.right = "";
-    });
-}
-function overlay(close = true) {
-    const overLay = document.querySelector('.overlay');
-    if (close == true) {
-        $(overLay).fadeOut();
-    } else {
-        $(overLay).fadeIn();
-    }
-}

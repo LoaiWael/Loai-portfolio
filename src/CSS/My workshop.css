@@ -164,7 +164,7 @@ nav .hamburger .bar {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f4f4f5;
+    background-color: hsl(240, 5%, 85%);
     transition: .4s;
     border-radius: 30px;
 }
