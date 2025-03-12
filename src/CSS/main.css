@@ -569,7 +569,7 @@ nav .hamburger .bar {
     span {
         width: 60%;
         height: 0.125rem;
-        background-color: var(--mainColor);
+        background-color: var(--black1);
         border-radius: 2rem;
         position: absolute;
     }
