@@ -102,6 +102,7 @@ nav {
     padding: 0;
     display: flex;
     align-items: center;
+    transition-duration: unset;
 }
 
 nav .hamburger {
@@ -389,6 +390,7 @@ nav .hamburger .bar {
     justify-content: center;
     position: relative;
     overflow-x: clip;
+    transition-duration: unset;
 }
 
 #skills {
@@ -601,7 +603,6 @@ nav .hamburger .bar {
 } */
 
 .content-after-headline p {
-    font-weight: 500;
     margin-top: 50px;
     align-self: flex-start;
     max-width: 75ch;
