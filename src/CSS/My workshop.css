@@ -18,6 +18,11 @@ body {
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
     height: 100vh;
     overflow-y: clip;
+
+    button {
+        font-family: "Lexend", sans-serif;
+        cursor: pointer;
+    }
 }
 
 nav {
@@ -456,6 +461,7 @@ nav .hamburger .bar {
 .overlay {
     display: none;
     position: absolute;
+    z-index: 3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 50%, transparent);
     backdrop-filter: blur(5px);
     inset: 0;
@@ -463,7 +469,7 @@ nav .hamburger .bar {
     height: 100vh;
     transition-duration: unset;
 
-    div {
+    .overlay-content {
         width: 80%;
         height: 80vh;
         background-color: var(--white);
@@ -473,21 +479,164 @@ nav .hamburger .bar {
         translate: -50% -50%;
         box-shadow: var(--boxShadow);
         border-radius: 1em;
+        overflow: clip;
+
+        h1 {
+            margin: 0;
+            padding: 0.5em;
+            background-color: var(--white);
+        }
+    }
+}
+
+.js-pop-up {
+    animation: overlay-pop-up both;
+    animation-duration: 450ms;
+}
+
+.overlay-content section {
+    height: calc(100% + -9vh);
+    overflow: auto;
+    container: overlay-container / inline-size;
+    scroll-timeline: --overlay;
+
+    figure {
+        background-color: var(--black2);
+        height: 8em;
+        border-radius: 0.5em;
+        margin: 1em;
+        margin-block: 1.75em;
+        overflow: clip;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
+        column-gap: 1em;
+        box-shadow: var(--boxShadow2);
 
-        h1#mentain-svg {
-            width: 2em;
+        img {
+            aspect-ratio: 1;
+            height: 100%;
+            object-fit: cover;
+        }
 
-            svg {
-                fill: var(--mainColor);
+        .about-product {
+            flex: 1 1;
+
+            figcaption {
+                font-size: 2rem;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            span {
+                margin-block: 0.5em;
+                font-size: 0.8rem;
+                font-weight: 300;
+                display: inline-block;
+                max-width: 30ch;
             }
         }
 
-        p {
+        .figure-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            margin-right: 0.75em;
+        }
+
+        a {
+            text-decoration: none;
+            border: none;
+            border-radius: 20em;
+            padding: 0.625em 1em;
+            background: linear-gradient(120deg, var(--black1), var(--black3));
+            color: light-dark(white, black);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            gap: 0.5em;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        a:hover {
+            opacity: 0.6;
+            box-shadow: var(--boxShadow);
+        }
+
+        a:active {
+            scale: 0.9;
+        }
+    }
+}
+
+.overlay-content section::after,
+.overlay-content section::before {
+    opacity: 0;
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 0.75em;
+    animation: overlay-scrolling linear both;
+    animation-timeline: --overlay;
+}
+
+.overlay-content section::after {
+    background: radial-gradient(farthest-side at 50% -100%, hsla(0, 0%, 7%, 0.6), transparent);
+    top: 4.5em;
+    left: 0;
+    animation-range: 0.75em 2.75em;
+}
+
+.overlay-content section::before {
+    background: radial-gradient(farthest-side at 50% 100%, hsla(0, 0%, 7%, 0.6), transparent);
+    bottom: 0;
+    left: 0;
+    animation-direction: reverse;
+    animation-range: calc(100% - 1.75em) calc(100% - 0.75em);
+}
+
+.secondary-button,
+.overlay-content section figure a.secondary-button {
+    background: transparent;
+    color: light-dark(black, white);
+    border: 0.25em solid;
+    border-color: linear-gradient(120deg, var(--black1), var(--black3));
+    padding: calc(0.625em - 0.25em) calc(1em - 0.25em);
+}
+
+.overlay-content section figure button.secondary-button:hover {
+    background-color: var(--hoverBackgroundColor);
+}
+
+@container overlay-container (max-width: 565px) {
+    .overlay-content section {
+        figure {
+            flex-direction: column;
+            height: unset;
+
+            img {
+                width: 100%;
+            }
+
+            .about-product {
+                align-self: flex-start;
+                margin: 0.75em;
+            }
+
+            .figure-buttons {
+                flex-direction: row;
+                margin: 0;
+                padding: 0.75em;
+                justify-content: space-evenly;
+                width: 100%;
+
+                a {
+                    flex: 1 1 100%;
+                }
+            }
         }
     }
 }
@@ -498,7 +647,7 @@ nav .hamburger .bar {
     right: 1vw;
     border-radius: 50%;
     border: none;
-    background: var(--black2);
+    background: var(--black3);
     aspect-ratio: 1;
     width: 2.25em;
     display: flex;
@@ -511,7 +660,7 @@ nav .hamburger .bar {
     span {
         width: 60%;
         height: 0.125rem;
-        background-color: var(--black1);
+        background-color: var(--white);
         border-radius: 2rem;
         position: absolute;
     }
@@ -577,6 +726,22 @@ nav .hamburger .bar {
         from {
             translate: calc(1.5em * var(--big-screen)) calc(1.5em * var(--small-screen));
             opacity: 0;
+        }
+    }
+
+    @keyframes overlay-pop-up {
+        from {
+            scale: 0.9;
+        }
+    }
+
+    @keyframes overlay-scrolling {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
         }
     }
 }
