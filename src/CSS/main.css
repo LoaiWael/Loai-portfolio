@@ -723,50 +723,7 @@ nav .hamburger .bar {
         }
     }
 
-    #html-tech {
-        background-image: radial-gradient(rgba(240, 163, 127, 0.9) 2%, rgba(240, 163, 127, 0.5) 90%);
-    }
-
-    #css-tech {
-        background-image: radial-gradient(rgba(127, 180, 240, 0.9) 2%, rgba(127, 180, 240, 0.5) 90%);
-    }
-
-    #js-tech {
-        background-image: radial-gradient(rgba(255, 255, 79, 0.9) 2%, rgba(255, 255, 79, 0.5) 90%);
-    }
-
-    #scroll-driven-animation {
-        background-image: radial-gradient(rgba(207, 207, 207, 0.9) 2%, rgba(207, 207, 207, 0.5) 90%);
-
-        a {
-            color: var(--static-black);
-        }
-    }
-
-    #vs-tech {
-        background-image: radial-gradient(rgba(175, 211, 255, 0.9) 2%, rgba(175, 211, 255, 0.5) 90%);
-    }
-
-    #git-tech {
-        background-image: radial-gradient(rgba(255, 156, 141, 0.9) 2%, rgba(255, 156, 141, 0.5) 90%);
-    }
-
-    #github-tech {
-        background-image: radial-gradient(rgba(45, 45, 45, 0.9) 2%, rgba(45, 45, 45, 0.6) 90%);
-        color: white;
-    }
-
-    #figma-tech {
-        background-image: radial-gradient(rgba(156, 255, 182, 0.9) 2%, rgba(156, 255, 182, 0.5) 90%);
-    }
-
-    #adobe-color-tech {
-        background-image: radial-gradient(rgba(255, 139, 255, 0.9) 2%, rgba(255, 139, 255, 0.5) 90%);
-    }
-
-    #cinema-tech {
-        background-image: radial-gradient(rgba(129, 133, 255, 0.9) 2%, rgba(129, 133, 255, 0.5) 90%);
-    }
+    /* the colors in assest.css */
 }
 
 #experience-line {
@@ -994,6 +951,14 @@ footer hr {
     margin-bottom: 1em;
 }
 
+@keyframes certificate-markers {
+
+    from,
+    to {
+        background-color: var(--black1);
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
 
     /* @keyframes smooth-scroll {
@@ -1019,14 +984,6 @@ footer hr {
         from {
             opacity: 0;
             scale: 0.9;
-        }
-    }
-
-    @keyframes certificate-markers {
-
-        from,
-        to {
-            background-color: var(--black1);
         }
     }
 

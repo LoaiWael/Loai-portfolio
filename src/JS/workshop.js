@@ -3,6 +3,20 @@ workshop_openSource_hover();
 workshop_uiux_hover();
 workshop_3d_hover();
 
+document.querySelectorAll('.markers a').forEach(marker => {
+    marker.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        let index = getComputedStyle(this).getPropertyValue('--i').trim();
+        let image = document.querySelectorAll('.photos li')[index];
+        let container = document.querySelector('.photos');
+
+        container.scrollTo({
+            left: image.offsetLeft,
+        });
+    });
+});
+
 function workshop_openSource_hover() {
     const openSourceLi = document.querySelector("#open-source");
     const websitesLi = document.querySelector("#websites");
@@ -60,7 +74,7 @@ function workshop_3d_hover() {
         websitesLi.style.right = "";
     });
 }
-function overlay(close = true, content) {
+function overlay(close = false, content) {
     const overLay = document.querySelector('.overlay');
     const overlayContent = document.querySelector('.overlay-content')
     if (close) {
@@ -74,7 +88,7 @@ function overlay(close = true, content) {
 
     if (content === '3d') {
         overlayContent.innerHTML = `
-            <button class="close-button" onclick="overlay(true)"><span></span><span></span></button>
+            <button class="close-button" onclick="overlay(true)" title="Close"><span></span><span></span></button>
             <h1>3D Models.</h1>
             <section>
                 <figure id="mug">
@@ -310,7 +324,7 @@ function overlay(close = true, content) {
         `;
     } else if (content === 'ui-ux') {
         overlayContent.innerHTML = `
-            <button class="close-button" onclick="overlay(true)"><span></span><span></span></button>
+            <button class="close-button" onclick="overlay(true)" title="Close"><span></span><span></span></button>
             <h1>UI UX.</h1>
             <section>
                 <figure id="allam-ui-ux">
@@ -358,7 +372,7 @@ function overlay(close = true, content) {
     }
     else if (content === 'open-source') {
         overlayContent.innerHTML = `
-            <button class="close-button" onclick="overlay(true)"><span></span><span></span></button>
+            <button class="close-button" onclick="overlay(true)" title="Close"><span></span><span></span></button>
             <h1>Open Source.</h1>
             <section
                 style="display: flex; justify-content: center; align-items: center; height: calc(100% - 4.5em);">
@@ -368,7 +382,7 @@ function overlay(close = true, content) {
     }
     else if (content === 'websites') {
         overlayContent.innerHTML = `
-            <button class="close-button" onclick="overlay(true)"><span></span><span></span></button>
+            <button class="close-button" onclick="overlay(true)" title="Close"><span></span><span></span></button>
             <h1>Websites.</h1>
             <section>
                 <figure id="allam-website">
@@ -392,5 +406,15 @@ function overlay(close = true, content) {
                 </figure>
             </section>
         `;
+    }
+}
+function overlayDetails(back = false, categ, product) {
+    const details = document.querySelector('.overlay-content-details');
+    if (back) {
+        details.classList.remove('js-pop-up');
+        return $(details).fadeOut("fast");
+    } else {
+        details.classList.add('js-pop-up');
+        $(details).fadeIn();
     }
 }
