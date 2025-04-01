@@ -287,16 +287,16 @@ nav .hamburger .bar {
 .name {
     color: var(--mainColor);
     font-weight: 950;
-    font-size: 50px;
+    font-size: 3.5em;
     margin: 0;
-    line-height: 40px;
+    line-height: 0.75;
     animation: pop-up 1500ms;
     animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .info-under-name {
     font-weight: 250;
-    font-size: 13px;
+    font-size: 0.75em;
     margin: 0;
     margin-left: 3px;
     animation: pop-up 2000ms;
@@ -608,7 +608,7 @@ nav .hamburger .bar {
     max-width: 75ch;
 }
 
-.content img {
+.content img:not(.skills-list img) {
     width: 20%;
     max-width: 600px;
     filter: drop-shadow(var(--imageBoxShadow));
@@ -707,19 +707,23 @@ nav .hamburger .bar {
         padding: 2px 4px;
         display: flex;
         align-items: center;
-        gap: 5px;
+        column-gap: 5px;
         color: var(--static-black);
     }
 
-    dd a {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        color: var(--mainColor);
+    dd {
+        a {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: var(--mainColor);
 
+        }
+
+        img,
         svg {
-            aspect-ratio: 1;
-            width: 1em;
+            flex: 1 1 1rem;
+            width: 1rem;
         }
     }
 
@@ -763,7 +767,7 @@ nav .hamburger .bar {
     display: block;
     margin-top: -24px;
     margin-bottom: 30px;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: 300;
 }
 
@@ -1188,14 +1192,14 @@ footer hr {
         flex: 1 1 100%
     }
 
-    #skills img {
+    #skills img:not(.skills-list img) {
         order: 2;
         flex: 0 1 60%;
         margin: 0;
         transform: translate(40%, -15px);
     }
 
-    .content img {
+    .content img:not(.skills-list img) {
         flex: 0 1 80%;
         margin: 10px 0;
     }
@@ -1208,9 +1212,4 @@ footer hr {
         flex: 2 1 100%;
         margin: 1em 0;
     }
-}
-
-button[aria-label="Visual Search"],
-button[data-visual-search] {
-    display: none !important;
 }
