@@ -1,50 +1,126 @@
 {
-    "contributors": {
-        "LoaiWaelHassan": {
-            "name": "Loai W. Hassan (Me)",
-            "position": "Student @ CIS MU",
-            "photo": "./public/PP/Loai.webp",
-            "communication": "https://www.linkedin.com/in/loai-wael-374a93299/"
-        }
-    },
-    "technologies": {
-        "c4d": {
-            "name": "C4D",
-            "id": "cinema-tech",
-            "icon": "./public/tech/c4d-logo.webp"
-        },
-        "picsart": {
-            "name": "PicsArt",
-            "id": "picsart-tech",
-            "icon": "./public/tech/picsart-logo.webp"
-        },
-        "lightroom": {
-            "name": "Adobe Lightroom",
-            "id": "adobe-lightroom-tech",
-            "icon": "./public/tech/adobe-lightroom-logo.webp"
-        }
-    },
-    "myWork": {
-        "threeD": {
-            "minecraftNethier": {
-                "title": "Minecraft Render",
-                "creationDate": "since: (2019 - 2020)",
-                "doc": "These 2 renders was made as a design for a communication app called amino minecraft. It's a community for the people playing this game. I have learned how to use light source in C4D and installed new light packages like the silincer pistol lazer.",
-                "technologies": [
-                    "technologies.c4d",
-                    "technologies.picsart",
-                    "technologies.lightroom"
-                ],
-                "contributors": [
-                    "contributors.LoaiWaelHassan"
-                ],
-                "srcPost": "https://www.instagram.com/p/CokWwptqAW-/?img_index=1",
-                "numOfImages": 2,
-                "images": [
-                    "./public/My workshop/3D/minecraft-neither.webp",
-                    "./public/My workshop/3D/minecraft-neither 2.webp"
-                ]
-            }
-        }
-    }
+	"contributors": {
+		"LoaiWaelHassan": {
+			"name": "Loai W. Hassan (Me)",
+			"position": "Student @ CIS MU",
+			"photo": "./public/PP/Loai.webp",
+			"communication": "https://www.linkedin.com/in/loai-wael-374a93299/"
+		}
+	},
+	"technologies": {
+		"c4d": {
+			"name": "C4D",
+			"id": "cinema-tech",
+			"icon": "./public/tech/c4d-logo.webp"
+		},
+		"picsart": {
+			"name": "PicsArt",
+			"id": "picsart-tech",
+			"icon": "./public/tech/picsart-logo.webp"
+		},
+		"lightroom": {
+			"name": "Adobe Lightroom",
+			"id": "adobe-lightroom-tech",
+			"icon": "./public/tech/adobe-lightroom-logo.webp"
+		},
+		"figma": {
+			"name": "Figma",
+			"id": "figma-tech",
+			"icon": "./public/tech/Figma-Logo.webp"
+		}
+	},
+	"myWork": {
+		"threeD": {
+			"category": "3D Models.",
+			"numOfProducts": 12,
+			"minecraftNethier": {
+				"title": "Minecraft Render",
+				"creationDate": "since: (2019 - 2020)",
+				"doc": "These 2 renders was made as a design for a communication app called amino minecraft. It's a community for the people playing this game. I have learned how to use light source in C4D and installed new light packages like the silincer pistol lazer.",
+				"technologies": [
+					{
+						"name": "c4d",
+						"techUsage": "Used to create the render"
+					},
+					{
+						"name": "picsart",
+						"techUsage": "Used to add png's like the flame"
+					},
+					{
+						"name": "lightroom",
+						"techUsage": "Used for fixing the colors"
+					}
+				],
+				"contributors": [
+					"LoaiWaelHassan"
+				],
+				"src": [
+					"https://www.instagram.com/p/CokWwptqAW-/?img_index=1"
+				],
+				"numOfImages": 2,
+				"images": [
+					"./public/My workshop/3D/minecraft-neither.webp",
+					"./public/My workshop/3D/minecraft-neither 2.webp"
+				]
+			},
+			"mug": {
+				"title": "3D Mug",
+				"creationDate": "since: (2024)",
+				"doc": "This small model was made to bring it in the main view in my actual project for Allam Coffee, The main concept for making this mug is to bring back my old skills in a real project to not forget the 3D tools.",
+				"technologies": [
+					{
+						"name": "c4d",
+						"techUsage": "Used to create the model"
+					},
+					{
+						"name": "picsart",
+						"techUsage": "Used to add coffee beans and shadows"
+					},
+					{
+						"name": "Figma",
+						"techUsage": "Used to add the background"
+					}
+				],
+				"contributors": [
+					"LoaiWaelHassan"
+				],
+				"src": [
+					"https://www.instagram.com/p/DCsoEJTInh6/?img_index=2"
+				],
+				"numOfImages": 1,
+				"images": [
+					"public/My workshop/3D/photo 4.webp"
+				]
+			},
+			"perfume": {
+				"title": "3D Perfume",
+				"creationDate": "since: (2024)",
+				"doc": "This model was made at the valantine day, I was trying to challenge my self to make a realistic glass bottle not to create a lovely gift.",
+				"technologies": [
+					{
+						"name": "c4d",
+						"techUsage": "Used to create the model"
+					},
+					{
+						"name": "lightroom",
+						"techUsage": "Used to enhance the colors"
+					}
+				],
+				"contributors": [
+					"LoaiWaelHassan"
+				],
+				"src": [
+					"https://www.instagram.com/p/C3RAiXtt5Da/?img_index=1"
+				],
+				"numOfImages": 5,
+				"images": [
+					"public/My workshop/3D/perfume/perfume 1.webp",
+					"public/My workshop/3D/perfume/perfume 2.webp",
+					"public/My workshop/3D/perfume/perfume 3.webp",
+					"public/My workshop/3D/perfume/perfume 4.webp",
+					"public/My workshop/3D/perfume/perfume 5.webp"
+				]
+			}
+		}
+	}
 }
