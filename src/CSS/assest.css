@@ -5,6 +5,7 @@
     --black1: light-dark(#131313, hsl(0, 0%, 90%));
     --black2: light-dark(white, hsl(0, 0%, 18%));
     --black3: light-dark(hsl(0, 0%, 18%), rgb(169, 169, 169));
+    --black4: light-dark(rgb(220, 220, 220), hsl(0, 0%, 18%));
     --white: light-dark(white, #1f1f1f);
     --simi-black: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.25));
     --nav-color: light-dark(rgba(255, 255, 255, 0.6), hsla(0, 0%, 10%, 0.6));
@@ -65,6 +66,7 @@
 
 #figma-tech {
     background-image: radial-gradient(rgba(156, 255, 182, 0.9) 2%, rgba(156, 255, 182, 0.5) 90%);
+    color: var(--static-black);
 }
 
 #adobe-color-tech {
