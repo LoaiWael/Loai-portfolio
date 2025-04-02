@@ -459,7 +459,7 @@ nav .hamburger .bar {
 }
 
 .overlay {
-    /* display: none; */
+    display: none;
     position: absolute;
     z-index: 3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 50%, transparent);
@@ -493,6 +493,12 @@ nav .hamburger .bar {
 .js-pop-up {
     animation: overlay-pop-up both;
     animation-duration: 450ms;
+}
+
+.js-pop-out {
+    animation: overlay-pop-up both;
+    animation-duration: 450ms;
+    animation-direction: reverse;
 }
 
 .overlay-content section {
@@ -645,6 +651,7 @@ nav .hamburger .bar {
 }
 
 .overlay-content-details {
+    display: none;
     width: 80%;
     max-width: 100rem;
     height: 80vh;
@@ -656,6 +663,7 @@ nav .hamburger .bar {
     box-shadow: var(--boxShadow);
     border-radius: 1em;
     overflow: clip;
+    transition-duration: unset;
 
     .scrolling-area {
         height: 100%;
@@ -672,7 +680,7 @@ nav .hamburger .bar {
                 padding: 0;
                 list-style: none;
                 width: 100%;
-                height: fit-content;
+                max-height: 68vh;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -687,9 +695,14 @@ nav .hamburger .bar {
                     margin: 0;
                     padding: 0;
                     flex: 0 0 100%;
+                    display: flex;
+                    justify-content: center;
+                    background-color: var(--black4);
 
                     img {
-                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                        object-fit: fill;
                     }
                 }
             }
@@ -716,7 +729,7 @@ nav .hamburger .bar {
                         display: inline-block;
                         aspect-ratio: 1;
                         width: 1em;
-                        background-color: hsla(0, 0%, 100%, 0.3);
+                        background-color: light-dark(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 100%, 0.3));
                         border-radius: 50%;
                         animation: content-details-photos-markers linear;
                         animation-timeline: --photos-scrolling;
@@ -724,7 +737,7 @@ nav .hamburger .bar {
                     }
 
                     a:hover {
-                        background-color: hsla(0, 0%, 100%, 0.175);
+                        background-color: light-dark(hsla(0, 0%, 20%, 0.175), hsla(0, 0%, 100%, 0.175));
                     }
                 }
             }
@@ -785,10 +798,15 @@ nav .hamburger .bar {
         .technologies {
             margin: 0 1vw;
 
-            div {
+            div.details-info {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.5em;
+                position: relative;
+
+                div:has(span) {
+                    margin-block-end: 1em;
+                }
 
                 span {
                     padding: 0.25em;
@@ -802,6 +820,27 @@ nav .hamburger .bar {
                         flex: 1 1 1em;
                         width: 1em;
                     }
+
+                    cursor: default;
+                }
+
+                span:hover {
+                    scale: 1.1;
+                }
+
+                small {
+                    position: absolute;
+                    opacity: 0;
+                    scale: 0.9;
+                    translate: -1em 0;
+                    margin-block-start: 0.125em;
+                    cursor: default;
+                }
+
+                span:hover+small {
+                    opacity: 1;
+                    scale: 1;
+                    translate: unset;
                 }
             }
         }
@@ -982,16 +1021,7 @@ nav .hamburger .bar {
     margin: 0;
 }
 
-@keyframes content-details-photos-markers {
-
-    from,
-    to {
-        background-color: white;
-
-    }
-}
-
-/* @media (prefers-reduced-motion:no-preference) {
+@media (prefers-reduced-motion:no-preference) {
     @keyframes background {
         from {
             transform: scale(1.4) rotate(10deg);
@@ -1025,23 +1055,32 @@ nav .hamburger .bar {
             opacity: 0;
         }
     }
+}
 
-    @keyframes overlay-pop-up {
-        from {
-            scale: 0.9;
-        }
+/* Explicty animations */
+@keyframes content-details-photos-markers {
+
+    from,
+    to {
+        background-color: light-dark(black, white);
+    }
+}
+
+@keyframes overlay-pop-up {
+    from {
+        scale: 0.95;
+    }
+}
+
+@keyframes overlay-scrolling {
+    from {
+        opacity: 0;
     }
 
-    @keyframes overlay-scrolling {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
+    to {
+        opacity: 1;
     }
-} */
+}
 
 @media (max-width:1060px) {
     .navigations {
