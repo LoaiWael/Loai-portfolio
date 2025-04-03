@@ -251,7 +251,7 @@
 				{
 					"title": "3D Iphone",
 					"quickDoc": "3D green Iphone model was made to simulate the real one.",
-					"photoPrev": "./public/My workshop/3D/Green iphone/green iphone 1 - preview.webp",
+					"photoPrev": "./public/My workshop/3D/Green Iphone/green iphone 1 - preview.webp",
 					"creationDate": "since: (2023 - 2024)",
 					"doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the green Iphone version.",
 					"technologies": [
@@ -272,10 +272,10 @@
 					],
 					"numOfImages": 4,
 					"images": [
-						"./public/My workshop/3D/Green iphone/green iphone 1.webp",
-						"./public/My workshop/3D/Green iphone/green iphone 2.webp",
-						"./public/My workshop/3D/Green iphone/green iphone 3.webp",
-						"./public/My workshop/3D/Green iphone/green iphone 4.webp"
+						"./public/My workshop/3D/Green Iphone/green iphone 1.webp",
+						"./public/My workshop/3D/Green Iphone/green iphone 2.webp",
+						"./public/My workshop/3D/Green Iphone/green iphone 3.webp",
+						"./public/My workshop/3D/Green Iphone/green iphone 4.webp"
 					]
 				},
 				{
@@ -450,7 +450,7 @@
 					"quickDoc": "UI UX design for allam coffee application.",
 					"photoPrev": "./public/My workshop/UI UX/allam/photo 1.webp",
 					"creationDate": "since: (2024)",
-					"doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is just a view about the main app.",
+					"doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Mr.Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is just a view about the main app.",
 					"technologies": [
 						{
 							"name": "figma",
@@ -520,7 +520,7 @@
 					"quickDoc": "Small website to improve the accessibility at the coffee shop.",
 					"photoPrev": "./public/My workshop/websites/allam coffee/allam.webp",
 					"creationDate": "since: (2024 - 2025)",
-					"doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is the full project (Mr.Ahmed rejected this project).",
+					"doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Mr.Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is the full project (Mr.Ahmed rejected this project).",
 					"technologies": [
 						{
 							"name": "html",
