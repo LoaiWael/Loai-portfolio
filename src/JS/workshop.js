@@ -121,6 +121,7 @@ function overlayDetails(categ, work) {
 	const overlayDetails = document.querySelector('.overlay-content-details');
 
 	fetch('src/data.json').then(res => res.json()).then(data => {
+
 		const contributors = data.contributors;
 		const technologies = data.technologies;
 
@@ -218,8 +219,20 @@ function overlayDetails(categ, work) {
 				});
 			});
 		});
+		imgContentHover();
 	});
-
+	function imgContentHover() {
+		const photos = document.querySelectorAll('ul.photos li img');
+		const markers = document.querySelector('ul.markers');
+		photos.forEach(photo => {
+			photo.addEventListener('mouseenter', () => {
+				markers.style.opacity = '0.25';
+			});
+			photo.addEventListener('mouseleave', () => {
+				markers.style.opacity = '1';
+			});
+		})
+	}
 }
 
 function backButton(back = false) {

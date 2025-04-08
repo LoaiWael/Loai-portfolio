@@ -19,8 +19,8 @@
     --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
     background-color: var(--static-black);
     scroll-behavior: smooth;
-    /* animation: smooth-scroll linear both;
-    animation-timeline: scroll(root); */
+    animation: smooth-scroll linear both;
+    animation-timeline: scroll(root);
 }
 
 * {
@@ -35,12 +35,12 @@ body {
     margin: 0px;
     font-family: "Lexend", sans-serif;
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
-    /* transition: --scroll-position-delayed 0.625s linear;
-    --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); */
+    transition: --scroll-position-delayed 0.3s ease-in-out;
+    /* --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); */
     /* --scroll-direction: sign(var(--scroll-velocity));
     --scroll-speed: abs(var(--scroll-velocity)); */
-    /* --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
-    --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position)); */
+    --scrolling-down: calc(var(--scroll-position) - var(--scroll-position-delayed));
+    --scrolling-up: calc(var(--scroll-position-delayed) - var(--scroll-position));
 }
 
 .introduction-background {
@@ -277,6 +277,11 @@ nav .hamburger .bar {
 #introduction-line {
     background-image: linear-gradient(10deg, #15f5fd 10%, #036cda 80%);
     margin: 5% 0 1%;
+    transition: opacity 2000ms;
+
+    @starting-style {
+        opacity: 0;
+    }
 }
 
 
@@ -325,8 +330,6 @@ nav .hamburger .bar {
 .photo-space {
     position: relative;
     width: fit-content;
-    animation: image 2800ms;
-    animation-fill-mode: both;
 }
 
 #background {
@@ -335,6 +338,9 @@ nav .hamburger .bar {
     border-bottom-right-radius: 100px 100px;
     border-bottom-left-radius: 100px 100px;
     box-shadow: 0 1px 5px rgba(14, 14, 14, 0.5);
+    animation: image 2800ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(1, 0.125, 0.125, 1);
 }
 
 #me-in-img {
@@ -345,7 +351,7 @@ nav .hamburger .bar {
     filter: drop-shadow(0 0 5px rgba(14, 14, 14, 0.5));
     animation: me 2800ms;
     animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-timing-function: cubic-bezier(1, 0.125, 0.125, 1);
 }
 
 .cv-content {
@@ -368,9 +374,9 @@ nav .hamburger .bar {
 
 #about-me {
     grid-area: about-me;
-    animation: contentScroll linear both;
-    animation-timeline: view();
-    animation-range: entry 0 entry 70vh;
+    animation: contentScroll linear both, on-view linear both;
+    animation-timeline: view(), view();
+    animation-range: entry 0 entry 70vh, entry 0% entry calc(100% - 15vh);
 }
 
 #education {
@@ -403,16 +409,19 @@ nav .hamburger .bar {
 
 #contacts {
     grid-area: contacts;
-    animation: contacts-end linear both;
-    animation-timeline: view();
-    animation-range: exit -10% exit 100%;
+    animation: contacts-end linear both, on-view linear both;
+    animation-timeline: view(), view();
+    animation-range: exit -10% exit 100%, entry 0% entry calc(100% - 15vh);
 }
 
 /* end of grid area properties */
-/* .blur-scrolling {
-    translate: calc(-0.25rem * var(--scrolling-down)) calc(-10rem * var(--scrolling-down));
-    filter: blur(max(calc(0.75rem * var(--scrolling-down)), calc(0.75rem * var(--scrolling-up))));
-} */
+.blur-scrolling {
+    animation: on-view linear both;
+    animation-timeline: view(y);
+    animation-range: entry 0% entry calc(100% - 15vh);
+    /* translate: calc(-1rem * var(--scrolling-down)) calc(-5rem * var(--scrolling-down));
+    filter: blur(max(calc(1rem * var(--scrolling-down)), calc(1rem * var(--scrolling-up)))); */
+}
 
 .cv-content-box {
     border-radius: 5px;
@@ -757,6 +766,9 @@ nav .hamburger .bar {
     padding: 15px;
     flex: 1;
     background-color: var(--black2);
+    animation: on-view linear both;
+    animation-timeline: view(y);
+    animation-range: entry 0% entry calc(100% - 5vh);
 
     dl {
         margin-left: 5px;
@@ -862,20 +874,18 @@ footer::after {
     background-color: var(--white);
     position: absolute;
     top: 0;
-    right: 40%;
+    right: calc(40% + (10rem * var(--scrolling-down)));
     animation: footer-whiteHead linear both;
     animation-timeline: view();
     animation-range: contain 0 contain 60vh;
 }
 
 footer::after {
-    left: 36%;
-    /* translate: calc(5rem * var(--scrolling-down)) 0; */
+    left: calc(40% + (10rem * var(--scrolling-down)));
     transform: translateX(-50%) skewX(40deg);
 }
 
 footer::before {
-    /* translate: calc(-5rem * var(--scrolling-down)) 0; */
     transform: translateX(50%) skewX(-40deg);
 }
 
@@ -965,7 +975,7 @@ footer hr {
 
 @media (prefers-reduced-motion: no-preference) {
 
-    /* @keyframes smooth-scroll {
+    @keyframes smooth-scroll {
         from {
             --scroll-position: 0;
             --scroll-position-delayed: 0;
@@ -975,11 +985,11 @@ footer hr {
             --scroll-position: 1;
             --scroll-position-delayed: 1;
         }
-    } */
+    }
 
     @keyframes contacts-end {
         to {
-            scale: 0.5;
+            scale: calc(0.5 + var(--scrolling-up));
             opacity: 0;
         }
     }
@@ -1055,37 +1065,42 @@ footer hr {
 
     @keyframes me {
         0% {
-            opacity: 0.7;
+            opacity: 0;
         }
 
-        20% {
+        30% {
             opacity: 1;
         }
 
         50% {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
     }
 
     @keyframes image {
         0% {
-            opacity: 0.7;
-            transform: scale(0.9);
+            opacity: 0;
+            transform: scale(0.95);
         }
 
-        20% {
+        40% {
             opacity: 1;
         }
 
         50% {
-            transform: scale(1.05);
+            transform: scale(1.025);
         }
     }
 
     @keyframes pop-up {
         0% {
+            opacity: 0;
             filter: blur(1.5px);
             transform: scale(0.8) translateY(10px);
+        }
+
+        50% {
+            opacity: 1;
         }
 
         70% {
@@ -1095,12 +1110,24 @@ footer hr {
 
     @keyframes pop-up-contacts {
         0% {
+            opacity: 0;
             filter: blur(0.5px);
             transform: scale(0.8) translateY(10px);
         }
 
+        50% {
+            opacity: 1;
+        }
+
         70% {
             transform: scale(1.3);
+        }
+    }
+
+    @keyframes on-view {
+        from {
+            translate: calc(5rem * var(--scrolling-down)) calc(13% + (15rem * var(--scrolling-down)));
+            filter: blur(max(calc(5px + (10rem * var(--scrolling-down))), calc(5px + (10rem * var(--scrolling-up)))));
         }
     }
 }

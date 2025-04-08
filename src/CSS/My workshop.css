@@ -652,9 +652,9 @@ nav .hamburger .bar {
 
 .overlay-content-details {
     display: none;
-    width: 80%;
+    width: 85%;
     max-width: 100rem;
-    height: 80vh;
+    height: 81vh;
     background-color: var(--white);
     position: absolute;
     top: 50%;
@@ -689,15 +689,16 @@ nav .hamburger .bar {
                 scroll-behavior: smooth;
                 scroll-snap-type: x mandatory;
                 scroll-timeline: --photos-scrolling x;
+                background-color: var(--black4);
 
                 li {
                     scroll-snap-align: center;
+                    scroll-snap-stop: always;
                     margin: 0;
                     padding: 0;
                     flex: 0 0 100%;
                     display: flex;
                     justify-content: center;
-                    background-color: var(--black4);
 
                     img {
                         height: 100%;
@@ -712,7 +713,8 @@ nav .hamburger .bar {
                 margin: 0;
                 padding: 0;
                 list-style: none;
-                position: relative;
+                position: absolute;
+                z-index: 2;
                 left: 50%;
                 transform: translate(-50%, -120%);
                 border-radius: 5em;
@@ -758,7 +760,7 @@ nav .hamburger .bar {
         }
 
         .doc {
-            margin: 0 1vw;
+            margin: 2.5em 1vw;
 
             h1 {
                 margin: -1em 0 0.3125em 0;
@@ -798,6 +800,7 @@ nav .hamburger .bar {
             p {
                 line-height: 1.5;
                 max-width: 75ch;
+                margin-inline: 1em;
             }
         }
 
