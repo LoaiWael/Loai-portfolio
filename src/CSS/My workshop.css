@@ -65,6 +65,8 @@ nav .hamburger {
     cursor: pointer;
     padding: 0.25em;
     margin: 0.5em;
+    border: none;
+    background-color: transparent;
     transition: 200ms;
     border-radius: 5px;
 }
@@ -747,12 +749,17 @@ nav .hamburger .bar {
                     a:hover {
                         background-color: light-dark(hsla(0, 0%, 20%, 0.175), hsla(0, 0%, 100%, 0.175));
                     }
+
+                    a:focus {
+                        outline: 1.5px solid var(--black1);
+                    }
                 }
             }
         }
 
         h2 {
             margin-block-start: 2em;
+            margin-inline-start: 0.125em;
         }
 
         .details-info {
@@ -763,7 +770,7 @@ nav .hamburger .bar {
             margin: 2.5em 1vw;
 
             h1 {
-                margin: -1em 0 0.3125em 0;
+                margin: -1em 0 0.3125em 0.125em;
                 position: relative;
                 width: fit-content;
             }
@@ -793,6 +800,7 @@ nav .hamburger .bar {
             small {
                 display: inline-block;
                 margin-bottom: 1.25em;
+                margin-inline-start: 0.125em;
                 font-weight: 300;
                 font-size: 0.75rem;
             }
@@ -1174,6 +1182,15 @@ nav .hamburger .bar {
 }
 
 @media (max-width:540px) {
+
+    a:focus,
+    button:focus,
+    .figure-buttons:focus,
+    .figure-buttons a:focus {
+        outline: 1.5px solid var(--black1);
+        -webkit-tap-highlight-color: transparent;
+    }
+
     nav {
         height: 35px;
     }

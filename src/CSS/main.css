@@ -112,6 +112,8 @@ nav .hamburger {
     padding: 0.25em;
     margin: 0.5em;
     transition: 200ms;
+    border: none;
+    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -1143,6 +1145,13 @@ footer hr {
 }
 
 @media (max-width:540px) {
+
+    a:focus,
+    button:focus,
+    details:focus {
+        outline: 1.5px solid var(--black1);
+        -webkit-tap-highlight-color: transparent;
+    }
 
     nav {
         height: 35px;
