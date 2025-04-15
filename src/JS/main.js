@@ -1,4 +1,8 @@
 window.onload = function () {
+    theme();
+    $('.loading-warper').fadeOut();
+    contactAnimation();
+
     $("#certificates").slideUp();
     if ($(window).width() < 445) {
         $(".nav-links").slideUp();
@@ -22,8 +26,6 @@ window.onload = function () {
         // $("#certificates-header").removeClass("certificates-animation-open");
         // $(".certificates-container").removeClass("certificates-animation-open");
     });
-    contactAnimation();
-    theme();
 }
 function theme() {
     const themeToggle = document.getElementById('themeToggle');

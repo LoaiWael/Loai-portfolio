@@ -64,13 +64,13 @@ function overlay(close = false, content) {
 	const overLay = document.querySelector('.overlay');
 	const overlayContent = document.querySelector('.overlay-content');
 	if (close) {
-		overlayContent.classList.add('js-pop-out');
 		overlayContent.classList.remove('js-pop-up');
+		overlayContent.classList.add('js-pop-out');
 		backButton(true);
 		return $(overLay).fadeOut(200);
 	} else {
-		overlayContent.classList.add('js-pop-up');
 		overlayContent.classList.remove('js-pop-out');
+		overlayContent.classList.add('js-pop-up');
 		$(overLay).fadeIn();
 	}
 
@@ -238,12 +238,12 @@ function overlayDetails(categ, work) {
 function backButton(back = false) {
 	const details = document.querySelector('.overlay-content-details');
 	if (back) {
-		details.classList.add('js-pop-out');
 		details.classList.remove('js-pop-up');
+		details.classList.add('js-pop-out');
 		return $(details).fadeOut(200);
 	} else {
-		details.classList.add('js-pop-up');
 		details.classList.remove('js-pop-out');
+		details.classList.add('js-pop-up');
 		$(details).fadeIn(200);
 	}
 }
