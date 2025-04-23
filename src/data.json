@@ -125,7 +125,7 @@
 					"quickDoc": "3D smart watch model was made to simulate a real smart watch.",
 					"photoPrev": "./public/My workshop/3D/Smart watch/smart watch preview.webp",
 					"creationDate": "since: (2024)",
-					"doc": "In this model I was trying to merge a real smart watch with an analog watch, this took from me a long time to find the best model with the best box and OS design.",
+					"doc": "In this model I was trying to merge a real smart watch with an analog watch, this took a long time to find the best model with the best box and OS design.",
 					"technologies": [
 						{
 							"name": "c4d",
@@ -454,7 +454,7 @@
 					"technologies": [
 						{
 							"name": "figma",
-							"techUsage": "Used for design patterns"
+							"techUsage": "Used for prototyping"
 						},
 						{
 							"name": "adobeColor",
@@ -487,7 +487,7 @@
 					"technologies": [
 						{
 							"name": "figma",
-							"techUsage": "Used for design patterns"
+							"techUsage": "Used for prototyping"
 						}
 					],
 					"contributors": [

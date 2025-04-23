@@ -186,6 +186,12 @@ nav .hamburger .bar {
     display: none;
 }
 
+.checkbox-wrapper-54,
+.checkbox-wrapper-54 .switch,
+.checkbox-wrapper-54 input[type="checkbox"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .checkbox-wrapper-54 *,
 .checkbox-wrapper-54 ::after,
 .checkbox-wrapper-54 ::before {
@@ -205,6 +211,7 @@ nav .hamburger .bar {
     height: var(--height-of-switch);
     display: inline-block;
     margin-inline-start: 1.5em;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* The slider */

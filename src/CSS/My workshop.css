@@ -16,13 +16,17 @@ body {
     color: var(--mainColor);
     font-family: "Lexend", sans-serif;
     font-size: clamp(0.9375rem, 1rem, 1.125rem);
-    height: 100vh;
-    overflow-y: clip;
 
     button {
         font-family: "Lexend", sans-serif;
         cursor: pointer;
     }
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
 nav {
@@ -138,6 +142,12 @@ nav .hamburger .bar {
     display: none;
 }
 
+.checkbox-wrapper-54,
+.checkbox-wrapper-54 .switch,
+.checkbox-wrapper-54 input[type="checkbox"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .checkbox-wrapper-54 *,
 .checkbox-wrapper-54 ::after,
 .checkbox-wrapper-54 ::before {
@@ -157,6 +167,7 @@ nav .hamburger .bar {
     height: var(--height-of-switch);
     display: inline-block;
     margin-inline-start: 1.5em;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* The slider */
@@ -294,7 +305,7 @@ nav .hamburger .bar {
     transform: translate(-58%, -50%);
     clip-path: circle(100% at center);
     border-radius: 50%;
-    border-right: 0.4em solid var(--mainColor);
+    border-right: 0.4em solid var(--black1);
     transition: 300ms;
     overflow: visible;
     animation: navigations 2s;
@@ -309,7 +320,7 @@ nav .hamburger .bar {
 
         a {
             clip-path: circle();
-            background-color: var(--mainColor);
+            background-color: var(--black1);
             border-radius: 50%;
             padding: 0.65em;
             aspect-ratio: 1;
@@ -326,7 +337,7 @@ nav .hamburger .bar {
             top: 50%;
             transform: translateY(-50%);
             translate: -50% 0;
-            color: var(--mainColor);
+            color: var(--black1);
             font-weight: bold;
             text-wrap: nowrap;
             scale: 0;

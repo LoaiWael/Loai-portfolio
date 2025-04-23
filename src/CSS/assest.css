@@ -15,7 +15,7 @@
     --boxShadow2: 0 2px 10px 0 rgba(14, 14, 14, 0.2);
     --imageBoxShadow: 0 3px 5px rgba(14, 14, 14, 0.3);
     --hoverBackgroundColor: light-dark(hsla(0, 0%, 15%, 0.125), hsla(0, 0%, 80%, 0.125));
-    --index-introduction: linear-gradient(140deg, light-dark(hsl(209, 50%, 93%), hsl(209, 20%, 18%)) 10%, light-dark(hsl(206, 14%, 95%), hsl(206, 14%, 15%)) 60%);
+    --index-introduction: linear-gradient(140deg, light-dark(hsl(209, 50%, 93%), hsl(200, 3%, 15%)) 10%, light-dark(hsl(206, 14%, 95%), hsl(206, 10%, 14%)) 60%);
     --certificates: light-dark(#f9f5fa, hsl(288, 15%, 13%));
 }
 
