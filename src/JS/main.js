@@ -42,5 +42,4 @@ function theme() {
     themeToggle.addEventListener('change', () => {
         applyTheme(themeToggle.checked ? 'dark' : 'light');
     });
-
 }

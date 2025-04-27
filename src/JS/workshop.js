@@ -74,7 +74,7 @@ function overlay(close = false, content) {
 		$(overLay).fadeIn();
 	}
 
-	fetch("src/data.json").then(data => data.json()).then(data => {
+	fetch("public/data.json").then(data => data.json()).then(data => {
 		const category = data.myWork[content];
 		const works = category.content;
 		console.log(category);
@@ -120,7 +120,7 @@ function overlayDetails(categ, work) {
 
 	const overlayDetails = document.querySelector('.overlay-content-details');
 
-	fetch('src/data.json').then(res => res.json()).then(data => {
+	fetch('public/data.json').then(res => res.json()).then(data => {
 
 		const contributors = data.contributors;
 		const technologies = data.technologies;
