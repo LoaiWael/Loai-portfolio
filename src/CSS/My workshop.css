@@ -584,12 +584,12 @@ nav .hamburger .bar {
         }
 
         a:hover {
-            opacity: 0.6;
+            opacity: 0.8;
             box-shadow: var(--boxShadow);
         }
 
         a:active {
-            scale: 0.95;
+            outline: 0.125em solid black
         }
     }
 }
@@ -950,12 +950,12 @@ nav .hamburger .bar {
             }
 
             a:hover {
-                opacity: 0.6;
+                opacity: 0.8;
                 box-shadow: var(--boxShadow);
             }
 
             a:active {
-                scale: 0.95;
+                outline: 0.125em solid black;
             }
         }
     }
@@ -1041,8 +1041,10 @@ nav .hamburger .bar {
     }
 }
 
-.close-button:active {
-    scale: 0.8;
+.close-button:active,
+.back-button:active {
+    scale: 0.95;
+    outline: 0.125em solid light-dark(black, white);
 }
 
 .white-fog {
