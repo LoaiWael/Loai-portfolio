@@ -3,6 +3,7 @@
     --mainColor: light-dark(#252525, white);
     --static-black: #131313;
     --black1: light-dark(#131313, hsl(0, 0%, 90%));
+    --button-color: light-dark(#131313, hsl(0, 0%, 25%));
     --black2: light-dark(white, hsl(0, 0%, 18%));
     --black3: light-dark(hsl(0, 0%, 18%), rgb(169, 169, 169));
     --black4: light-dark(rgb(220, 220, 220), hsl(0, 0%, 18%));
@@ -101,7 +102,7 @@
 }
 
 #github-tech {
-    background-image: radial-gradient(rgba(45, 45, 45, 0.9) 2%, rgba(45, 45, 45, 0.6) 90%);
+    background-image: radial-gradient(rgba(25, 25, 25, 0.8), rgba(25, 25, 25, 0.9) 90%);
     color: white;
 }
 
@@ -132,4 +133,13 @@
 
 #bootstrap-tech {
     background-image: radial-gradient(rgba(183, 120, 255, 0.9) 2%, rgba(183, 120, 255, 0.5) 90%);
+}
+
+#cursor-tech {
+    background-image: radial-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.9) 90%);
+    color: white;
+}
+
+#jasmine-tech {
+    background-image: radial-gradient(rgba(255, 159, 245, 0.9) 2%, rgba(255, 159, 245, 0.5) 90%);
 }

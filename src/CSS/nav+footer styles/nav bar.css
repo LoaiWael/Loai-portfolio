@@ -92,13 +92,13 @@ nav .hamburger .bar {
 }
 
 .nav-buttons:active {
-    background-color: var(--mainColor);
-    color: var(--white);
+    background-color: var(--button-color);
+    color: white;
 }
 
 #home {
-    background-color: var(--black1);
-    color: var(--white);
+    background-color: var(--button-color);
+    color: white;
     pointer-events: none;
 }
 

@@ -111,6 +111,9 @@ nav .hamburger .bar {
 
 #my-workshop {
     cursor: pointer;
+    background-color: var(--button-color);
+    color: white;
+    pointer-events: none;
 }
 
 .logo-name {
@@ -126,14 +129,8 @@ nav .hamburger .bar {
 }
 
 .nav-buttons:active {
-    background-color: var(--mainColor);
-    color: var(--white);
-}
-
-#my-workshop {
-    background-color: var(--black1);
-    color: var(--white);
-    pointer-events: none;
+    background-color: var(--button-color);
+    color: white;
 }
 
 /* checkbox theme */
