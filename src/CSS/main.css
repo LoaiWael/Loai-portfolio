@@ -22,6 +22,7 @@
     overflow: clip;
     animation: smooth-scroll linear both;
     animation-timeline: scroll(root);
+    interpolate-size: allow-keywords;
 }
 
 * {
@@ -646,16 +647,27 @@ nav .hamburger .bar {
     padding: 1px;
 }
 
-.content .content-list li {
+.content .content-list li:not(.list-spaces li) {
     margin-bottom: 25px;
 
 }
 
 .content details {
-    transition-duration: 400ms;
+    transition-duration: 300ms;
+    transition-behavior: allow-discrete;
     border-radius: 10px;
-    cursor: pointer;
     padding: 3px;
+
+    summary {
+        cursor: pointer;
+    }
+}
+
+.content details::details-content {
+    block-size: 0;
+    transition: block-size 300ms ease-in-out;
+    content-visibility: auto;
+    overflow: clip;
 }
 
 .content details:hover {
@@ -668,8 +680,21 @@ nav .hamburger .bar {
     box-shadow: var(--boxShadow);
 }
 
+.content details[open]::details-content {
+    block-size: auto;
+}
+
 .list-spaces {
-    margin-top: 20px;
+    padding-top: 10px;
+
+    li {
+        margin-bottom: 1em;
+        height: 1em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .list-spaces li {
