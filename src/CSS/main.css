@@ -513,6 +513,7 @@ nav .hamburger .bar {
         margin: 0;
         padding: 0;
         display: flex;
+        gap: 3em;
         scroll-snap-type: x mandatory;
         scroll-timeline: --certificates x;
 
@@ -621,12 +622,12 @@ nav .hamburger .bar {
     animation: certificates-pop-up 1s ease-in-out both;
     animation-direction: reverse;
 } */
-
 .content-after-headline p {
     margin-top: 50px;
     align-self: flex-start;
     max-width: 75ch;
 }
+
 
 .content img:not(.skills-list img) {
     width: 20%;
@@ -803,17 +804,59 @@ nav .hamburger .bar {
     background-color: var(--black2);
     animation: on-view linear both;
     animation-timeline: view(y);
-    animation-range: entry 0% entry calc(100% - 5vh);
+    animation-range: entry 0% entry calc(100% - 30vh);
 
     dl {
         margin-left: 5px;
     }
+
+    dd {
+        margin: 0.5em;
+    }
 }
 
-.experience-content-flex article small {
+.experience-content-flex article small:not(.experience-date) {
     display: block;
     margin-top: -24px;
     margin-bottom: 30px;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.depi-internship {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: radial-gradient(rgba(156, 255, 182, 0.5) 2%, rgba(156, 255, 182, 0.2) 90%);
+
+    img {
+        aspect-ratio: 1;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.intern-headline {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.experience-date {
+    margin: 0;
     font-size: 0.75em;
     font-weight: 300;
 }
