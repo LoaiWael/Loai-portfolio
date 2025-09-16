@@ -63,6 +63,16 @@
 			"name": "Bootstrap",
 			"id": "bootstrap-tech",
 			"icon": "./public/tech/Bootstrap.webp"
+		},
+		"stitch": {
+			"name": "Google Stitch",
+			"id": "stitch-tech",
+			"icon": "./public/tech/stitch.webp"
+		},
+		"typescript": {
+			"name": "TypeScript",
+			"id": "ts-tech",
+			"icon": "./public/tech/typescript.svg"
 		}
 	},
 	"myWork": {
