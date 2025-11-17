@@ -1,13 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>loai-portfolio</title>
+    <meta name="author" content="Loai Wael Hassan" />
+    <meta
+      name="description"
+      content="All in one, here what you all need about me."
+    />
+    <meta
+      name="keywords"
+      content="Loai Wael Hassan, لؤي وائل حسن, loai wael hassan, loai, Loai, loai portfolio"
+    />
+    <meta name="search-disable" content="true" />
+    <meta
+      property="og:image"
+      content="https://loaiwael.github.io/Loai-portfolio/public/coverPhoto.jpg"
+    />
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/favicons/favicon_16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/favicons/favicon_32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="public/favicons/favicon_48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="public/favicons/favicon_64x64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="public/favicons/favicon_128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="public/favicons/favicon_256x256.png"
+    />
+    <!-- Font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Loai</title>
   </head>
   <body>
+    <style>
+      .loading-warper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(var(--black4), var(--white));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 350ms;
+
+        .loading-triangle {
+          aspect-ratio: 1;
+          width: 1.5rem;
+          background-color: var(--black1);
+          display: inline;
+          translate: 0 -12%;
+          transform-origin: center 65%;
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          animation: loadingScreen both;
+          animation-duration: 1000ms;
+          animation-iteration-count: infinite;
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
+
+        .loading-circle {
+          position: absolute;
+          aspect-ratio: 1;
+          width: 2rem;
+          border-radius: 50%;
+          border: 0.05em solid var(--black1);
+        }
+      }
+    </style>
     <div id="root"></div>
+    <div class="loading-warper">
+      <span class="loading-triangle"></span>
+      <span class="loading-circle"></span>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

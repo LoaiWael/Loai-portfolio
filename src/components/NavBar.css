@@ -1,0 +1,217 @@
+nav {
+  position: fixed;
+  z-index: 100;
+  left: 8%;
+  right: 8%;
+  background-color: var(--nav-color);
+  -moz-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  z-index: 98;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--boxShadow);
+  animation-name: slideDown;
+  animation-fill-mode: both;
+  animation-duration: 3000ms;
+  animation-timing-function: cubic-bezier(1, 0, 0.25, 1);
+}
+
+.nav-links {
+  margin: 2px;
+  margin-right: 1%;
+  float: right;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition-duration: unset;
+}
+
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.25em;
+  margin: 0.5em;
+  transition: 200ms;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+nav .hamburger:hover {
+  background-color: var(--hoverBackgroundColor);
+}
+
+nav .hamburger .bar {
+  width: 20px;
+  height: 3px;
+  background-color: var(--mainColor);
+  margin: 1px;
+  border-radius: 3px;
+}
+
+.nav-links li {
+  list-style: none;
+  float: left;
+}
+
+.nav-buttons {
+  text-decoration: none;
+  color: var(--mainColor);
+  margin: 7px;
+  display: block;
+  padding: 3px 5px;
+  border-radius: 0.475em;
+  transition-duration: var(--transitionDuration);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+#timeline {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+#my-workshop {
+  cursor: pointer;
+}
+
+.logo-name {
+  position: relative;
+  font-size: 1.15rem;
+  left: 1em;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+/* hovering */
+.nav-buttons:hover {
+  background-color: var(--hoverBackgroundColor);
+}
+
+.nav-buttons:active {
+  background-color: var(--button-color);
+  color: white;
+}
+
+#home {
+  background-color: var(--button-color);
+  color: white;
+  pointer-events: none;
+}
+
+/* checkbox theme */
+.checkbox-wrapper-54 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-54,
+.checkbox-wrapper-54 .switch,
+.checkbox-wrapper-54 input[type="checkbox"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+  --width-of-switch: 3em;
+  --height-of-switch: 1.5em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.125em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.25em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  display: inline-block;
+  margin-inline-start: 1.5em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The slider */
+.checkbox-wrapper-54 {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper-54 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(240, 5%, 85%);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+.checkbox-wrapper-54 input:checked + .slider {
+  background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+@media (max-width: 540px) {
+  nav {
+    height: 35px;
+  }
+
+  nav .nav-links {
+    visibility: hidden;
+    position: fixed;
+    z-index: 95;
+    top: 35px;
+    right: 25px;
+    left: 25px;
+    background-color: #252525;
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
+    align-items: unset;
+  }
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  nav .hamburger {
+    display: flex;
+  }
+}

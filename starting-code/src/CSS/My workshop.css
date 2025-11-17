@@ -6,17 +6,9 @@
     scroll-behavior: smooth;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0px;
     background-color: white;
     color: var(--mainColor);
-    font-family: "Lexend", sans-serif;
-    font-size: clamp(0.9375rem, 1rem, 1.125rem);
-
     button {
         font-family: "Lexend", sans-serif;
         cursor: pointer;
