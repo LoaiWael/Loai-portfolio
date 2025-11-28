@@ -1,5 +1,10 @@
+import type { CSSProperties } from "react";
 import NavBar from "../components/NavBar";
-import "./Home.css";
+import "./HomePage.css";
+
+interface carouselIndex extends CSSProperties {
+  '--i': number
+}
 
 export default function Home() {
   return (
@@ -64,14 +69,14 @@ export default function Home() {
             <img
               draggable="false"
               id="background"
-              fetchpriority="high"
+              fetchPriority="high"
               src="./public/Home images/IMG20240725232931.webp"
               alt="My image"
             />
             <img
               draggable="false"
               id="me-in-img"
-              fetchpriority="high"
+              fetchPriority="high"
               src="./public/Home images/Me.webp"
               alt="me in the image :D"
             />
@@ -222,12 +227,12 @@ export default function Home() {
               <div className="certificates-markers">
                 <a
                   href="#certificate1"
-                  style={{ "--i": 1 }}
+                  style={{ "--i": 1 } as carouselIndex}
                   title="HP-Life"
                 ></a>
                 <a
                   href="#certificate2"
-                  style={{ "--i": 2 }}
+                  style={{ "--i": 2 } as carouselIndex}
                   title="American Council"
                 ></a>
               </div>
@@ -532,7 +537,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
+      </main >
       <footer>
         <div className="skeleton">
           <div className="top-footer">

@@ -19,7 +19,6 @@
   --decorationColor5: linear-gradient(10deg, #dfec51 10%, #73aa0a 80%);
   background-color: var(--static-black);
   scroll-behavior: smooth;
-  overflow: clip;
   animation: smooth-scroll linear both;
   animation-timeline: scroll(root);
   interpolate-size: allow-keywords;

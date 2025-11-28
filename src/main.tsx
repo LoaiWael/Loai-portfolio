@@ -4,14 +4,16 @@ import "./index.css";
 import App from "./App.jsx";
 
 window.addEventListener("load", () => {
-  const loadingElem = document.querySelector(".loading-warper");
-  loadingElem.style.opacity = 0;
+  const loadingElem = document.querySelector(".loading-warper") as HTMLElement;
+  loadingElem.style.opacity = '0';
+
+  document.documentElement.style.overflow = 'auto';
   setTimeout(() => {
-    document.removeChild(loadingElem);
+    document.body.removeChild(loadingElem);
   }, 350);
 });
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
   </StrictMode>
