@@ -50,6 +50,11 @@ body{
   color-scheme: light;
 }
 
+button {
+  font-family: "Lexend", sans-serif;
+  cursor: pointer;
+}
+
 .loading-warper {
   position: fixed;
   inset: 0;

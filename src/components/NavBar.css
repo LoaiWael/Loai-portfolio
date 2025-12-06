@@ -95,12 +95,7 @@ nav .hamburger .bar {
   background-color: var(--hoverBackgroundColor);
 }
 
-.nav-buttons:active {
-  background-color: var(--button-color);
-  color: white;
-}
-
-#home {
+.nav-buttons.active {
   background-color: var(--button-color);
   color: white;
   pointer-events: none;

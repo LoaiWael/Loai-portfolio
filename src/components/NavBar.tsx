@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -7,29 +8,27 @@ export default function NavBar() {
         <span className="logo-name">.Loa项目'</span>
         <ul className="nav-links">
           <li>
-            <a
-              target="_self"
+            <NavLink
               className="nav-buttons"
-              href="./index.html"
+              to="/"
               id="home"
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a target="_self" className="nav-buttons" href="#" id="timeline">
+            <NavLink className="nav-buttons" to="/timeline" id="timeline">
               Timeline
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
+            <NavLink
               className="nav-buttons"
               id="my-workshop"
-              target="_self"
-              href="./My workshop.html"
+              to="/workshop"
             >
               My workshop
-            </a>
+            </NavLink>
           </li>
           <li>
             <div className="checkbox-wrapper-54" title="Theme mode">

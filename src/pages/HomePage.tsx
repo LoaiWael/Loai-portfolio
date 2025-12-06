@@ -1,5 +1,4 @@
 import type { CSSProperties } from "react";
-import NavBar from "../components/NavBar";
 import "./HomePage.css";
 
 interface carouselIndex extends CSSProperties {
@@ -9,7 +8,6 @@ interface carouselIndex extends CSSProperties {
 export default function Home() {
   return (
     <>
-      <NavBar />
       <main>
         <div className="introduction-background"></div>
         <section className="introduction">
@@ -70,15 +68,15 @@ export default function Home() {
               draggable="false"
               id="background"
               fetchPriority="high"
-              src="./public/Home images/IMG20240725232931.webp"
-              alt="My image"
+              src="src/assets/imgs/home/IMG20240725232931.webp"
+              alt="Loai Wael Hassan"
             />
             <img
               draggable="false"
               id="me-in-img"
               fetchPriority="high"
-              src="./public/Home images/Me.webp"
-              alt="me in the image :D"
+              src="src/assets/imgs/home/Me.webp"
+              alt="Loai"
             />
           </div>
         </section>
@@ -121,7 +119,7 @@ export default function Home() {
                 </p>
               </div>
               <img
-                src="./public/Home images/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
+                src="src/assets/imgs/home/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
                 alt="Big MAN"
                 draggable="false"
                 loading="lazy"
@@ -189,7 +187,7 @@ export default function Home() {
                 </button>
               </div>
               <img
-                src="./public/Home images/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
+                src="src/assets/imgs/home/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
                 alt="graduation cap"
                 draggable="false"
                 loading="lazy"
@@ -213,13 +211,13 @@ export default function Home() {
               <ul className="certificates">
                 <li id="certificate1">
                   <img
-                    src="./public/Home images/certificate CX.webp"
+                    src="src/assets/imgs/home/certificate CX.webp"
                     alt="CX certificate"
                   />
                 </li>
                 <li id="certificate2">
                   <img
-                    src="./public/Home images/american-council-frontend.webp"
+                    src="src/assets/imgs/home/american-council-frontend.webp"
                     alt="american council front-end certificate"
                   />
                 </li>
@@ -383,7 +381,7 @@ export default function Home() {
                 </div>
               </div>
               <img
-                src="./public/Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
+                src="src/assets/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
                 alt="Skateboard boi"
                 draggable="false"
                 loading="lazy"
@@ -412,7 +410,7 @@ export default function Home() {
                           ( 27/6/2025 - 5/12/2025 )
                         </small>
                       </div>
-                      <img src="./public/Home images/depi.webp" alt="DEPI" />
+                      <img src="src/assets/imgs/home/depi.webp" alt="DEPI" />
                       <p>
                         took an internship at{" "}
                         <a
@@ -468,7 +466,7 @@ export default function Home() {
                 </article>
               </div>
               <img
-                src="./public/Home images/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
+                src="src/assets/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
                 alt="Very very big MAN"
                 draggable="false"
                 loading="lazy"
@@ -529,7 +527,7 @@ export default function Home() {
                 </ul>
               </div>
               <img
-                src="./public/Home images/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
+                src="src/assets/imgs/home/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
                 alt="Contacts picture"
                 draggable="false"
                 loading="lazy"

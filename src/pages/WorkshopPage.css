@@ -1,111 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
 /* font-family: "Noto Serif TC", serif; */
 
-:root {
-    background-color: var(--black1);
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: white;
-    color: var(--mainColor);
-    button {
-        font-family: "Lexend", sans-serif;
-        cursor: pointer;
-    }
-}
-
-main {
+main.workshop {
     position: relative;
     height: 100vh;
     overflow: hidden;
-}
-
-nav {
-    position: fixed;
-    z-index: 100;
-    left: 8%;
-    right: 8%;
-    background-color: var(--nav-color);
-    -moz-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    z-index: 98;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--boxShadow);
-    animation-name: slideDown;
-    animation-fill-mode: both;
-    animation-duration: 3000ms;
-    animation-timing-function: cubic-bezier(1, 0, 0.25, 1);
-}
-
-.nav-links {
-    margin: 2px;
-    margin-right: 1%;
-    float: right;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    transition-duration: unset;
-}
-
-nav .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 0.25em;
-    margin: 0.5em;
-    border: none;
-    background-color: transparent;
-    transition: 200ms;
-    border-radius: 5px;
-}
-
-nav .hamburger:hover {
-    background-color: var(--hoverBackgroundColor);
-}
-
-nav .hamburger .bar {
-    width: 20px;
-    height: 3px;
-    background-color: var(--mainColor);
-    margin: 1px;
-    border-radius: 3px;
-}
-
-.nav-links li {
-    list-style: none;
-    float: left;
-}
-
-.nav-buttons {
-    text-decoration: none;
+    background-color: var(--white);
     color: var(--mainColor);
-    margin: 7px;
-    display: block;
-    padding: 3px 5px;
-    border-radius: 0.475em;
-    transition-duration: var(--transitionDuration);
-    font-weight: 500;
-    font-size: 0.8rem;
-}
-
-#timeline {
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-#my-workshop {
-    cursor: pointer;
-    background-color: var(--button-color);
-    color: white;
-    pointer-events: none;
 }
 
 .logo-name {
@@ -202,8 +103,9 @@ nav .hamburger .bar {
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
-.introduction {
+.workshop {
     height: 100vh;
+    width: 100vw;
     position: relative;
     perspective: 500px;
     overflow: hidden;
@@ -390,7 +292,7 @@ nav .hamburger .bar {
 }
 
 .logo-area-realtive {
-    position: relative;
+    position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
@@ -449,7 +351,7 @@ nav .hamburger .bar {
     transition: 200ms;
 }
 
-.introduction .fact {
+.workshop .fact {
     position: absolute;
     z-index: 1;
     bottom: 25px;
@@ -1280,7 +1182,7 @@ nav .hamburger .bar {
 
     }
 
-    .introduction .fact {
+    .fact {
         margin-left: 9%;
     }
 
