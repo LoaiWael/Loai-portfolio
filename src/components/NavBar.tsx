@@ -1,7 +1,19 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+import $ from 'jquery'
 import "./NavBar.css";
+import { useEffect } from "react";
 
 export default function NavBar() {
+  useEffect(() => {
+    if ($(window).width()! < 445) {
+      $(".nav-links").slideUp();
+    }
+    $(".hamburger").click(function () {
+      $(".nav-links").css("visibility", "visible");
+      $(".nav-links").slideToggle("fast");
+    });
+  }, [])
+
   return (
     <header>
       <nav>

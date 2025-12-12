@@ -1,11 +1,45 @@
-import type { CSSProperties } from "react";
+import { useEffect, type CSSProperties } from "react";
+import Footer from "../components/Footer";
+import $ from 'jquery'
 import "./HomePage.css";
 
 interface carouselIndex extends CSSProperties {
   '--i': number
 }
 
-export default function Home() {
+const contactAnimation = () => {
+  const contactLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(".contacts a");
+  let timing = 1500;
+  for (let i = 0; i < contactLinks.length; i++) {
+    contactLinks[i].style.animationName = 'pop-up-contacts'
+    contactLinks[i].style.animationTimingFunction = 'cubic-bezier(1, 0, 0, 1)'
+    contactLinks[i].style.animationDuration = `${timing}ms`
+    timing += 120
+  }
+}
+
+export default function HomePage() {
+  useEffect(() => {
+    contactAnimation();
+    $("#certificates").slideUp();
+
+    $("#certificate-button").click(function () {
+      $("#certificates").slideDown("slow");
+      document.getElementById("certificates")!.scrollIntoView();
+      $("#certificates-header").addClass("certificates-animation-open");
+      $(".certificates-container").addClass("certificates-animation-open");
+      // $("#certificates-header").removeClass("certificates-animation-close");
+      // $(".certificates-container").removeClass("certificates-animation-close");
+    });
+    $("#close-certificates").click(function () {
+      $("#certificates").slideUp("slow");
+      // $("#certificates-header").addClass("certificates-animation-close");
+      // $(".certificates-container").addClass("certificates-animation-close");
+      // $("#certificates-header").removeClass("certificates-animation-open");
+      // $(".certificates-container").removeClass("certificates-animation-open");
+    });
+  }, [])
+
   return (
     <>
       <main>
@@ -536,74 +570,7 @@ export default function Home() {
           </div>
         </section>
       </main >
-      <footer>
-        <div className="skeleton">
-          <div className="top-footer">
-            <span className="logo-footer">.Loa项目'</span>
-            <div className="top-footer-first-column">
-              <a target="_blank" href="#about-me" rel="noreferrer">
-                About me
-              </a>
-              <br />
-              <a target="_blank" href="#education" rel="noreferrer">
-                Education
-              </a>
-              <br />
-              <a target="_blank" href="#skills" rel="noreferrer">
-                Skills
-              </a>
-            </div>
-            <div className="top-footer-second-column">
-              <a href="#experience">Experience</a>
-              <br />
-              <a href="#contacts">Contacts</a>
-            </div>
-            <div className="top-footer-third-column">
-              <a href="./index.html" target="_self">
-                Home
-              </a>
-              <br />
-              <a href="#" target="_self">
-                Timeline
-              </a>
-              <br />
-              <a href="./My workshop.html" target="_self">
-                My workshop
-              </a>
-            </div>
-          </div>
-          <hr />
-          <div className="bottom-footer">
-            <div className="links">
-              <a
-                title="FaceBook"
-                target="_blank"
-                href="https://www.facebook.com/mirror.edge.165"
-                rel="noreferrer"
-              >
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a
-                title="LinkedIn"
-                target="_blank"
-                href="https://www.linkedin.com/in/loai-wael-cs"
-                rel="noreferrer"
-              >
-                <i className="bi bi-linkedin"></i>
-              </a>
-              <a
-                title="GitHub"
-                target="_blank"
-                href="https://github.com/LoaiWael"
-                rel="noreferrer"
-              >
-                <i className="bi bi-github"></i>
-              </a>
-            </div>
-            <p>&copy;CopyRight. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

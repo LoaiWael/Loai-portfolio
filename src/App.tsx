@@ -1,14 +1,13 @@
-import { Routes, Route } from "react-router";
-import Home from "./pages/HomePage";
-import WorkshopPage from "./pages/WorkshopPage";
+import { RouterProvider } from "react-router-dom";
+import router from "./router"
+import ThemeProvider from "./contexts/ThemeContext";
 import "./App.css";
 
 function App() {
   return (
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/workshop" element={<WorkshopPage />} />
-    </Routes>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

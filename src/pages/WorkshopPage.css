@@ -3,7 +3,7 @@
 
 main.workshop {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     background-color: var(--white);
     color: var(--mainColor);
@@ -1093,62 +1093,6 @@ main.workshop {
     .figure-buttons a:focus {
         outline: 1.5px solid var(--black1);
         -webkit-tap-highlight-color: transparent;
-    }
-
-    nav {
-        height: 35px;
-    }
-
-    nav .nav-links {
-        visibility: hidden;
-        position: fixed;
-        z-index: 95;
-        top: 35px;
-        right: 25px;
-        left: 25px;
-        background-color: #252525;
-        -moz-backdrop-filter: blur(10px);
-        -ms-backdrop-filter: blur(10px);
-        -o-backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 1rem;
-        margin: 0;
-        border-radius: 0 0 0.5em 0.5em;
-        box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.2);
-        align-items: unset;
-    }
-
-    .nav-links li:last-of-type {
-        align-self: flex-end;
-    }
-
-    .nav-buttons {
-        color: white;
-    }
-
-    .nav-buttons:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .nav-buttons:active {
-        color: var(--mainColor);
-        background-color: var(--white);
-    }
-
-    #my-workshop {
-        background-color: white;
-        color: var(--static-black);
-        pointer-events: none;
-    }
-
-    nav .nav-links.active {
-        display: flex;
-    }
-
-    nav .hamburger {
-        display: flex;
     }
 
     .navigations {

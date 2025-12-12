@@ -1,0 +1,9 @@
+@media (max-width:540px) {
+
+  a:focus,
+  button:focus,
+  details:focus {
+    outline: 1.5px solid var(--black1);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
