@@ -147,14 +147,6 @@ const WorkshopPage = () => {
           <img fetchPriority="high" draggable="false" src="public/imgs/my-workshop/background.webp"
             className="background background-rotate" alt="background" />
         </section>
-        <div className="overlay">
-          <div className="overlay-content">
-
-          </div>
-          <div className="overlay-content-details">
-
-          </div>
-        </div>
         <hr className="white-fog" />
       </main>
     </>
