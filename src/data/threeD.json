@@ -1,0 +1,387 @@
+{
+  "categoryName": "3D Models.",
+  "content": [
+    {
+      "title": "3D Mug",
+      "quickDoc": "3D mug was made for Allam coffee website.",
+      "photoPrev": "./public/My workshop/3D/photo 4.webp",
+      "creationDate": "since: (2024)",
+      "doc": "This small model was made to bring it in the main view in my actual project for Allam Coffee, The main concept for making this mug is to bring back my old skills in a real project to not forget the 3D tools.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used to add coffee beans and shadows"
+        },
+        {
+          "name": "figma",
+          "techUsage": "Used to add the background"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/DCsoEJTInh6/?img_index=2"
+      ],
+      "numOfImages": 1,
+      "images": [
+        "public/My workshop/3D/photo 4.webp"
+      ]
+    },
+    {
+      "title": "3D Perfume",
+      "quickDoc": "3D perfume model for Miss Dior.",
+      "photoPrev": "./public/My workshop/3D/perfume/perfume 3 - preview.webp",
+      "creationDate": "since: (2024)",
+      "doc": "This model was made at the valantine day, I was trying to challenge my self to make a realistic glass bottle not to create a lovely gift.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used to enhance the colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C3RAiXtt5Da/?img_index=1"
+      ],
+      "numOfImages": 5,
+      "images": [
+        "public/My workshop/3D/perfume/perfume 1.webp",
+        "public/My workshop/3D/perfume/perfume 2.webp",
+        "public/My workshop/3D/perfume/perfume 3.webp",
+        "public/My workshop/3D/perfume/perfume 4.webp",
+        "public/My workshop/3D/perfume/perfume 5.webp"
+      ]
+    },
+    {
+      "title": "3D Smart watch",
+      "quickDoc": "3D smart watch model was made to simulate a real smart watch.",
+      "photoPrev": "./public/My workshop/3D/Smart watch/smart watch preview.webp",
+      "creationDate": "since: (2024)",
+      "doc": "In this model I was trying to merge a real smart watch with an analog watch, this took a long time to find the best model with the best box and OS design.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C28cU4jNiAL/?img_index=1"
+      ],
+      "numOfImages": 12,
+      "images": [
+        "./public/My workshop/3D/Smart watch/1.webp",
+        "./public/My workshop/3D/Smart watch/2.webp",
+        "./public/My workshop/3D/Smart watch/3.webp",
+        "./public/My workshop/3D/Smart watch/4.webp",
+        "./public/My workshop/3D/Smart watch/4.5.webp",
+        "./public/My workshop/3D/Smart watch/5.webp",
+        "./public/My workshop/3D/Smart watch/6.webp",
+        "./public/My workshop/3D/Smart watch/7.webp",
+        "./public/My workshop/3D/Smart watch/8.webp",
+        "./public/My workshop/3D/Smart watch/9.webp",
+        "./public/My workshop/3D/Smart watch/10.webp",
+        "./public/My workshop/3D/Smart watch/11.webp"
+      ]
+    },
+    {
+      "title": "3D Iphone",
+      "quickDoc": "3D silver Iphone model was made to simulate the real one.",
+      "photoPrev": "./public/My workshop/3D/silver iphone/silver iphone 1 - preview.webp",
+      "creationDate": "since: (2023 - 2024)",
+      "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the silver Iphone version.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C2TAz9gteIG/?img_index=1"
+      ],
+      "numOfImages": 4,
+      "images": [
+        "./public/My workshop/3D/silver iphone/silver iphone 1.webp",
+        "./public/My workshop/3D/silver iphone/silver iphone 2.webp",
+        "./public/My workshop/3D/silver iphone/silver iphone 3.webp",
+        "./public/My workshop/3D/silver iphone/silver iphone 4.webp"
+      ]
+    },
+    {
+      "title": "3D Iphone",
+      "quickDoc": "3D red Iphone model was made to simulate the real one.",
+      "photoPrev": "./public/My workshop/3D/Red iphone/red iphone 1 - preview.webp",
+      "creationDate": "since: (2023 - 2024)",
+      "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the red Iphone version.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C2TBIDvtkR-/?img_index=1"
+      ],
+      "numOfImages": 4,
+      "images": [
+        "./public/My workshop/3D/Red iphone/red iphone 1.webp",
+        "./public/My workshop/3D/Red iphone/red iphone 2.webp",
+        "./public/My workshop/3D/Red iphone/red iphone 3.webp",
+        "./public/My workshop/3D/Red iphone/red iphone 4.webp"
+      ]
+    },
+    {
+      "title": "3D Iphone",
+      "quickDoc": "3D bronze Iphone model was made to simulate the real one.",
+      "photoPrev": "./public/My workshop/3D/Bronze iphone/bronze iphone 1 - preview.webp",
+      "creationDate": "since: (2023 - 2024)",
+      "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the bronze Iphone version.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C2TBjXXNwcn/?img_index=1"
+      ],
+      "numOfImages": 4,
+      "images": [
+        "./public/My workshop/3D/Bronze iphone/bronze iphone 1.webp",
+        "./public/My workshop/3D/Bronze iphone/bronze iphone 2.webp",
+        "./public/My workshop/3D/Bronze iphone/bronze iphone 3.webp",
+        "./public/My workshop/3D/Bronze iphone/bronze iphone 4.webp"
+      ]
+    },
+    {
+      "title": "3D Iphone",
+      "quickDoc": "3D green Iphone model was made to simulate the real one.",
+      "photoPrev": "./public/My workshop/3D/Green Iphone/green iphone 1 - preview.webp",
+      "creationDate": "since: (2023 - 2024)",
+      "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the green Iphone version.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C2TB36ztRjZ/?img_index=1"
+      ],
+      "numOfImages": 4,
+      "images": [
+        "./public/My workshop/3D/Green Iphone/green iphone 1.webp",
+        "./public/My workshop/3D/Green Iphone/green iphone 2.webp",
+        "./public/My workshop/3D/Green Iphone/green iphone 3.webp",
+        "./public/My workshop/3D/Green Iphone/green iphone 4.webp"
+      ]
+    },
+    {
+      "title": "3D Donut",
+      "quickDoc": "3D donut candy was made to feel like a real candy.",
+      "photoPrev": "./public/My workshop/3D/donuts/donut 1.webp",
+      "creationDate": "since: (2023)",
+      "doc": "After I have learned how to deal with textures and finished 3D modeling playlist on YT, I was trying to create something simple and cool like a tasty donut.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the model"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used to enhance the colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/C0fEXEArWt1/?img_index=1"
+      ],
+      "numOfImages": 3,
+      "images": [
+        "./public/My workshop/3D/donuts/donut 1.webp",
+        "./public/My workshop/3D/donuts/donut 2.webp",
+        "./public/My workshop/3D/donuts/donut 3.webp"
+      ]
+    },
+    {
+      "title": "Roblox Render",
+      "quickDoc": "A banner was made for a youtuber.",
+      "photoPrev": "./public/My workshop/3D/roblox-model-details.webp",
+      "creationDate": "since: (2021 - 2022)",
+      "doc": "I was playing since I was young and made a huge network with a lot of foreign people, I knew a youtuber he was playing with me and after he knows about my work he asked me for a chilling background with his character for a big trade in our game, and so at this time I was dealing with fully functional rigs.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the render"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used to fix the lights and colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/Com73dYq-MJ/"
+      ],
+      "numOfImages": 1,
+      "images": [
+        "./public/My workshop/3D/roblox-model 1.webp"
+      ]
+    },
+    {
+      "title": "Minecraft Render",
+      "quickDoc": "A render was made for a Minecraft youtuber.",
+      "photoPrev": "./public/My workshop/3D/minecraft 1 - preview.webp",
+      "creationDate": "since: (2019 - 2020)",
+      "doc": "Since I was active at the amino app I knew some youtubers and after they notice me they asked me for renders about thier skins in Minecraft.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the render"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used to fix the lights and colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/CoikIijq9SM/?img_index=1"
+      ],
+      "numOfImages": 3,
+      "images": [
+        "./public/My workshop/3D/minecraft 1.webp",
+        "./public/My workshop/3D/minecraft 2.webp",
+        "./public/My workshop/3D/minecraft 3.webp"
+      ]
+    },
+    {
+      "title": "Minecraft Render",
+      "quickDoc": "A banner was made for Minecraft communication app.",
+      "photoPrev": "./public/My workshop/3D/minecraft-neither.webp",
+      "creationDate": "since: (2019 - 2020)",
+      "doc": "These 2 renders was made as a design for a communication app called amino minecraft. It's a community for the people playing this game. I have learned how to use light source in C4D and installed new light packages like the silincer pistol lazer.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the render"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used to add png's like the flame"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used for fixing the colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/CokWwptqAW-/?img_index=1"
+      ],
+      "numOfImages": 2,
+      "images": [
+        "./public/My workshop/3D/minecraft-neither.webp",
+        "./public/My workshop/3D/minecraft-neither 2.webp"
+      ]
+    },
+    {
+      "title": "Logo Render",
+      "quickDoc": "A render was made for me after learning a new skills.",
+      "photoPrev": "./public/My workshop/3D/loai logo preview.webp",
+      "creationDate": "since: (2019)",
+      "doc": "Here I was trying to learn somthing since COVID-19 and we all stayed at home also we took a big holiday so I have learned how to make simple 3D logos and here was the start of a 3D artist.",
+      "technologies": [
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the logo"
+        },
+        {
+          "name": "picsart",
+          "techUsage": "Used for editing"
+        },
+        {
+          "name": "lightroom",
+          "techUsage": "Used to fix the lights and colors"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.instagram.com/p/CoqP_AmqobM/?img_index=1"
+      ],
+      "numOfImages": 3,
+      "images": [
+        "./public/My workshop/3D/loai logo 1.webp",
+        "./public/My workshop/3D/loai logo 2.webp",
+        "./public/My workshop/3D/loai logo 3.webp"
+      ]
+    }
+  ]
+}

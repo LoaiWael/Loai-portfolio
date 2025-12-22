@@ -1,0 +1,62 @@
+{
+  "c4d": {
+    "title": "C4D",
+    "id": "cinema-tech",
+    "icon": "./public/tech/c4d-logo.webp"
+  },
+  "picsart": {
+    "title": "PicsArt",
+    "id": "picsart-tech",
+    "icon": "./public/tech/picsart-logo.webp"
+  },
+  "lightroom": {
+    "title": "Adobe Lightroom",
+    "id": "adobe-lightroom-tech",
+    "icon": "./public/tech/adobe-lightroom-logo.webp"
+  },
+  "figma": {
+    "title": "Figma",
+    "id": "figma-tech",
+    "icon": "./public/tech/Figma-Logo.webp"
+  },
+  "adobeColor": {
+    "title": "Adobe Color",
+    "id": "adobe-color-tech",
+    "icon": "./public/tech/adobe-color-icon.webp"
+  },
+  "html": {
+    "title": "HTML5",
+    "id": "html-tech",
+    "icon": "./public/tech/html-logo-png.webp"
+  },
+  "css": {
+    "title": "CSS3",
+    "id": "css-tech",
+    "icon": "./public/tech/css.webp"
+  },
+  "js": {
+    "title": "JavaScript",
+    "id": "js-tech",
+    "icon": "./public/tech/javascript.webp"
+  },
+  "jquery": {
+    "title": "jQuery",
+    "id": "jquery-tech",
+    "icon": "./public/tech/jQuery.webp"
+  },
+  "bootstrap": {
+    "title": "Bootstrap",
+    "id": "bootstrap-tech",
+    "icon": "./public/tech/Bootstrap.webp"
+  },
+  "stitch": {
+    "title": "Google Stitch",
+    "id": "stitch-tech",
+    "icon": "./public/tech/stitch.webp"
+  },
+  "typescript": {
+    "title": "TypeScript",
+    "id": "ts-tech",
+    "icon": "./public/tech/typescript.svg"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "LoaiWaelHassan": {
+    "name": "Loai W. Hassan (Me)",
+    "position": "Student @ CIS MU",
+    "photo": "./public/PP/Loai.webp",
+    "communication": "https://www.linkedin.com/in/loai-wael-374a93299/"
+  },
+  "SuperSimpleDev": {
+    "name": "SuperSimpleDev",
+    "position": "Software Engineer",
+    "photo": "./public/PP/SuperSimpleDev.webp",
+    "communication": "https://github.com/SuperSimpleDev"
+  }
+}

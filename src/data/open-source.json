@@ -1,0 +1,51 @@
+{
+  "categoryName": "Open Source.",
+  "content": [
+    {
+      "title": "Amazon website",
+      "quickDoc": "Contributing to SuperSimpleDev project.",
+      "photoPrev": "./public/My workshop/open source/amazon clone/prev.webp",
+      "creationDate": "since: (2025)",
+      "doc": "This is a contribution to an amazon web project created by <a target=\"_blank\" href=\"https://github.com/SuperSimpleDev\">SuperSimpleDev</a>. While learning JS I have been asked from him to complete his amazon website interactivity that I have took the website fully designed and my task is to code it with JS making it like a real e-commerce website.<br/><br/>The main repo has not been made to merge it with my fork because the purpose behind this project is to learn how to code with JS, so I'm not the only one who worked on this project.<br/><br/><b>1st: </b>I generated the products data at the main page and function every single button and controlling the logic in this page like which item is added and how much quantity.<br/><b>2nd: </b>Made code to generate the shipping dates and the price for each date, the shipping dates are calculated based on the date that you open the page at. <a target=\"_blank\" href=\"https://github.com/LoaiWael/SuperSimpleDev-amazon-project/blob/main/data/shippingTime.js\">shippingTime.js</a><br/><b>3rd: </b>Generating the cart from your local storage.<br/><b>4th: </b>If place order pressed it will generate the order with an ID for you with each product that you can track its shipping progress bassed on the selected date and your current date.",
+      "technologies": [
+        {
+          "name": "html",
+          "techUsage": "Used to create the pillars"
+        },
+        {
+          "name": "css",
+          "techUsage": "Used for styling"
+        },
+        {
+          "name": "bootstrap",
+          "techUsage": "Assisting in styling"
+        },
+        {
+          "name": "js",
+          "techUsage": "Making it interactive"
+        }
+      ],
+      "contributors": [
+        "SuperSimpleDev",
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://github.com/LoaiWael/SuperSimpleDev-amazon-project",
+        "https://github.com/SuperSimpleDev/javascript-amazon-project"
+      ],
+      "numOfImages": 10,
+      "images": [
+        "./public/My workshop/open source/amazon clone/1.webp",
+        "./public/My workshop/open source/amazon clone/2.webp",
+        "./public/My workshop/open source/amazon clone/3.webp",
+        "./public/My workshop/open source/amazon clone/4.webp",
+        "./public/My workshop/open source/amazon clone/5.webp",
+        "./public/My workshop/open source/amazon clone/6.webp",
+        "./public/My workshop/open source/amazon clone/7.webp",
+        "./public/My workshop/open source/amazon clone/8.webp",
+        "./public/My workshop/open source/amazon clone/9.webp",
+        "./public/My workshop/open source/amazon clone/10.webp"
+      ]
+    }
+  ]
+}
