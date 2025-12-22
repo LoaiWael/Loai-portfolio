@@ -2,8 +2,11 @@ import { NavLink } from "react-router-dom";
 import $ from 'jquery'
 import "./NavBar.css";
 import { useEffect } from "react";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function NavBar() {
+  const { themeMode, applyTheme } = useTheme();
+
   useEffect(() => {
     if ($(window).width()! < 445) {
       $(".nav-links").slideUp();
@@ -45,7 +48,7 @@ export default function NavBar() {
           <li>
             <div className="checkbox-wrapper-54" title="Theme mode">
               <label className="switch">
-                <input id="themeToggle" type="checkbox" />
+                <input id="themeToggle" type="checkbox" checked={themeMode === 'dark'} onClick={() => applyTheme(themeMode === 'dark' ? 'light' : 'dark')} />
                 <span className="slider"></span>
               </label>
             </div>
