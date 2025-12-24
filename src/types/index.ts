@@ -1,14 +1,17 @@
+import { type CSSProperties } from 'react';
+
 export type themeType = 'dark' | 'light';
 
 export type jsonData = 'contributors' | 'open-source' | 'technologies' | 'threeD' | 'ui-ux' | 'websites';
 
 export type category = 'websites' | 'open-source' | 'ui-ux' | '3d-models';
 
-type contributor = 'LoaiWaelHassan' | 'SuperSimpleDev';
+export type contributor = 'LoaiWaelHassan' | 'SuperSimpleDev';
 
 export type technologyKeys = 'c4d' | 'picsart' | 'lightroom' | 'figma' | 'adobeColor' | 'html' | 'css' | 'js' | 'jquery' | 'bootstrap' | 'stitch' | 'typescript';
 
 export interface Icontributor {
+  id?: string
   name: string
   position: string
   photo: string
@@ -35,4 +38,8 @@ export interface Iwork {
   src: string[]
   numOfImages: number
   images: string[]
+}
+
+export interface carouselIndex extends CSSProperties {
+  '--i': number
 }
