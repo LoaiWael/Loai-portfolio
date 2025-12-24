@@ -1,13 +1,11 @@
 import { createContext, useContext, useState, type ReactNode } from "react"
-import axios from "axios"
-import type { Icontributor, Itechnology, Iwork, jsonData, technologyKeys } from "../types"
+import type { Iwork } from "../types"
 
 interface IworkContext {
   showOverlay: boolean
   setShowOverlay: React.Dispatch<React.SetStateAction<boolean>>
-  fetchData: (data: jsonData) => Promise<any>
-  works: { categoryName: string, content: Iwork[] } | null
-  setWorks: React.Dispatch<React.SetStateAction<{
+  projects: { categoryName: string, content: Iwork[] } | null
+  setProjects: React.Dispatch<React.SetStateAction<{
     categoryName: string;
     content: Iwork[];
   } | null>>
@@ -19,21 +17,11 @@ const WorkContext = createContext<IworkContext | null>(null);
 
 const WorkProvider = ({ children }: { children: ReactNode }) => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [works, setWorks] = useState<{ categoryName: string, content: Iwork[] } | null>(null)
+  const [projects, setProjects] = useState<{ categoryName: string, content: Iwork[] } | null>(null)
   const [projectDetails, setProjectDetails] = useState<Iwork | null>(null);
 
-  const fetchData = async (data: jsonData) => {
-    try {
-      const response = await axios.get(`./${data}.json`);
-      return response.data;
-    }
-    catch (error) {
-      console.error("Something went wrong", error);
-    }
-  }
-
   return (
-    <WorkContext.Provider value={{ showOverlay, setShowOverlay, fetchData, works, setWorks, projectDetails, setProjectDetails }}>
+    <WorkContext.Provider value={{ showOverlay, setShowOverlay, projects, setProjects, projectDetails, setProjectDetails }}>
       {children}
     </WorkContext.Provider>
   )
