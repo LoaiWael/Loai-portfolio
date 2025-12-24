@@ -1,0 +1,66 @@
+{
+  "categoryName": "UI UX.",
+  "content": [
+    {
+      "title": "Allam coffee app",
+      "quickDoc": "UI UX design for allam coffee application.",
+      "photoPrev": "public/imgs/my-workshop/ui-ux/allam/1.webp",
+      "creationDate": "since: (2024)",
+      "doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Mr.Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is just a view about the main app.",
+      "technologies": [
+        {
+          "name": "figma",
+          "techUsage": "Used for prototyping"
+        },
+        {
+          "name": "adobeColor",
+          "techUsage": "Used to pick the color plates"
+        },
+        {
+          "name": "c4d",
+          "techUsage": "Used to create the mug"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.behance.net/gallery/213196697/Allam-Arabic-coffee-UI-UX-App-design"
+      ],
+      "numOfImages": 3,
+      "images": [
+        "public/imgs/my-workshop/ui-ux/allam/1.webp",
+        "public/imgs/my-workshop/ui-ux/allam/2.webp",
+        "public/imgs/my-workshop/ui-ux/allam/3.webp"
+      ]
+    },
+    {
+      "title": "Music platform",
+      "quickDoc": "UI UX design for a virtual music platform.",
+      "photoPrev": "public/imgs/my-workshop/ui-ux/music-platform/preview.webp",
+      "creationDate": "since: (2024)",
+      "doc": "This is the first project after learning how to design in figma, as this is a music app design so I was trying to bring the aura in this project.",
+      "technologies": [
+        {
+          "name": "figma",
+          "techUsage": "Used for prototyping"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://www.behance.net/gallery/208943153/Music-platform-UI-UX-designn"
+      ],
+      "numOfImages": 6,
+      "images": [
+        "public/imgs/my-workshop/ui-ux/music-platform/1.webp",
+        "public/imgs/my-workshop/ui-ux/music-platform/2.webp",
+        "public/imgs/my-workshop/ui-ux/music-platform/3.webp",
+        "public/imgs/my-workshop/ui-ux/music-platform/4.webp",
+        "public/imgs/my-workshop/ui-ux/music-platform/5.webp",
+        "public/imgs/my-workshop/ui-ux/music-platform/6.webp"
+      ]
+    }
+  ]
+}

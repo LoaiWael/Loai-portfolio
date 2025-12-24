@@ -1,0 +1,50 @@
+{
+  "categoryName": "Websites.",
+  "content": [
+    {
+      "title": "Allam coffee app",
+      "quickDoc": "Small website to improve the accessibility at the coffee shop.",
+      "photoPrev": "public/imgs/my-workshop/websites/allam-coffee/preview.webp",
+      "creationDate": "since: (2024 - 2025)",
+      "doc": "I have beed asked at the faculty to create a small restaurant website and then the idea came to create an app for Mr.Ahmed Allam to improve the accessibility at his coffee and to take the full mark at the faculty. This is the full project (Mr.Ahmed rejected this project).",
+      "technologies": [
+        {
+          "name": "html",
+          "techUsage": "Used to create the pillars"
+        },
+        {
+          "name": "css",
+          "techUsage": "Used for styling"
+        },
+        {
+          "name": "js",
+          "techUsage": "Controlling the behaviors"
+        },
+        {
+          "name": "jquery",
+          "techUsage": "Assisting in JS"
+        }
+      ],
+      "contributors": [
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://loaiwael.github.io/Allam-coffee/",
+        "https://github.com/LoaiWael/Allam-coffee"
+      ],
+      "numOfImages": 10,
+      "images": [
+        "public/imgs/my-workshop/websites/allam-coffee/1.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/2.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/3.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/4.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/5.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/6.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/7.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/8.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/9.webp",
+        "public/imgs/my-workshop/websites/allam-coffee/10.webp"
+      ]
+    }
+  ]
+}
