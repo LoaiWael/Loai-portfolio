@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Footer from "../components/Footer";
 import $ from 'jquery';
-import type { carouselIndex } from "../types";
+import type { carouselIndex, category, technologyKeys } from "../types";
 import "./HomePage.css";
 
 const contactAnimation = () => {
@@ -13,6 +13,14 @@ const contactAnimation = () => {
     contactLinks[i].style.animationDuration = `${timing}ms`
     timing += 120
   }
+}
+
+type myTracks = 'front-end' | 'ui-ux' | '3d-modeling';
+
+const myTech: Record<myTracks, technologyKeys[]> = {
+  'front-end': [],
+  'ui-ux': [],
+  '3d-modeling': []
 }
 
 export default function HomePage() {

@@ -58,5 +58,10 @@
     "title": "TypeScript",
     "id": "ts-tech",
     "icon": "public/imgs/tech/typescript.svg"
+  },
+  "cursor": {
+    "title": "Cursor",
+    "id": "cursor-tech",
+    "icon": "public/imgs/tech/cursor.webp"
   }
 }
