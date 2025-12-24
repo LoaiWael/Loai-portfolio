@@ -107,14 +107,14 @@ export default function HomePage() {
               draggable="false"
               id="background"
               fetchPriority="high"
-              src="public/imgs/home/IMG20240725232931.webp"
+              src="imgs/home/IMG20240725232931.webp"
               alt="Loai Wael Hassan"
             />
             <img
               draggable="false"
               id="me-in-img"
               fetchPriority="high"
-              src="public/imgs/home/Me.webp"
+              src="imgs/home/Me.webp"
               alt="Loai"
             />
           </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
                 </p>
               </div>
               <img
-                src="public/imgs/home/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
+                src="imgs/home/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
                 alt="Big MAN"
                 draggable="false"
                 loading="lazy"
@@ -226,7 +226,7 @@ export default function HomePage() {
                 </button>
               </div>
               <img
-                src="public/imgs/home/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
+                src="imgs/home/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
                 alt="graduation cap"
                 draggable="false"
                 loading="lazy"
@@ -250,13 +250,13 @@ export default function HomePage() {
               <ul className="certificates">
                 <li id="certificate1">
                   <img
-                    src="public/imgs/home/certificate CX.webp"
+                    src="imgs/home/certificate CX.webp"
                     alt="CX certificate"
                   />
                 </li>
                 <li id="certificate2">
                   <img
-                    src="public/imgs/home/american-council-frontend.webp"
+                    src="imgs/home/american-council-frontend.webp"
                     alt="american council front-end certificate"
                   />
                 </li>
@@ -295,38 +295,38 @@ export default function HomePage() {
                           <dt>TECH:</dt>
                           <dd id="html-tech">
                             <img
-                              src="public/imgs/tech/html-logo-png.webp"
+                              src="imgs/tech/html-logo-png.webp"
                               alt=""
                             />{" "}
                             HTML5
                           </dd>
                           <dd id="css-tech">
-                            <img src="public/imgs/tech/css.webp" alt="" /> CSS3
+                            <img src="imgs/tech/css.webp" alt="" /> CSS3
                           </dd>
                           <dd id="js-tech">
-                            <img src="public/imgs/tech/javascript.webp" alt="" />{" "}
+                            <img src="imgs/tech/javascript.webp" alt="" />{" "}
                             JavaScript
                           </dd>
                           <dd id="ts-tech">
-                            <img src="public/imgs/tech/typescript.svg" alt="" />{" "}
+                            <img src="imgs/tech/typescript.svg" alt="" />{" "}
                             TypeScript
                           </dd>
                           <dd id="jasmine-tech">
-                            <img src="public/imgs/tech/Jasmine.webp" alt="" />{" "}
+                            <img src="imgs/tech/Jasmine.webp" alt="" />{" "}
                             Jasmine
                           </dd>
                         </div>
                         <div className="all-frontend-tools">
                           <dt>TOOLS:</dt>
                           <dd id="cursor-tech">
-                            <img src="public/imgs/tech/cursor.webp" alt="" />{" "}
+                            <img src="imgs/tech/cursor.webp" alt="" />{" "}
                             Cursor
                           </dd>
                           <dd id="github-tech">
                             <i className="bi bi-github"></i> GitHub
                           </dd>
                           <dd id="git-tech">
-                            <img src="public/imgs/tech/git.webp" alt="" /> Git
+                            <img src="imgs/tech/git.webp" alt="" /> Git
                           </dd>
                         </div>
                       </dl>
@@ -345,16 +345,16 @@ export default function HomePage() {
                         <div>
                           <dt>TOOLS:</dt>
                           <dd id="figma-tech">
-                            <img src="public/imgs/tech/Figma-Logo.webp" alt="" />{" "}
+                            <img src="imgs/tech/Figma-Logo.webp" alt="" />{" "}
                             Figma
                           </dd>
                           <dd id="stitch-tech">
-                            <img src="public/imgs/tech/stitch.webp" alt="" />{" "}
+                            <img src="imgs/tech/stitch.webp" alt="" />{" "}
                             Google Stitch
                           </dd>
                           <dd id="adobe-color-tech">
                             <img
-                              src="public/imgs/tech/adobe-color-icon.webp"
+                              src="imgs/tech/adobe-color-icon.webp"
                               alt=""
                             />{" "}
                             Adobe Color
@@ -376,7 +376,7 @@ export default function HomePage() {
                         <div>
                           <dt>TOOLS:</dt>
                           <dd id="cinema-tech">
-                            <img src="public/imgs/tech/c4d-logo.webp" alt="" />{" "}
+                            <img src="imgs/tech/c4d-logo.webp" alt="" />{" "}
                             Cinema 4D
                           </dd>
                         </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
                 </div>
               </div>
               <img
-                src="public/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
+                src="imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
                 alt="Skateboard boi"
                 draggable="false"
                 loading="lazy"
@@ -415,7 +415,7 @@ export default function HomePage() {
                           ( 27/6/2025 - 5/12/2025 )
                         </small>
                       </div>
-                      <img src="public/imgs/home/depi.webp" alt="DEPI" />
+                      <img src="imgs/home/depi.webp" alt="DEPI" />
                       <p>
                         took an internship at{" "}
                         <a
@@ -471,7 +471,7 @@ export default function HomePage() {
                 </article>
               </div>
               <img
-                src="public/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
+                src="imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
                 alt="Very very big MAN"
                 draggable="false"
                 loading="lazy"
@@ -532,7 +532,7 @@ export default function HomePage() {
                 </ul>
               </div>
               <img
-                src="public/imgs/home/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
+                src="imgs/home/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
                 alt="Contacts picture"
                 draggable="false"
                 loading="lazy"

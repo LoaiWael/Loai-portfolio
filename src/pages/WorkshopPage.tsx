@@ -128,8 +128,8 @@ const WorkshopPage = () => {
             <span>All my work grouped in this page</span>
           </div>
           <div className="logo-area-realtive">
-            <img fetchPriority="high" src="public/imgs/my-workshop/circle.webp" alt="circle" draggable="false" />
-            <img fetchPriority="high" src="public/imgs/my-workshop/line.webp" alt="line" draggable="false" />
+            <img fetchPriority="high" src="imgs/my-workshop/circle.webp" alt="circle" draggable="false" />
+            <img fetchPriority="high" src="imgs/my-workshop/line.webp" alt="line" draggable="false" />
             <span className="loaiproject">羅艾项目</span>
           </div>
           <ul className="navigations">
@@ -157,7 +157,7 @@ const WorkshopPage = () => {
             </svg></button><span>3D Models.</span></li>
           </ul>
           <span className="fact">Eyes contact with visuals<br />before reading the content.</span>
-          <img fetchPriority="high" draggable="false" src="public/imgs/my-workshop/background.webp"
+          <img fetchPriority="high" draggable="false" src="my-workshop/background.webp"
             className="background background-rotate" alt="background" />
         </section>
         {showOverlay && <WorkshopOverlay category={category!} />}

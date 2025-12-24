@@ -4,7 +4,7 @@
     {
       "title": "3D Mug",
       "quickDoc": "3D mug was made for Allam coffee website.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/coffee-mug.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/coffee-mug.webp",
       "creationDate": "since: (2024)",
       "doc": "This small model was made to bring it in the main view in my actual project for Allam Coffee, The main concept for making this mug is to bring back my old skills in a real project to not forget the 3D tools.",
       "technologies": [
@@ -29,13 +29,13 @@
       ],
       "numOfImages": 1,
       "images": [
-        "public/imgs/my-workshop/models-3d/coffee-mug.webp"
+        "imgs/my-workshop/models-3d/coffee-mug.webp"
       ]
     },
     {
       "title": "3D Perfume",
       "quickDoc": "3D perfume model for Miss Dior.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/perfume/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/perfume/preview.webp",
       "creationDate": "since: (2024)",
       "doc": "This model was made at the valantine day, I was trying to challenge my self to make a realistic glass bottle not to create a lovely gift.",
       "technologies": [
@@ -56,17 +56,17 @@
       ],
       "numOfImages": 5,
       "images": [
-        "public/imgs/my-workshop/models-3d/perfume/1.webp",
-        "public/imgs/my-workshop/models-3d/perfume/2.webp",
-        "public/imgs/my-workshop/models-3d/perfume/3.webp",
-        "public/imgs/my-workshop/models-3d/perfume/4.webp",
-        "public/imgs/my-workshop/models-3d/perfume/5.webp"
+        "imgs/my-workshop/models-3d/perfume/1.webp",
+        "imgs/my-workshop/models-3d/perfume/2.webp",
+        "imgs/my-workshop/models-3d/perfume/3.webp",
+        "imgs/my-workshop/models-3d/perfume/4.webp",
+        "imgs/my-workshop/models-3d/perfume/5.webp"
       ]
     },
     {
       "title": "3D Smart watch",
       "quickDoc": "3D smart watch model was made to simulate a real smart watch.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/smart-watch/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/smart-watch/preview.webp",
       "creationDate": "since: (2024)",
       "doc": "In this model I was trying to merge a real smart watch with an analog watch, this took a long time to find the best model with the best box and OS design.",
       "technologies": [
@@ -87,24 +87,24 @@
       ],
       "numOfImages": 12,
       "images": [
-        "public/imgs/my-workshop/models-3d/smart-watch/1.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/2.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/3.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/4.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/4.5.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/5.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/6.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/7.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/8.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/9.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/10.webp",
-        "public/imgs/my-workshop/models-3d/smart-watch/11.webp"
+        "imgs/my-workshop/models-3d/smart-watch/1.webp",
+        "imgs/my-workshop/models-3d/smart-watch/2.webp",
+        "imgs/my-workshop/models-3d/smart-watch/3.webp",
+        "imgs/my-workshop/models-3d/smart-watch/4.webp",
+        "imgs/my-workshop/models-3d/smart-watch/4.5.webp",
+        "imgs/my-workshop/models-3d/smart-watch/5.webp",
+        "imgs/my-workshop/models-3d/smart-watch/6.webp",
+        "imgs/my-workshop/models-3d/smart-watch/7.webp",
+        "imgs/my-workshop/models-3d/smart-watch/8.webp",
+        "imgs/my-workshop/models-3d/smart-watch/9.webp",
+        "imgs/my-workshop/models-3d/smart-watch/10.webp",
+        "imgs/my-workshop/models-3d/smart-watch/11.webp"
       ]
     },
     {
       "title": "3D Iphone",
       "quickDoc": "3D silver Iphone model was made to simulate the real one.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/silver-iphone/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/silver-iphone/preview.webp",
       "creationDate": "since: (2023 - 2024)",
       "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the silver Iphone version.",
       "technologies": [
@@ -125,16 +125,16 @@
       ],
       "numOfImages": 4,
       "images": [
-        "public/imgs/my-workshop/models-3d/silver-iphone/1.webp",
-        "public/imgs/my-workshop/models-3d/silver-iphone/2.webp",
-        "public/imgs/my-workshop/models-3d/silver-iphone/3.webp",
-        "public/imgs/my-workshop/models-3d/silver-iphone/4.webp"
+        "imgs/my-workshop/models-3d/silver-iphone/1.webp",
+        "imgs/my-workshop/models-3d/silver-iphone/2.webp",
+        "imgs/my-workshop/models-3d/silver-iphone/3.webp",
+        "imgs/my-workshop/models-3d/silver-iphone/4.webp"
       ]
     },
     {
       "title": "3D Iphone",
       "quickDoc": "3D red Iphone model was made to simulate the real one.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/red-iphone/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/red-iphone/preview.webp",
       "creationDate": "since: (2023 - 2024)",
       "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the red Iphone version.",
       "technologies": [
@@ -155,16 +155,16 @@
       ],
       "numOfImages": 4,
       "images": [
-        "public/imgs/my-workshop/models-3d/red-iphone/1.webp",
-        "public/imgs/my-workshop/models-3d/red-iphone/2.webp",
-        "public/imgs/my-workshop/models-3d/red-iphone/3.webp",
-        "public/imgs/my-workshop/models-3d/red-iphone/4.webp"
+        "imgs/my-workshop/models-3d/red-iphone/1.webp",
+        "imgs/my-workshop/models-3d/red-iphone/2.webp",
+        "imgs/my-workshop/models-3d/red-iphone/3.webp",
+        "imgs/my-workshop/models-3d/red-iphone/4.webp"
       ]
     },
     {
       "title": "3D Iphone",
       "quickDoc": "3D bronze Iphone model was made to simulate the real one.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/bronze-iphone/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/bronze-iphone/preview.webp",
       "creationDate": "since: (2023 - 2024)",
       "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the bronze Iphone version.",
       "technologies": [
@@ -185,16 +185,16 @@
       ],
       "numOfImages": 4,
       "images": [
-        "public/imgs/my-workshop/models-3d/bronze-iphone/1.webp",
-        "public/imgs/my-workshop/models-3d/bronze-iphone/2.webp",
-        "public/imgs/my-workshop/models-3d/bronze-iphone/3.webp",
-        "public/imgs/my-workshop/models-3d/bronze-iphone/4.webp"
+        "imgs/my-workshop/models-3d/bronze-iphone/1.webp",
+        "imgs/my-workshop/models-3d/bronze-iphone/2.webp",
+        "imgs/my-workshop/models-3d/bronze-iphone/3.webp",
+        "imgs/my-workshop/models-3d/bronze-iphone/4.webp"
       ]
     },
     {
       "title": "3D Iphone",
       "quickDoc": "3D green Iphone model was made to simulate the real one.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/green-iphone/preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/green-iphone/preview.webp",
       "creationDate": "since: (2023 - 2024)",
       "doc": "After I have finished the 3D model & UV mesh playlist on YT, I was trying to create a realistic project and this is the green Iphone version.",
       "technologies": [
@@ -215,16 +215,16 @@
       ],
       "numOfImages": 4,
       "images": [
-        "public/imgs/my-workshop/models-3d/green-iphone/1.webp",
-        "public/imgs/my-workshop/models-3d/green-iphone/2.webp",
-        "public/imgs/my-workshop/models-3d/green-iphone/3.webp",
-        "public/imgs/my-workshop/models-3d/green-iphone/4.webp"
+        "imgs/my-workshop/models-3d/green-iphone/1.webp",
+        "imgs/my-workshop/models-3d/green-iphone/2.webp",
+        "imgs/my-workshop/models-3d/green-iphone/3.webp",
+        "imgs/my-workshop/models-3d/green-iphone/4.webp"
       ]
     },
     {
       "title": "3D Donut",
       "quickDoc": "3D donut candy was made to feel like a real candy.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/donuts/1.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/donuts/1.webp",
       "creationDate": "since: (2023)",
       "doc": "After I have learned how to deal with textures and finished 3D modeling playlist on YT, I was trying to create something simple and cool like a tasty donut.",
       "technologies": [
@@ -249,15 +249,15 @@
       ],
       "numOfImages": 3,
       "images": [
-        "public/imgs/my-workshop/models-3d/donuts/1.webp",
-        "public/imgs/my-workshop/models-3d/donuts/2.webp",
-        "public/imgs/my-workshop/models-3d/donuts/3.webp"
+        "imgs/my-workshop/models-3d/donuts/1.webp",
+        "imgs/my-workshop/models-3d/donuts/2.webp",
+        "imgs/my-workshop/models-3d/donuts/3.webp"
       ]
     },
     {
       "title": "Roblox Render",
       "quickDoc": "A banner was made for a youtuber.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/roblox-model-details.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/roblox-model-details.webp",
       "creationDate": "since: (2021 - 2022)",
       "doc": "I was playing since I was young and made a huge network with a lot of foreign people, I knew a youtuber he was playing with me and after he knows about my work he asked me for a chilling background with his character for a big trade in our game, and so at this time I was dealing with fully functional rigs.",
       "technologies": [
@@ -282,13 +282,13 @@
       ],
       "numOfImages": 1,
       "images": [
-        "public/imgs/my-workshop/models-3d/roblox-model-1.webp"
+        "imgs/my-workshop/models-3d/roblox-model-1.webp"
       ]
     },
     {
       "title": "Minecraft Render",
       "quickDoc": "A render was made for a Minecraft youtuber.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/minecraft-1-preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/minecraft-1-preview.webp",
       "creationDate": "since: (2019 - 2020)",
       "doc": "Since I was active at the amino app I knew some youtubers and after they notice me they asked me for renders about thier skins in Minecraft.",
       "technologies": [
@@ -313,15 +313,15 @@
       ],
       "numOfImages": 3,
       "images": [
-        "public/imgs/my-workshop/models-3d/minecraft-1.webp",
-        "public/imgs/my-workshop/models-3d/minecraft-2.webp",
-        "public/imgs/my-workshop/models-3d/minecraft-3.webp"
+        "imgs/my-workshop/models-3d/minecraft-1.webp",
+        "imgs/my-workshop/models-3d/minecraft-2.webp",
+        "imgs/my-workshop/models-3d/minecraft-3.webp"
       ]
     },
     {
       "title": "Minecraft Render",
       "quickDoc": "A banner was made for Minecraft communication app.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/minecraft-neither.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/minecraft-neither.webp",
       "creationDate": "since: (2019 - 2020)",
       "doc": "These 2 renders was made as a design for a communication app called amino minecraft. It's a community for the people playing this game. I have learned how to use light source in C4D and installed new light packages like the silincer pistol lazer.",
       "technologies": [
@@ -346,14 +346,14 @@
       ],
       "numOfImages": 2,
       "images": [
-        "public/imgs/my-workshop/models-3d/minecraft-neither.webp",
-        "public/imgs/my-workshop/models-3d/minecraft-neither-2.webp"
+        "imgs/my-workshop/models-3d/minecraft-neither.webp",
+        "imgs/my-workshop/models-3d/minecraft-neither-2.webp"
       ]
     },
     {
       "title": "Logo Render",
       "quickDoc": "A render was made for me after learning a new skills.",
-      "photoPrev": "public/imgs/my-workshop/models-3d/loai-logo-preview.webp",
+      "photoPrev": "imgs/my-workshop/models-3d/loai-logo-preview.webp",
       "creationDate": "since: (2019)",
       "doc": "Here I was trying to learn somthing since COVID-19 and we all stayed at home also we took a big holiday so I have learned how to make simple 3D logos and here was the start of a 3D artist.",
       "technologies": [
@@ -378,9 +378,9 @@
       ],
       "numOfImages": 3,
       "images": [
-        "public/imgs/my-workshop/models-3d/loai-logo-1.webp",
-        "public/imgs/my-workshop/models-3d/loai-logo-2.webp",
-        "public/imgs/my-workshop/models-3d/loai-logo-3.webp"
+        "imgs/my-workshop/models-3d/loai-logo-1.webp",
+        "imgs/my-workshop/models-3d/loai-logo-2.webp",
+        "imgs/my-workshop/models-3d/loai-logo-3.webp"
       ]
     }
   ]
