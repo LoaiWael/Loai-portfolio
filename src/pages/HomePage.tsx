@@ -1,11 +1,8 @@
-import { useEffect, type CSSProperties } from "react";
+import { useEffect } from "react";
 import Footer from "../components/Footer";
-import $ from 'jquery'
+import $ from 'jquery';
+import type { carouselIndex } from "../types";
 import "./HomePage.css";
-
-interface carouselIndex extends CSSProperties {
-  '--i': number
-}
 
 const contactAnimation = () => {
   const contactLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(".contacts a");
@@ -102,14 +99,14 @@ export default function HomePage() {
               draggable="false"
               id="background"
               fetchPriority="high"
-              src="src/assets/imgs/home/IMG20240725232931.webp"
+              src="public/imgs/home/IMG20240725232931.webp"
               alt="Loai Wael Hassan"
             />
             <img
               draggable="false"
               id="me-in-img"
               fetchPriority="high"
-              src="src/assets/imgs/home/Me.webp"
+              src="public/imgs/home/Me.webp"
               alt="Loai"
             />
           </div>
@@ -153,7 +150,7 @@ export default function HomePage() {
                 </p>
               </div>
               <img
-                src="src/assets/imgs/home/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
+                src="public/imgs/home/vecteezy_adventurous-3d-florist-boy-with-cactus-ideal-for-desert-or_22483610_resized.webp"
                 alt="Big MAN"
                 draggable="false"
                 loading="lazy"
@@ -221,7 +218,7 @@ export default function HomePage() {
                 </button>
               </div>
               <img
-                src="src/assets/imgs/home/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
+                src="public/imgs/home/3d-graduation-of-university-hat-cap-or-diploma-graduation-hat-3d-icon-free-png (1).webp"
                 alt="graduation cap"
                 draggable="false"
                 loading="lazy"
@@ -245,13 +242,13 @@ export default function HomePage() {
               <ul className="certificates">
                 <li id="certificate1">
                   <img
-                    src="src/assets/imgs/home/certificate CX.webp"
+                    src="public/imgs/home/certificate CX.webp"
                     alt="CX certificate"
                   />
                 </li>
                 <li id="certificate2">
                   <img
-                    src="src/assets/imgs/home/american-council-frontend.webp"
+                    src="public/imgs/home/american-council-frontend.webp"
                     alt="american council front-end certificate"
                   />
                 </li>
@@ -290,72 +287,38 @@ export default function HomePage() {
                           <dt>TECH:</dt>
                           <dd id="html-tech">
                             <img
-                              src="./public/tech/html-logo-png.webp"
+                              src="public/imgs/tech/html-logo-png.webp"
                               alt=""
                             />{" "}
                             HTML5
                           </dd>
                           <dd id="css-tech">
-                            <img src="./public/tech/css.webp" alt="" /> CSS3
+                            <img src="public/imgs/tech/css.webp" alt="" /> CSS3
                           </dd>
                           <dd id="js-tech">
-                            <img src="./public/tech/javascript.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/javascript.webp" alt="" />{" "}
                             JavaScript
                           </dd>
                           <dd id="ts-tech">
-                            <img src="./public/tech/typescript.svg" alt="" />{" "}
+                            <img src="public/imgs/tech/typescript.svg" alt="" />{" "}
                             TypeScript
                           </dd>
                           <dd id="jasmine-tech">
-                            <img src="./public/tech/Jasmine.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/Jasmine.webp" alt="" />{" "}
                             Jasmine
-                          </dd>
-                          <dd id="scroll-driven-animation">
-                            <a
-                              href="https://scroll-driven-animations.style/"
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 960 960"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path
-                                  d="M117.414 113.459l.22 438.763M67.44 157.873c33.292-81.812 66.625-82.275 99.999-1.389m.201 349.094c-33.293 81.812-66.626 82.275-99.999 1.389"
-                                  fill="none"
-                                  stroke="#000"
-                                  strokeWidth="37.5"
-                                />
-                                <path
-                                  d="M770.599 215.902C736 90.774 614.765 47.812 489.636 82.411 364.508 117.01 282.565 216.152 317.164 341.28l114.209 413.042c34.599 125.129 152.546 156.198 277.674 121.599 125.129-34.599 210.36-121.848 175.761-246.977L770.599 215.902z"
-                                  fill="#fff"
-                                  stroke="#000"
-                                  strokeWidth="50.45"
-                                />
-                                <path
-                                  d="M536.653 252.449l31.344 113.359"
-                                  fill="none"
-                                  stroke="#000"
-                                  strokeWidth="58.81"
-                                />
-                              </svg>{" "}
-                              Scroll-driven Animations
-                            </a>
                           </dd>
                         </div>
                         <div className="all-frontend-tools">
                           <dt>TOOLS:</dt>
                           <dd id="cursor-tech">
-                            <img src="./public/tech/cursor.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/cursor.webp" alt="" />{" "}
                             Cursor
                           </dd>
                           <dd id="github-tech">
                             <i className="bi bi-github"></i> GitHub
                           </dd>
                           <dd id="git-tech">
-                            <img src="./public/tech/git.webp" alt="" /> Git
+                            <img src="public/imgs/tech/git.webp" alt="" /> Git
                           </dd>
                         </div>
                       </dl>
@@ -374,16 +337,16 @@ export default function HomePage() {
                         <div>
                           <dt>TOOLS:</dt>
                           <dd id="figma-tech">
-                            <img src="./public/tech/Figma-Logo.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/Figma-Logo.webp" alt="" />{" "}
                             Figma
                           </dd>
                           <dd id="stitch-tech">
-                            <img src="./public/tech/stitch.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/stitch.webp" alt="" />{" "}
                             Google Stitch
                           </dd>
                           <dd id="adobe-color-tech">
                             <img
-                              src="./public/tech/adobe-color-icon.webp"
+                              src="public/imgs/tech/adobe-color-icon.webp"
                               alt=""
                             />{" "}
                             Adobe Color
@@ -405,7 +368,7 @@ export default function HomePage() {
                         <div>
                           <dt>TOOLS:</dt>
                           <dd id="cinema-tech">
-                            <img src="./public/tech/c4d-logo.webp" alt="" />{" "}
+                            <img src="public/imgs/tech/c4d-logo.webp" alt="" />{" "}
                             Cinema 4D
                           </dd>
                         </div>
@@ -415,7 +378,7 @@ export default function HomePage() {
                 </div>
               </div>
               <img
-                src="src/assets/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
+                src="public/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660.webp"
                 alt="Skateboard boi"
                 draggable="false"
                 loading="lazy"
@@ -444,7 +407,7 @@ export default function HomePage() {
                           ( 27/6/2025 - 5/12/2025 )
                         </small>
                       </div>
-                      <img src="src/assets/imgs/home/depi.webp" alt="DEPI" />
+                      <img src="public/imgs/home/depi.webp" alt="DEPI" />
                       <p>
                         took an internship at{" "}
                         <a
@@ -500,7 +463,7 @@ export default function HomePage() {
                 </article>
               </div>
               <img
-                src="src/assets/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
+                src="public/imgs/home/vecteezy_a-cartoon-character-with-sunglasses-and-a-skateboard_23624660_resized (1).webp"
                 alt="Very very big MAN"
                 draggable="false"
                 loading="lazy"
@@ -561,7 +524,7 @@ export default function HomePage() {
                 </ul>
               </div>
               <img
-                src="src/assets/imgs/home/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
+                src="public/imgs/home/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651_resized.webp"
                 alt="Contacts picture"
                 draggable="false"
                 loading="lazy"
