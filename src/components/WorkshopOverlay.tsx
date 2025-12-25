@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties } from "react"
+import { AnimatePresence, motion } from "motion/react";
 import { chooseButton, detailsSrcButtons, generateMarkers } from "../utils/workshop";
 import fetchData from "../utils/fetchData";
 import { useWork } from "../contexts/WorkContext";
@@ -9,10 +10,35 @@ interface InumOfPhotos extends CSSProperties {
   '--num-photos': number
 }
 
-const Details = ({ category }: { category: category }) => {
+const overlayMotionVariants = {
+  hidden: { scale: 0.95, opacity: 0, filter: "blur(10px)", height: "20em" },
+  show: {
+    scale: 1,
+    opacity: 1,
+    filter: "blur(0px)",
+    height: "80vh",
+    transition: {
+      staggerChildren: 0.125,
+      delayChildren: 0.125,
+    }
+  },
+  exit: {
+    scale: 0.95,
+    opacity: 0,
+    filter: "blur(10px)",
+    height: "20em",
+    transition: {
+      staggerChildren: 0.125,
+      delayChildren: 0.125,
+      staggerDirection: -1
+    }
+  }
+}
+
+const Details = ({ category, projectDetails }: { category: category, projectDetails: Iwork }) => {
   const [technologies, setTechnologies] = useState<Record<technologyKeys, Itechnology> | null>(null);
   const [contributors, setContributors] = useState<Record<contributor, Icontributor> | null>(null);
-  const { projectDetails, setProjectDetails, setShowOverlay } = useWork();
+  const { setProjectDetails, setShowOverlay } = useWork();
 
   useEffect(() => {
     const loadData = async () => {
@@ -46,7 +72,7 @@ const Details = ({ category }: { category: category }) => {
         (marker as HTMLAnchorElement).removeEventListener('click', onClickAncor)
       })
     }
-  }, [projectDetails]);
+  }, []);
 
   const projectTechnologies = projectDetails?.technologies.map(tech => {
     if (technologies) {
@@ -72,7 +98,7 @@ const Details = ({ category }: { category: category }) => {
   });
 
   return (
-    <div className="overlay-content-details">
+    <motion.div className="overlay-content-details" variants={overlayMotionVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 1.5, ease: "easeInOut" }}>
       <div className="header">
         <button className="back-button" onClick={() => setProjectDetails(null)} title="Back"><span></span></button>
         <button className="close-button" onClick={() => { setShowOverlay(false); setProjectDetails(null) }}
@@ -120,7 +146,7 @@ const Details = ({ category }: { category: category }) => {
           {detailsSrcButtons(category, projectDetails as Iwork)}
         </div>
       </div>
-    </div >
+    </motion.div >
   )
 }
 
@@ -140,16 +166,33 @@ const WorkshopOverlay = ({ category }: { category: category }) => {
 
     }
     getData();
-  }, [category, setProjects])
+
+    return () => {
+      setProjects(null);
+      setProjectDetails(null);
+    }
+  }, [category, setProjects, setProjectDetails])
+
+  const overlaySectionVariants = {
+    hidden: { height: "20em" },
+    show: {
+      height: "calc(100% + -9vh)",
+      transition: {
+        staggerChildren: 0.125,
+        delayChildren: 0.125,
+      }
+    }
+  }
 
   return (
-    < div className="overlay" >
-      <div className="overlay-content">
+    <motion.div className="overlay" initial={{ opacity: 0 }
+    } animate={{ opacity: 1 }} exit={{ opacity: 0 }} >
+      <motion.div className="overlay-content" variants={overlayMotionVariants} initial="hidden" animate="show" exit="exit" transition={{ duration: 1.5, ease: "easeInOut" }} >
         <button className="close-button" onClick={() => setShowOverlay(false)} title="Close"><span></span><span></span></button>
-        <h1>{projects ? projects.categoryName : ''}</h1>
-        <section>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>{projects ? projects.categoryName : ''}</motion.h1>
+        <motion.section variants={overlaySectionVariants} initial="hidden" animate="show">
           {projects?.content ? projects.content.map(project =>
-            <figure key={crypto.randomUUID()}>
+            <motion.figure key={project.quickDoc} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
               <img loading="lazy" draggable="false" src={project.photoPrev} alt={project.title} />
               <div className="about-product">
                 <figcaption>{project.title}</figcaption>
@@ -159,14 +202,16 @@ const WorkshopOverlay = ({ category }: { category: category }) => {
                 <a target="_blank" href={project.src[0]}>{chooseButton(category)}</a>
                 <a className="secondary-button" onClick={() => setProjectDetails(project)}>Read more</a>
               </div>
-            </figure>
+            </motion.figure>
           ) :
             ''
           }
-        </section>
-      </div>
-      {projectDetails && <Details category={category} />}
-    </div >
+        </motion.section>
+      </motion.div>
+      <AnimatePresence>
+        {projectDetails && <Details category={category} projectDetails={projectDetails} />}
+      </AnimatePresence>
+    </motion.div >
   )
 }
 

@@ -6,6 +6,7 @@ import type { category } from '../types';
 import logoCircle from '../assets/imgs/circle.webp';
 import logoLine from '../assets/imgs/line.webp';
 import background from '../assets/imgs/background.webp';
+import { AnimatePresence } from 'motion/react';
 
 function workshop_openSource_hover() {
   const openSourceLi = document.querySelector("#open-source") as HTMLElement;
@@ -163,7 +164,9 @@ const WorkshopPage = () => {
           <img fetchPriority="high" draggable="false" src={background}
             className="background background-rotate" alt="background" />
         </section>
-        {showOverlay && <WorkshopOverlay category={category!} />}
+        <AnimatePresence>
+          {showOverlay && <WorkshopOverlay category={category!} />}
+        </AnimatePresence>
         <hr className="white-fog" />
       </main>
     </>
