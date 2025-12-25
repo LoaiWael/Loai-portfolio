@@ -3,7 +3,7 @@ import type { jsonData } from "../types";
 
 const fetchData = async (data: jsonData) => {
   try {
-    const response = await axios.get(`/data/${data}.json`);
+    const response = await axios.get(`data/${data}.json`);
     return response.data;
   }
   catch (error) {

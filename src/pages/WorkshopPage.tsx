@@ -3,6 +3,9 @@ import { useWork } from '../contexts/WorkContext';
 import './WorkshopPage.css';
 import WorkshopOverlay from '../components/WorkshopOverlay';
 import type { category } from '../types';
+import logoCircle from '../assets/imgs/circle.webp';
+import logoLine from '../assets/imgs/line.webp';
+import background from '../assets/imgs/background.webp';
 
 function workshop_openSource_hover() {
   const openSourceLi = document.querySelector("#open-source") as HTMLElement;
@@ -128,8 +131,8 @@ const WorkshopPage = () => {
             <span>All my work grouped in this page</span>
           </div>
           <div className="logo-area-realtive">
-            <img fetchPriority="high" src="imgs/my-workshop/circle.webp" alt="circle" draggable="false" />
-            <img fetchPriority="high" src="imgs/my-workshop/line.webp" alt="line" draggable="false" />
+            <img fetchPriority="high" src={logoCircle} alt="circle" draggable="false" />
+            <img fetchPriority="high" src={logoLine} alt="line" draggable="false" />
             <span className="loaiproject">羅艾项目</span>
           </div>
           <ul className="navigations">
@@ -157,7 +160,7 @@ const WorkshopPage = () => {
             </svg></button><span>3D Models.</span></li>
           </ul>
           <span className="fact">Eyes contact with visuals<br />before reading the content.</span>
-          <img fetchPriority="high" draggable="false" src="my-workshop/background.webp"
+          <img fetchPriority="high" draggable="false" src={background}
             className="background background-rotate" alt="background" />
         </section>
         {showOverlay && <WorkshopOverlay category={category!} />}
