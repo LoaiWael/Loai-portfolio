@@ -2,11 +2,86 @@
   "categoryName": "Open Source.",
   "content": [
     {
+      "title": "Friend's Portfolio 2",
+      "quickDoc": "Helping a friend in creating a portfolio in one day.",
+      "photoPrev": "imgs/my-workshop/open-source/soultan-portfolio/preview.webp",
+      "creationDate": "since: (2025)",
+      "doc": "Designed and deployed in a rigorous single-day sprint, this personal portfolio website showcases a mastery of core web technologies through a custom-built Model-View-Controller (MVC) architecture using only vanilla HTML, CSS, and JavaScript. By strictly separating the application state (Model) from the DOM rendering logic (View) and user interactions (Controller), the codebase achieves a high degree of maintainability and scalability often absent in static sites. The frontend features a modern, responsive UI with smooth, GPU-accelerated animations and interactive elements that ensure a fluid user experience across all devices. This project serves as a practical demonstration of advanced architectural patterns applied to raw web standards without reliance on third-party frameworks.",
+      "technologies": [
+        {
+          "name": "html",
+          "techUsage": "Used to create the pillars"
+        },
+        {
+          "name": "css",
+          "techUsage": "Used for styling"
+        },
+        {
+          "name": "js",
+          "techUsage": "Making it interactive"
+        }
+      ],
+      "contributors": [
+        "MohamedSoultan",
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://github.com/LoaiWael/soultan-Portfolio",
+        "https://github.com/Mohameedsoltan/My-Portfolio"
+      ],
+      "numOfImages": 6,
+      "images": [
+        "imgs/my-workshop/open-source/soultan-portfolio/1.webp",
+        "imgs/my-workshop/open-source/soultan-portfolio/2.webp",
+        "imgs/my-workshop/open-source/soultan-portfolio/3.webp",
+        "imgs/my-workshop/open-source/soultan-portfolio/4.webp",
+        "imgs/my-workshop/open-source/soultan-portfolio/5.webp",
+        "imgs/my-workshop/open-source/soultan-portfolio/6.webp"
+      ]
+    },
+    {
+      "title": "Friend's Portfolio 1",
+      "quickDoc": "Helping my friend in optimizing a portfolio.",
+      "photoPrev": "imgs/my-workshop/open-source/elnemr-portfolio/preview.webp",
+      "creationDate": "since: (2025)",
+      "doc": "Optimized the frontend architecture of a personal portfolio website by refactoring the CSS layout for enhanced responsiveness and cross-browser compatibility. I implemented a robust, system-aware Light/Dark mode theming engine using vanilla JavaScript and CSS Custom Properties (Variables). This logic not only toggles the visual theme dynamically but also persists user preference via localStorage and respects the operating system's prefers-color-scheme media query. The result is a highly adaptable UI that maintains visual consistency and accessibility standards while delivering a seamless user experience across diverse viewing environments.",
+      "technologies": [
+        {
+          "name": "html",
+          "techUsage": "Used to create the pillars"
+        },
+        {
+          "name": "css",
+          "techUsage": "Used for styling"
+        },
+        {
+          "name": "js",
+          "techUsage": "Making it interactive"
+        }
+      ],
+      "contributors": [
+        "MohamedElNemr",
+        "LoaiWaelHassan"
+      ],
+      "src": [
+        "https://github.com/LoaiWael/Tiger-Portfolio",
+        "https://github.com/Tiger0x01/My-Portfolio"
+      ],
+      "numOfImages": 5,
+      "images": [
+        "imgs/my-workshop/open-source/elnemr-portfolio/1.webp",
+        "imgs/my-workshop/open-source/elnemr-portfolio/2.webp",
+        "imgs/my-workshop/open-source/elnemr-portfolio/3.webp",
+        "imgs/my-workshop/open-source/elnemr-portfolio/4.webp",
+        "imgs/my-workshop/open-source/elnemr-portfolio/5.webp"
+      ]
+    },
+    {
       "title": "Amazon website",
       "quickDoc": "Contributing to SuperSimpleDev project.",
       "photoPrev": "imgs/my-workshop/open-source/amazon-clone/prev.webp",
       "creationDate": "since: (2025)",
-      "doc": "This is a contribution to an amazon web project created by <a target=\"_blank\" href=\"https://github.com/SuperSimpleDev\">SuperSimpleDev</a>. While learning JS I have been asked from him to complete his amazon website interactivity that I have took the website fully designed and my task is to code it with JS making it like a real e-commerce website.<br/><br/>The main repo has not been made to merge it with my fork because the purpose behind this project is to learn how to code with JS, so I'm not the only one who worked on this project.<br/><br/><b>1st: </b>I generated the products data at the main page and function every single button and controlling the logic in this page like which item is added and how much quantity.<br/><b>2nd: </b>Made code to generate the shipping dates and the price for each date, the shipping dates are calculated based on the date that you open the page at. <a target=\"_blank\" href=\"https://github.com/LoaiWael/SuperSimpleDev-amazon-project/blob/main/data/shippingTime.js\">shippingTime.js</a><br/><b>3rd: </b>Generating the cart from your local storage.<br/><b>4th: </b>If place order pressed it will generate the order with an ID for you with each product that you can track its shipping progress bassed on the selected date and your current date.",
+      "doc": "This is a contribution to an amazon web project created by SuperSimpleDev: https://github.com/SuperSimpleDev. While learning JS I have been asked from him to complete his amazon website interactivity that I have took the website fully designed and my task is to code it with JS making it like a real e-commerce website. The main repo has not been made to merge it with my fork because the purpose behind this project is to learn how to code with JS, so I'm not the only one who worked on this project. 1st: I generated the products data at the main page and function every single button and controlling the logic in this page like which item is added and how much quantity. 2nd: Made code to generate the shipping dates and the price for each date, the shipping dates are calculated based on the date that you open the page at shippingTime.js: https://github.com/LoaiWael/SuperSimpleDev-amazon-project/blob/main/data/shippingTime.js 3rd: Generating the cart from your local storage. 4th: If place order pressed it will generate the order with an ID for you with each product that you can track its shipping progress bassed on the selected date and your current date.",
       "technologies": [
         {
           "name": "html",

@@ -2,6 +2,70 @@
   "categoryName": "Websites.",
   "content": [
     {
+      "title": "E-Commerce Coffee shop",
+      "quickDoc": "An e-commerce graduation project at DEPI.",
+      "photoPrev": "imgs/my-workshop/websites/depi/preview.webp",
+      "creationDate": "since: (2025 - 2026)",
+      "doc": "As part of the development team for our coffee shop e-commerce platform at DEPI, I was responsible for the UI/UX implementation and system stability. I designed and coded the page layouts, prioritizing a clean structure and ease of navigation. To drive user engagement, I integrated smooth animations that guided users through the purchasing flow. Simultaneously, I focused on application resilience by developing comprehensive error-handling protocols; this ensured that exceptions were managed gracefully, maintaining the integrity of the application and guiding users effectively when unexpected errors occurred.",
+      "technologies": [
+        {
+          "name": "html",
+          "techUsage": "Used in .tsx files"
+        },
+        {
+          "name": "css",
+          "techUsage": "Used for general styling"
+        },
+        {
+          "name": "typescript",
+          "techUsage": "Used for creating the types"
+        },
+        {
+          "name": "react",
+          "techUsage": "The core library"
+        },
+        {
+          "name": "vite",
+          "techUsage": "The Framework"
+        },
+        {
+          "name": "tailwind",
+          "techUsage": "Used for utility styling"
+        },
+        {
+          "name": "motion",
+          "techUsage": "Used for animations"
+        }
+      ],
+      "contributors": [
+        "ZeyadHany",
+        "LoaiWaelHassan",
+        "ReemMustafa",
+        "BoshraEmad",
+        "AsmaaDobal"
+      ],
+      "src": [
+        "https://ecommerce-depi.vercel.app/",
+        "https://github.com/zeyadhanydev/ecommerce"
+      ],
+      "numOfImages": 13,
+      "images": [
+        "imgs/my-workshop/websites/depi/1.webp",
+        "imgs/my-workshop/websites/depi/2.webp",
+        "imgs/my-workshop/websites/depi/3.webp",
+        "imgs/my-workshop/websites/depi/4.webp",
+        "imgs/my-workshop/websites/depi/5.webp",
+        "imgs/my-workshop/websites/depi/6.webp",
+        "imgs/my-workshop/websites/depi/7.webp",
+        "imgs/my-workshop/websites/depi/8.webp",
+        "imgs/my-workshop/websites/depi/9.webp",
+        "imgs/my-workshop/websites/depi/10.webp",
+        "imgs/my-workshop/websites/depi/11.webp",
+        "imgs/my-workshop/websites/depi/12.webp",
+        "imgs/my-workshop/websites/depi/13.webp"
+      ]
+    },
+    {
       "title": "Allam coffee app",
       "quickDoc": "Small website to improve the accessibility at the coffee shop.",
       "photoPrev": "imgs/my-workshop/websites/allam-coffee/preview.webp",

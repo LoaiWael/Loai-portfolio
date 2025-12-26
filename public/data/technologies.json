@@ -59,9 +59,49 @@
     "id": "ts-tech",
     "icon": "imgs/tech/typescript.svg"
   },
+  "react": {
+    "title": "React.js",
+    "id": "react-tech",
+    "icon": "imgs/tech/react.webp"
+  },
+  "vite": {
+    "title": "Vite",
+    "id": "vite-tech",
+    "icon": "imgs/tech/vite.webp"
+  },
+  "tailwind": {
+    "title": "Tailwind CSS",
+    "id": "tailwind-tech",
+    "icon": "imgs/tech/tailwind.webp"
+  },
+  "motion": {
+    "title": "Motion",
+    "id": "motion-tech",
+    "icon": "imgs/tech/motion.webp"
+  },
   "cursor": {
     "title": "Cursor",
     "id": "cursor-tech",
     "icon": "imgs/tech/cursor.webp"
+  },
+  "v0": {
+    "title": "v0",
+    "id": "v0-tech",
+    "icon": "imgs/tech/v0.webp"
+  },
+  "vercel": {
+    "title": "Vercel",
+    "id": "vercel-tech",
+    "icon": "imgs/tech/vercel.webp"
+  },
+  "github": {
+    "title": "GitHub",
+    "id": "github-tech",
+    "icon": "imgs/tech/github.webp"
+  },
+  "git": {
+    "title": "Git",
+    "id": "git-tech",
+    "icon": "imgs/tech/git.webp"
   }
 }

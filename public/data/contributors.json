@@ -10,5 +10,41 @@
     "position": "Software Engineer",
     "photo": "https://avatars.githubusercontent.com/u/70604577?v=4",
     "communication": "https://github.com/SuperSimpleDev"
+  },
+  "ZeyadHany": {
+    "name": "Zeyad Hany",
+    "position": "React.js & Next.js Developer",
+    "photo": "https://avatars.githubusercontent.com/u/110078366?v=4",
+    "communication": "https://www.linkedin.com/in/zeyad-hany/"
+  },
+  "ReemMustafa": {
+    "name": "Reem Mustafa",
+    "position": "Front-End Developer",
+    "photo": "https://avatars.githubusercontent.com/u/152494600?v=4",
+    "communication": "https://www.linkedin.com/in/reem-mustafaa/"
+  },
+  "BoshraEmad": {
+    "name": "Boshra Emad",
+    "position": "Front-End Developer",
+    "photo": "https://avatars.githubusercontent.com/u/112584666?v=4",
+    "communication": "https://www.linkedin.com/in/boshra-emad/"
+  },
+  "AsmaaDobal": {
+    "name": "Asmaa Dobal",
+    "position": "Front-End Developer",
+    "photo": "https://avatars.githubusercontent.com/u/158354808?v=4",
+    "communication": "https://www.linkedin.com/in/asmaa-ahmed-react-dev/"
+  },
+  "MohamedSoultan": {
+    "name": "Mohamed Soultan",
+    "position": "Back-End .Net Developer",
+    "photo": "https://avatars.githubusercontent.com/u/158595996?v=4",
+    "communication": "https://www.linkedin.com/in/mohamedsoultann/"
+  },
+  "MohamedElNemr": {
+    "name": "Mohamed Elnemr",
+    "position": "AI & ML Engineer",
+    "photo": "https://avatars.githubusercontent.com/u/145936220?v=4",
+    "communication": "https://www.linkedin.com/in/tiger0x01/"
   }
 }
