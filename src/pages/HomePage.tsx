@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import $ from 'jquery';
-import type { carouselIndex } from "../types";
+import type { carouselIndex, Itechnology, technologyKeys } from "../types";
 import "./HomePage.css";
+import fetchData from "../utils/fetchData";
 
 const contactAnimation = () => {
   const contactLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(".contacts a");
@@ -15,17 +16,29 @@ const contactAnimation = () => {
   }
 }
 
-// type myTracks = 'front-end' | 'ui-ux' | '3d-modeling';
+type myTracks = 'front-end' | 'ui-ux' | '3d-modeling';
 
-// const myTech: Record<myTracks, technologyKeys[]> = {
-//   'front-end': [],
-//   'ui-ux': [],
-//   '3d-modeling': []
-// }
+const myTech: Record<myTracks, { tech?: technologyKeys[], tools: technologyKeys[] }> = {
+  'front-end': {
+    tech: ['html', 'css', 'js', 'typescript', 'react', 'vite', 'tailwind', 'motion'],
+    tools: ['cursor', 'v0', 'vercel', 'github', 'git']
+  },
+  'ui-ux': { tools: ['figma', 'stitch', 'adobeColor'] },
+  '3d-modeling': { tools: ['c4d'] }
+}
 
 export default function HomePage() {
+  const [technologies, setTechnologies] = useState<Record<technologyKeys, Itechnology> | null>(null);
+
   useEffect(() => {
+    const getData = async () => {
+      const data = await fetchData('technologies');
+      setTechnologies(data);
+    }
+
+    getData();
     contactAnimation();
+
     $("#certificates").slideUp();
 
     $("#certificate-button").click(function () {
@@ -33,15 +46,9 @@ export default function HomePage() {
       document.getElementById("certificates")!.scrollIntoView();
       $("#certificates-header").addClass("certificates-animation-open");
       $(".certificates-container").addClass("certificates-animation-open");
-      // $("#certificates-header").removeClass("certificates-animation-close");
-      // $(".certificates-container").removeClass("certificates-animation-close");
     });
     $("#close-certificates").click(function () {
       $("#certificates").slideUp("slow");
-      // $("#certificates-header").addClass("certificates-animation-close");
-      // $(".certificates-container").addClass("certificates-animation-close");
-      // $("#certificates-header").removeClass("certificates-animation-open");
-      // $(".certificates-container").removeClass("certificates-animation-open");
     });
   }, [])
 
@@ -285,50 +292,36 @@ export default function HomePage() {
                 <div className="skills-progress">
                   <details>
                     <summary id="front-end-details">
-                      Front-End <progress max="100" value="80"></progress>
+                      Front-End <progress max="100" value="90"></progress>
                     </summary>
                     <hr />
                     <small>
                       Started front-end development career since 2024
                       <dl className="skills-list">
-                        <div className="all-frontend-skils">
-                          <dt>TECH:</dt>
-                          <dd id="html-tech">
-                            <img
-                              src="imgs/tech/html-logo-png.webp"
-                              alt=""
-                            />{" "}
-                            HTML5
-                          </dd>
-                          <dd id="css-tech">
-                            <img src="imgs/tech/css.webp" alt="" /> CSS3
-                          </dd>
-                          <dd id="js-tech">
-                            <img src="imgs/tech/javascript.webp" alt="" />{" "}
-                            JavaScript
-                          </dd>
-                          <dd id="ts-tech">
-                            <img src="imgs/tech/typescript.svg" alt="" />{" "}
-                            TypeScript
-                          </dd>
-                          <dd id="jasmine-tech">
-                            <img src="imgs/tech/Jasmine.webp" alt="" />{" "}
-                            Jasmine
-                          </dd>
-                        </div>
-                        <div className="all-frontend-tools">
-                          <dt>TOOLS:</dt>
-                          <dd id="cursor-tech">
-                            <img src="imgs/tech/cursor.webp" alt="" />{" "}
-                            Cursor
-                          </dd>
-                          <dd id="github-tech">
-                            <i className="bi bi-github"></i> GitHub
-                          </dd>
-                          <dd id="git-tech">
-                            <img src="imgs/tech/git.webp" alt="" /> Git
-                          </dd>
-                        </div>
+                        {technologies ? (
+                          <>
+                            <div className="all-frontend-skils">
+                              <dt>TECH:</dt>
+                              {myTech["front-end"].tech?.map(tech => (
+                                <dd key={technologies[tech]?.id} id={technologies[tech]?.id}>
+                                  <img
+                                    src={technologies[tech]?.icon}
+                                    alt=""
+                                  />
+                                  {" " + technologies[tech]?.title}
+                                </dd>
+                              ))}
+                            </div>
+                            <div className="all-frontend-tools">
+                              <dt>TOOLS:</dt>
+                              {myTech["front-end"].tools.map(tool => (
+                                <dd key={technologies[tool]?.id} id={technologies[tool]?.id}>
+                                  <img src={technologies[tool]?.icon} alt="" />{" " + technologies[tool]?.title}
+                                </dd>
+                              ))}
+                            </div>
+                          </>
+                        ) : ''}
                       </dl>
                     </small>
                   </details>
@@ -342,24 +335,16 @@ export default function HomePage() {
                       Learned modern color theories and some basic UI layouts
                       and how to choose between them
                       <dl className="skills-list">
-                        <div>
-                          <dt>TOOLS:</dt>
-                          <dd id="figma-tech">
-                            <img src="imgs/tech/Figma-Logo.webp" alt="" />{" "}
-                            Figma
-                          </dd>
-                          <dd id="stitch-tech">
-                            <img src="imgs/tech/stitch.webp" alt="" />{" "}
-                            Google Stitch
-                          </dd>
-                          <dd id="adobe-color-tech">
-                            <img
-                              src="imgs/tech/adobe-color-icon.webp"
-                              alt=""
-                            />{" "}
-                            Adobe Color
-                          </dd>
-                        </div>
+                        {technologies ? (
+                          <div>
+                            <dt>TOOLS:</dt>
+                            {myTech['ui-ux'].tools.map(tool => (
+                              <dd key={technologies[tool]?.id} id={technologies[tool]?.id}>
+                                <img src={technologies[tool]?.icon} alt="" />{" " + technologies[tool]?.title}
+                              </dd>
+                            ))}
+                          </div>
+                        ) : ''}
                       </dl>
                     </small>
                   </details>
@@ -373,13 +358,16 @@ export default function HomePage() {
                       Using C4D since i was chiled in 2019 when covid-19 apeared
                       but i have only learned how to create a model with UV mesh
                       <dl className="skills-list">
-                        <div>
-                          <dt>TOOLS:</dt>
-                          <dd id="cinema-tech">
-                            <img src="imgs/tech/c4d-logo.webp" alt="" />{" "}
-                            Cinema 4D
-                          </dd>
-                        </div>
+                        {technologies ? (
+                          <div>
+                            <dt>TOOLS:</dt>
+                            {myTech["3d-modeling"].tools.map(tool => (
+                              <dd key={technologies[tool]?.id} id={technologies[tool]?.id}>
+                                <img src={technologies[tool]?.icon} alt="" />{" " + technologies[tool]?.title}
+                              </dd>
+                            ))}
+                          </div>
+                        ) : ''}
                       </dl>
                     </small>
                   </details>

@@ -8,7 +8,7 @@ export type category = 'websites' | 'open-source' | 'ui-ux' | '3d-models';
 
 export type contributor = 'LoaiWaelHassan' | 'SuperSimpleDev';
 
-export type technologyKeys = 'c4d' | 'picsart' | 'lightroom' | 'figma' | 'adobeColor' | 'html' | 'css' | 'js' | 'jquery' | 'bootstrap' | 'stitch' | 'typescript' | 'cursor';
+export type technologyKeys = 'c4d' | 'picsart' | 'lightroom' | 'figma' | 'adobeColor' | 'html' | 'css' | 'js' | 'jquery' | 'bootstrap' | 'stitch' | 'typescript' | 'react' | 'vite' | 'tailwind' | 'motion' | 'cursor' | 'github' | 'git' | 'vercel' | 'v0';
 
 export interface Icontributor {
   id?: string
