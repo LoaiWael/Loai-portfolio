@@ -129,3 +129,32 @@ export const detailsSrcButtons = (categ: category, project: Iwork) => {
   }
   return buttons
 }
+
+export const imgContentHover = (photos: HTMLImageElement[]) => {
+  const markers: HTMLElement | null = document.querySelector('ul.markers');
+  if (markers) {
+    const onMouseEnter = () => {
+      markers.style.opacity = '0.25';
+    }
+    const onMouseLeave = () => {
+      markers.style.opacity = '1';
+    }
+
+    photos.forEach(photo => {
+      photo.addEventListener('mouseenter', () => {
+        onMouseEnter();
+      });
+      photo.addEventListener('mouseleave', () => {
+        onMouseLeave();
+      });
+    })
+
+    return () => {
+      photos.forEach(photo => {
+        photo.removeEventListener('mouseenter', onMouseEnter);
+        photo.removeEventListener('mouseleave', onMouseLeave);
+      })
+    }
+  }
+  return () => { }
+}
