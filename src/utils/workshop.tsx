@@ -1,5 +1,97 @@
 import type { category, Iwork, carouselIndex } from "../types";
 
+//main page
+export function workshop_openSource_hover() {
+  const openSourceLi = document.querySelector("#open-source") as HTMLElement;
+  const websitesLi = document.querySelector("#websites") as HTMLElement;
+
+  if (!openSourceLi || !websitesLi) return () => { };
+
+  const onEnter = () => {
+    websitesLi.style.top = "calc(var(--top) - 2.5%)";
+    websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
+  };
+
+  const onLeave = () => {
+    websitesLi.style.top = "";
+    websitesLi.style.right = "";
+  };
+
+  openSourceLi.addEventListener("mouseenter", onEnter);
+  openSourceLi.addEventListener("mouseleave", onLeave);
+
+  return () => {
+    openSourceLi.removeEventListener("mouseenter", onEnter);
+    openSourceLi.removeEventListener("mouseleave", onLeave);
+  };
+}
+
+export function workshop_uiux_hover() {
+  const uiux = document.querySelector("#ui-ux") as HTMLElement;
+  const openSourceLi = document.querySelector("#open-source") as HTMLElement;
+  const websitesLi = document.querySelector("#websites") as HTMLElement;
+
+  if (!uiux || !openSourceLi || !websitesLi) return () => { };
+
+  const onEnter = () => {
+    openSourceLi.style.top = "calc(var(--top) - 2.5%)";
+    openSourceLi.style.right = "calc((var(--top) / 16 + var(--right)) - 1%)";
+    websitesLi.style.top = "calc(var(--top) - 2.5%)";
+    websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
+  };
+
+  const onLeave = () => {
+    openSourceLi.style.top = "";
+    openSourceLi.style.right = "";
+    websitesLi.style.top = "";
+    websitesLi.style.right = "";
+  };
+
+  uiux.addEventListener("mouseenter", onEnter);
+  uiux.addEventListener("mouseleave", onLeave);
+
+  return () => {
+    uiux.removeEventListener("mouseenter", onEnter);
+    uiux.removeEventListener("mouseleave", onLeave);
+  };
+}
+
+export function workshop_3d_hover() {
+  const modeling = document.querySelector("#modeling") as HTMLElement;
+  const uiux = document.querySelector("#ui-ux") as HTMLElement;
+  const openSourceLi = document.querySelector("#open-source") as HTMLElement;
+  const websitesLi = document.querySelector("#websites") as HTMLElement;
+
+  if (!modeling || !uiux || !openSourceLi || !websitesLi) return () => { };
+
+  const onEnter = () => {
+    uiux.style.top = "calc(var(--top) - 2.5%)";
+    uiux.style.right = "calc((var(--top) / 16 + var(--right)) - 4%)";
+    openSourceLi.style.top = "calc(var(--top) - 2.5%)";
+    openSourceLi.style.right = "calc((var(--top) / 16 + var(--right)) - 1%)";
+    websitesLi.style.top = "calc(var(--top) - 2.5%)";
+    websitesLi.style.right = "calc((var(--top) / 16 + var(--right)) + 2.5%)";
+  };
+
+  const onLeave = () => {
+    uiux.style.top = "";
+    uiux.style.right = "";
+    openSourceLi.style.top = "";
+    openSourceLi.style.right = "";
+    websitesLi.style.top = "";
+    websitesLi.style.right = "";
+  };
+
+  modeling.addEventListener("mouseenter", onEnter);
+  modeling.addEventListener("mouseleave", onLeave);
+
+  return () => {
+    modeling.removeEventListener("mouseenter", onEnter);
+    modeling.removeEventListener("mouseleave", onLeave);
+  };
+}
+
+//overlay
 export const chooseButton = (categ: category) => {
   let srcButton;
   switch (categ) {
