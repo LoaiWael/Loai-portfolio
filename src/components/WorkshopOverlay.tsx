@@ -1,6 +1,6 @@
-import { useEffect, useState, type CSSProperties } from "react"
+import { useEffect, useRef, useState, type CSSProperties } from "react"
 import { AnimatePresence, motion } from "motion/react";
-import { chooseButton, detailsSrcButtons, generateMarkers } from "../utils/workshop";
+import { chooseButton, detailsSrcButtons, generateMarkers, imgContentHover } from "../utils/workshop";
 import fetchData from "../utils/fetchData";
 import { useWork } from "../contexts/WorkContext";
 import type { category, Icontributor, Itechnology, jsonData, technologyKeys, contributor, Iwork } from "../types"
@@ -38,6 +38,7 @@ const overlayMotionVariants = {
 const Details = ({ category, projectDetails }: { category: category, projectDetails: Iwork }) => {
   const [technologies, setTechnologies] = useState<Record<technologyKeys, Itechnology> | null>(null);
   const [contributors, setContributors] = useState<Record<contributor, Icontributor> | null>(null);
+  const imgsList = useRef<HTMLImageElement[]>([]);
   const { setProjectDetails, setShowOverlay } = useWork();
 
   useEffect(() => {
@@ -66,13 +67,15 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
       marker.addEventListener('click', (e) => onClickAncor(e as MouseEvent));
     });
 
+    const cleanUpImgHover = imgContentHover(imgsList.current);
 
     return () => {
+      cleanUpImgHover();
       document.querySelectorAll('.markers a').forEach(marker => {
         (marker as HTMLAnchorElement).removeEventListener('click', onClickAncor)
       })
     }
-  }, []);
+  }, [imgsList]);
 
   const projectTechnologies = projectDetails?.technologies.map(tech => {
     if (technologies) {
@@ -107,7 +110,9 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
       <div className="scrolling-area">
         <section className="photos-area" style={{ "--num-photos": projectDetails?.numOfImages } as InumOfPhotos}>
           <ul className="photos">
-            {projectDetails?.images.map(img => (<li key={crypto.randomUUID()}><img src={img} alt="" /></li>))}
+            {projectDetails?.images.map((img, i) => (<li key={crypto.randomUUID()}><img src={img} alt="" ref={(elem) => {
+              if (elem) imgsList.current[i] = elem;
+            }} /></li>))}
           </ul>
           <ul className="markers">
             {generateMarkers(projectDetails!.numOfImages)}
@@ -192,7 +197,7 @@ const WorkshopOverlay = ({ category }: { category: category }) => {
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>{projects ? projects.categoryName : ''}</motion.h1>
         <motion.section variants={overlaySectionVariants} initial="hidden" animate="show">
           {projects?.content ? projects.content.map(project =>
-            <motion.figure key={project.quickDoc} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+            <motion.figure key={project.title} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
               <img loading="lazy" draggable="false" src={project.photoPrev} alt={project.title} />
               <div className="about-product">
                 <figcaption>{project.title}</figcaption>
