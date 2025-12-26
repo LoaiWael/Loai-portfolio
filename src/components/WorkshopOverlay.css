@@ -7,25 +7,25 @@
   width: 100%;
   height: 100vh;
   transition-duration: unset;
+}
 
-  .overlay-content {
-    width: 80%;
-    max-width: 100rem;
-    height: 80vh;
+.overlay-content {
+  width: 85%;
+  max-width: 70rem;
+  height: 80vh;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  box-shadow: var(--boxShadow);
+  border-radius: 1em;
+  overflow: clip;
+
+  h1 {
+    margin: 0;
+    padding: 0.5em;
     background-color: var(--white);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    box-shadow: var(--boxShadow);
-    border-radius: 1em;
-    overflow: clip;
-
-    h1 {
-      margin: 0;
-      padding: 0.5em;
-      background-color: var(--white);
-    }
   }
 }
 
@@ -595,5 +595,22 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width:425px) {
+  .overlay {
+    --width: 95%;
+    --height: 85vh;
+  }
+
+  .overlay-content {
+    width: var(--width);
+    height: var(--height);
+  }
+
+  .overlay-content-details {
+    width: var(--width);
+    height: var(--height);
   }
 }
