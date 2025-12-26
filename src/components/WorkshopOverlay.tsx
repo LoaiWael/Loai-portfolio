@@ -11,7 +11,7 @@ interface InumOfPhotos extends CSSProperties {
 }
 
 const overlayMotionVariants = {
-  hidden: { scale: 0.95, opacity: 0, filter: "blur(10px)", height: "20em" },
+  hidden: { scale: 0.95, opacity: 0, filter: "blur(10px)", height: "27em" },
   show: {
     scale: 1,
     opacity: 1,
@@ -26,7 +26,7 @@ const overlayMotionVariants = {
     scale: 0.95,
     opacity: 0,
     filter: "blur(10px)",
-    height: "20em",
+    height: "27em",
     transition: {
       staggerChildren: 0.125,
       delayChildren: 0.125,
@@ -174,7 +174,7 @@ const WorkshopOverlay = ({ category }: { category: category }) => {
   }, [category, setProjects, setProjectDetails])
 
   const overlaySectionVariants = {
-    hidden: { height: "20em" },
+    hidden: { height: "26em" },
     show: {
       height: "calc(100% + -9vh)",
       transition: {
