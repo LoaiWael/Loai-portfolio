@@ -5,6 +5,7 @@ import useFetch from "../hooks/useFetch";
 import { useWork } from "../contexts/WorkContext";
 import type { category, jsonData, Iwork, technologyKeys, Itechnology, contributor, Icontributor } from "../types"
 import './WorkshopOverlay.css'
+import ContributorCard from "./ContributorCard";
 
 interface InumOfPhotos extends CSSProperties {
   '--num-photos': number
@@ -83,7 +84,6 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
   const projectContributors = projectDetails?.contributors.map(person => {
     if (contributors) {
       return {
-        id: crypto.randomUUID(),
         name: contributors[person].name,
         photo: contributors[person].photo,
         position: contributors[person].position,
@@ -128,14 +128,7 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
           <h2>Contributors:</h2>
           <div className="details-info">
             {projectContributors?.map(person => (
-              <a target="_blank"
-                href={person?.communication} key={person?.id}>
-                <img src={person?.photo} alt={person?.name} draggable="false" loading="lazy" />
-                <div className="contributor-info">
-                  <span className="contributor-info-name">{person?.name}</span>
-                  <small className="contributor-info-position">{person?.position}</small>
-                </div>
-              </a>
+              <ContributorCard person={person} />
             ))}
           </div>
         </section>
