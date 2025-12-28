@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import $ from 'jquery';
-import type { carouselIndex, Itechnology, technologyKeys } from "../types";
+import type { carouselIndex, technologyKeys, Itechnology } from "../types";
 import "./HomePage.css";
-import fetchData from "../utils/fetchData";
+import useFetch from "../hooks/useFetch";
 
 const contactAnimation = () => {
   const contactLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(".contacts a");
@@ -28,15 +28,9 @@ const myTech: Record<myTracks, { tech?: technologyKeys[], tools: technologyKeys[
 }
 
 export default function HomePage() {
-  const [technologies, setTechnologies] = useState<Record<technologyKeys, Itechnology> | null>(null);
+  const [technologies] = useFetch<Record<technologyKeys, Itechnology>>('technologies');
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await fetchData('technologies');
-      setTechnologies(data);
-    }
-
-    getData();
     contactAnimation();
 
     $("#certificates").slideUp();

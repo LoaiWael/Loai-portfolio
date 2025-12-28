@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState, type CSSProperties } from "react"
+import { useEffect, useRef, type CSSProperties } from "react"
 import { AnimatePresence, motion } from "motion/react";
 import { chooseButton, detailsSrcButtons, generateMarkers, imgContentHover } from "../utils/workshop";
-import fetchData from "../utils/fetchData";
+import useFetch from "../hooks/useFetch";
 import { useWork } from "../contexts/WorkContext";
-import type { category, Icontributor, Itechnology, jsonData, technologyKeys, contributor, Iwork } from "../types"
+import type { category, jsonData, Iwork, technologyKeys, Itechnology, contributor, Icontributor } from "../types"
 import './WorkshopOverlay.css'
 
 interface InumOfPhotos extends CSSProperties {
@@ -36,20 +36,12 @@ const overlayMotionVariants = {
 }
 
 const Details = ({ category, projectDetails }: { category: category, projectDetails: Iwork }) => {
-  const [technologies, setTechnologies] = useState<Record<technologyKeys, Itechnology> | null>(null);
-  const [contributors, setContributors] = useState<Record<contributor, Icontributor> | null>(null);
+  const [technologies] = useFetch<Record<technologyKeys, Itechnology>>('technologies');
+  const [contributors] = useFetch<Record<contributor, Icontributor>>('contributors');
   const imgsList = useRef<HTMLImageElement[]>([]);
   const { setProjectDetails, setShowOverlay } = useWork();
 
   useEffect(() => {
-    const loadData = async () => {
-      const techData = await fetchData('technologies');
-      const contribData = await fetchData('contributors');
-      setTechnologies(techData as Record<technologyKeys, Itechnology>);
-      setContributors(contribData as Record<contributor, Icontributor>);
-    };
-    loadData();
-
     function onClickAncor(e: MouseEvent) {
       e.preventDefault();
 
@@ -110,7 +102,7 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
       <div className="scrolling-area">
         <section className="photos-area" style={{ "--num-photos": projectDetails?.numOfImages } as InumOfPhotos}>
           <ul className="photos">
-            {projectDetails?.images.map((img, i) => (<li key={crypto.randomUUID()}><img src={img} alt="" ref={(elem) => {
+            {projectDetails?.images.map((img, i) => (<li key={crypto.randomUUID()}><img src={img} alt="" onClick={() => window.open(img)} ref={(elem) => {
               if (elem) imgsList.current[i] = elem;
             }} /></li>))}
           </ul>
@@ -155,28 +147,29 @@ const Details = ({ category, projectDetails }: { category: category, projectDeta
   )
 }
 
+interface Iresponse {
+  categoryName: string
+  content: Iwork[]
+}
+
 const WorkshopOverlay = ({ category }: { category: category }) => {
   const { projects, setProjects, projectDetails, setProjectDetails, setShowOverlay } = useWork();
+  let data: jsonData;
+  switch (category) {
+    case 'websites': data = 'websites'; break;
+    case 'open-source': data = 'open-source'; break;
+    case 'ui-ux': data = 'ui-ux'; break;
+    case '3d-models': data = 'threeD'; break;
+  }
+  const [response] = useFetch<Iresponse>(data)
+  setProjects(response);
 
   useEffect(() => {
-    const getData = async () => {
-      let data: jsonData;
-      switch (category) {
-        case 'websites': data = 'websites'; break;
-        case 'open-source': data = 'open-source'; break;
-        case 'ui-ux': data = 'ui-ux'; break;
-        case '3d-models': data = 'threeD'; break;
-      }
-      setProjects(await fetchData(data));
-
-    }
-    getData();
-
     return () => {
       setProjects(null);
       setProjectDetails(null);
     }
-  }, [category, setProjects, setProjectDetails])
+  }, [setProjectDetails, setProjects])
 
   const overlaySectionVariants = {
     hidden: { height: "26em" },
